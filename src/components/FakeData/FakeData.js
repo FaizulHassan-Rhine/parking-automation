@@ -4,25 +4,25 @@ export const users =[
         id: 1,
         name: 'John',
         email: '5M6yj@example.com',
-        password: '12345'
+        password: '123451'
     },
     {
         id: 2,
         name: 'Rhine',
         email: 'rhine@com.com',
-        password: '12345'
+        password: '123452'
     },
     {
         id: 3,
         name: 'Zakir',
         email: 'zakir@kr.com',
-        password: '12345'
+        password: '123453'
     },
     {
         id: 4,
         name: 'Rakib',
         email: 'rakib@rk.com',
-        password: '12345'
+        password: '123454'
     },
 ]
 

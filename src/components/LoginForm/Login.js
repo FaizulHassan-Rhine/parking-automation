@@ -1,9 +1,52 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { FaFacebookSquare, FaGoogle } from "react-icons/fa";
 // import { Link } from "react-router-dom";
 import login from "../../images/login.jpg";
+import { users } from "../FakeData/FakeData";
+import { userContextManager } from "../../App";
+import { useNavigate } from "react-router";
 
 const Login = () => {
+  const [getUserInfo, setUserInfo] = useContext(userContextManager);
+  const navigate = useNavigate();
+
+  const [getFormData, setFormData] = useState({
+    email: {
+      value: '',
+      required: true,
+      msg: 'Please input your email address'
+    },
+    pass: {
+      value: '',
+      required: true,
+      msg: 'Please input your password'
+    },
+    formValid: true
+  })
+
+  const singUpFunc = (e) => {
+    e.preventDefault();
+    if (getFormData.email.value.length > 0) {
+       if (getFormData.pass.value.length > 0) {
+          setUserInfo(checkCredentials(getFormData.email.value, getFormData.pass.value))
+          console.log(checkCredentials(getFormData.email.value, getFormData.pass.value))
+          navigate('/search')
+          // console.log(getFormData)
+      }
+    } else {
+      setFormData({ ...getFormData, formValid: false })
+    }
+  }
+
+  function checkCredentials(email, password) {
+    for (const user of users) {
+        if (user.email === email && user.password === password) {
+            return user; // Return the user object if credentials match
+        }
+    }
+    return null; // Return null if no match is found
+}
+
   return (
     <div>
       <div>
@@ -14,15 +57,20 @@ const Login = () => {
                 <img src={login} className="w-full rounded-lg" alt="Sample image" />
               </div>
               <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
-                <form>
-
+                <form onSubmit={singUpFunc}>
                   <div className="mb-6">
                     <input
                       type="text"
-                      className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                      className={"form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" +
+                        (getFormData.formValid == false && getFormData.email.required && getFormData.email.value === '' ? 'border-red-500' : 'border-gray-300')}
                       id="exampleFormControlInput2"
                       placeholder="Email address"
+                      onChange={(e) => setFormData({ ...getFormData, email: { ...getFormData.email, value: e.target.value } })}
                     />
+                    <p className={'text-xs font-normal text-red-500 pt-[2px] ' +
+                      (getFormData.formValid == false && getFormData.email.required && getFormData.email.value === '' ? 'visible' : 'invisible')}>
+                      {getFormData.email.msg}
+                    </p>
                   </div>
 
                   <div className="mb-6">
@@ -31,31 +79,16 @@ const Login = () => {
                       className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                       id="exampleFormControlInput2"
                       placeholder="Password"
+                      onChange={(e) => setFormData({ ...getFormData, pass: { ...getFormData.pass, value: e.target.value } })}
                     />
+                    <p className={'text-xs font-normal text-red-500 pt-[2px] ' +
+                      (getFormData.formValid == false && getFormData.pass.required && getFormData.pass.value === '' ? 'visible' : 'invisible')}>
+                      {getFormData.pass.msg}</p>
                   </div>
-
-                  {/* <div className="flex justify-between items-center mb-6">
-                    <div className="form-group form-check">
-                      <input
-                        type="checkbox"
-                        className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-[#59E4A8] checked:border-[#59E4A8] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                        id="exampleCheck2"
-                      />
-                      <label
-                        className="form-check-label inline-block text-gray-800"
-                        for="exampleCheck2"
-                      >
-                        Remember me
-                      </label>
-                    </div>
-                    <a href="#!" className="text-gray-800 hover:text-red-600">
-                      Forgot password?
-                    </a>
-                  </div> */}
 
                   <div className="text-center lg:text-left">
                     <button
-                      type="button"
+                      type="submit"
                       className="inline-block px-7 py-3 bg-[#59E4A8] text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#59E4A8] hover:shadow-lg focus:bg-[#59E4A8]focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                     >
                       Login
