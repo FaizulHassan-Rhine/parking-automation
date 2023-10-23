@@ -17,34 +17,38 @@ const Report = () => {
                     <div className="flex flex-col  md:flex md:flex-row md:justify-center mx-auto mt-10 md:gap-28 gap-5 border-black border py-5 md:w-[620px] w-80  ">
                     <div className="flex md:justify-between gap-5 ml-5 md:ml-0">
                         <div>
+                            <p className="font-semibold">SL/N:</p>
                             <p className="font-semibold">Date:</p>
                             <p className="font-semibold">Entry Time:</p>
                             <p className="font-semibold">Exit Time:</p>
-                            <p className="font-semibold">Vehicle No: </p>                         
-                            <p className="font-semibold">Day Entry: </p>
+                                                   
+                           
                         </div>
 
                         <div>
+                            <p>#SL-001</p>
                             <p>23-October-23</p>
-                            <p>10:30:00</p>
-                            <p>16:45:00</p>                          
-                            <p> DHK M-KA 00-0001</p>                   
-                            <p>2</p>
+                            <p>10:30 A.M</p>
+                            <p>16:45 P.M</p>                          
+                                            
+                           
                         </div>
 
                     </div>
                     <div className="flex md:justify-between gap-5 ml-5 md:ml-0">
                         <div>
+                        <p className="font-semibold">Vehicle No: </p> 
                         <p className="font-semibold">Vehicle Status: </p>
                             <p className="font-semibold">Service Type: </p>
-                            <p className="font-semibold">Subscription: </p>
+
                             <p className="font-semibold">QR Check: </p>
                         </div>
 
                         <div>
+                        <p> LMN-456</p> 
                             <p>In Queue</p>
                             <p>Automation</p>
-                            <p>Premium</p>
+                           
                             <p>Done</p>
                         </div>
                     </div>
