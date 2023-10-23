@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router';
 import { createContext, useState } from 'react';
 import Search from './components/Search/Search';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Report from './components/Report/Report';
 
 export const userContextManager = createContext();
 
@@ -20,6 +21,8 @@ function App() {
           <Route path="/search/" element={<PrivateRoute />}>
             <Route path="parking" element={<Search />} />
           </Route>
+          <Route path="/search" element={<Search />} />
+          <Route path="/report" element={<Report />} />
         </Routes>
       </userContextManager.Provider>
     </div>
