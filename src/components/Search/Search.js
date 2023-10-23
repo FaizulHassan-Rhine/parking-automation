@@ -1,15 +1,22 @@
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import qrCode from "../../images/qr-code.png"
 import avatar from "../../images/avatarProfile.png"
 import { parkingList } from '../FakeData/FakeData';
 import QrCodeGen from '../QrCodeGen/QrCodeGen';
 import ReportDownload from '../ReportDownload/ReportDownload';
+import { userContextManager } from '../../App';
+
 
 const Search = () => {
     const [getSearchString, setSearchString] = useState("")
     const [getParkingList, setParkingList] = useState({}); 
     const [getFoundCar, setFoundCar] = useState(false); 
+    const [getUserInfo, setUserInfo] = useContext(userContextManager);
+
+    const signOut =()=>{
+        setUserInfo({})
+    }
     const searchFunc = (e) => {
         e.preventDefault()
 
@@ -19,6 +26,8 @@ const Search = () => {
                 console.log("Car found:", foundCar);
                 setParkingList(foundCar); 
             } else {
+                setParkingList({}); 
+
                 console.log("Car not found");
             }
     }
@@ -54,7 +63,7 @@ const Search = () => {
                             </li>
 
                             <li>
-                                <a>Logout</a>
+                                <button onClick={signOut}>Logout</button>
                             </li>
                         </ul>
                     </div>
@@ -63,13 +72,13 @@ const Search = () => {
             
             {Object.keys(getParkingList).length > 0 ? (
                        <div className='flex flex-col items-center pt-12'>
-                        <QrCodeGen qrString={getParkingList.licensePlate}/>
-                       {/* <img src={qrCode} alt='' /> */}
-                       <p className='text-xl font-semibold'>{getParkingList.licensePlate}</p>
+                        {/* <QrCodeGen qrString={getParkingList.licensePlate}/> */}
+                       <img src={qrCode} alt='' />
+                       <p className='text-xl font-semibold'>Vehicle No: {getParkingList.licensePlate}</p>
                        <ReportDownload/>
                    </div>
             ) : (
-                <p>No car found</p>
+                <p className='text-center text-2xl font-semibold pt-40'>No SO found</p>
             )
         }
      
