@@ -11,7 +11,7 @@ const ReportDownload = () => {
 
     return (
        <div>
-          <button onClick={() => toPDF()}>Download PDF</button>
+          {/* <button onClick={() => toPDF()}>Download PDF</button> */}
           <div ref={targetRef} className='fixed left-[1999px]'>
              <Report/>
           </div>

@@ -4,6 +4,7 @@ import qrCode from "../../images/qr-code.png"
 import avatar from "../../images/avatarProfile.png"
 import { parkingList } from '../FakeData/FakeData';
 import QrCodeGen from '../QrCodeGen/QrCodeGen';
+import ReportDownload from '../ReportDownload/ReportDownload';
 
 const Search = () => {
     const [getSearchString, setSearchString] = useState("")
@@ -65,6 +66,7 @@ const Search = () => {
                         <QrCodeGen qrString={getParkingList.licensePlate}/>
                        {/* <img src={qrCode} alt='' /> */}
                        <p className='text-xl font-semibold'>{getParkingList.licensePlate}</p>
+                       <ReportDownload/>
                    </div>
             ) : (
                 <p>No car found</p>
