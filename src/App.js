@@ -4,6 +4,7 @@ import Login from './components/LoginForm/Login';
 import { Route, Routes } from 'react-router';
 import { createContext, useState } from 'react';
 import Search from './components/Search/Search';
+import Report from './components/Report/Report';
 
 export const userContextManager = createContext();
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/report" element={<Report />} />
         </Routes>
       </userContextManager.Provider>
     </div>
