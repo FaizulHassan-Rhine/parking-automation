@@ -5,7 +5,7 @@ const QrCodeGen = ({qrString="helo"}) => {
     const qrCodeRef = createRef();
 
     useEffect(() => {
-        new QRCode(qrCodeRef.current, {
+        new QrCodeGen(qrCodeRef.current, {
             text: qrString,
             width: 300,
             height: 300

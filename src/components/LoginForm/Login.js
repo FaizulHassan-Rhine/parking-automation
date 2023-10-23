@@ -5,7 +5,6 @@ import login from "../../images/login.jpg";
 import { users } from "../FakeData/FakeData";
 import { userContextManager } from "../../App";
 import { useNavigate } from "react-router";
-import QrCodeGen from "../QrCodeGen/QrCodeGen";
 
 const Login = () => {
   const [getUserInfo, setUserInfo] = useContext(userContextManager);
@@ -51,7 +50,6 @@ const Login = () => {
   return (
     <div>
       <div>
-        <QrCodeGen/>
         <section className="container mx-auto">
           <div className="px-6 h-full text-gray-800">
             <div className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6">

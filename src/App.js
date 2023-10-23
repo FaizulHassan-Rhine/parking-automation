@@ -6,6 +6,7 @@ import { createContext, useState } from 'react';
 import Search from './components/Search/Search';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Report from './components/Report/Report';
+import ReportDownload from './components/ReportDownload/ReportDownload';
 
 export const userContextManager = createContext();
 
@@ -23,6 +24,7 @@ function App() {
           </Route>
           <Route path="/search" element={<Search />} />
           <Route path="/report" element={<Report />} />
+          <Route path="/report-download" element={<ReportDownload />} />
         </Routes>
       </userContextManager.Provider>
     </div>
