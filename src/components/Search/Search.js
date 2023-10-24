@@ -1,6 +1,6 @@
 
 import React, { useContext, useState } from 'react';
-import qrCode from "../../images/qr-code.png"
+import qrCode from "../../images/barcode.jpg"
 import avatar from "../../images/avatarProfile.png"
 import { parkingList } from '../FakeData/FakeData';
 import QrCodeGen from '../QrCodeGen/QrCodeGen';
@@ -71,9 +71,9 @@ const Search = () => {
             </div>
             
             {Object.keys(getParkingList).length > 0 ? (
-                       <div className='flex flex-col items-center pt-12'>
+                       <div className='flex flex-col items-center'>
                         {/* <QrCodeGen qrString={getParkingList.licensePlate}/> */}
-                       <img src={qrCode} alt='' />
+                       <img className='w-[700px] mt-20' src={qrCode} alt='' />
                        <p className='text-xl font-semibold'>Vehicle No: {getParkingList.licensePlate}</p>
                        <ReportDownload/>
                    </div>
