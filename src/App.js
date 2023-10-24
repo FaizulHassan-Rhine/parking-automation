@@ -33,6 +33,8 @@ function App() {
           <Route path="/report-download" element={<ReportDownload />} />
           <Route path="/data" element={<DataTable />} />
           <Route path="/details-search" element={<DetailsSearch />} />
+          <Route path="/so-detail/:stocklocation" element={<AdminPageThree />} />
+
           <Route path="/page-two" element={<AdminPageTwo2 />} />
           <Route path="/page-three" element={<AdminPageThree />} />
         </Routes>

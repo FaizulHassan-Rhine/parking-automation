@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
+import { useParams } from 'react-router-dom';
+import { parkingList } from '../FakeData/FakeData';
 
 const AdminPageThree = () => {
     const [examinees, setExaminees] = useState([
@@ -32,6 +34,20 @@ const AdminPageThree = () => {
           },
 
     ]);
+
+    const [getStockLocation, setStockLocation] = useState([]);
+    const param = useParams();
+
+    const stockLocationFunc = (stockLocation) => {
+        console.log(stockLocation);
+        const allLockData = parkingList.filter(car => car.stockLocation.toLowerCase() === stockLocation.toLowerCase());
+        setStockLocation(allLockData);
+    }
+    useEffect(() => {
+
+        stockLocationFunc(param.stocklocation);
+
+    },[])
     return (
         <div>
             <Navbar/>
@@ -68,23 +84,23 @@ const AdminPageThree = () => {
                                     </tr>
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-300">
-                                    {examinees.map((examinee, index) => (
+                                    {getStockLocation.map((examinee, index) => (
                                         <tr key={index}>
                                            
                                             <td className="pl-6 py-3 whitespace-nowrap">
-                                                {examinee.Sales}
+                                                {examinee.salesOrderNumber}
                                             </td>
                                            
                                             <td className="pl-6 py-3 whitespace-nowrap">
-                                                {examinee.Queue_No}
+                                                {examinee.queueNo}
                                                 {/* Pending */}
                                             </td>
                                             <td className="pl-6 py-3 whitespace-nowrap">
-                                                {examinee.Queue_Status}
+                                                {examinee.queueStatus}
                                                 {/* Pending */}
                                             </td>
                                             <td className="pl-6 py-3 whitespace-nowrap">
-                                                {examinee.Vehicle_Number}
+                                                {examinee.vehicleNumber}
                                                 {/* Pending */}
                                             </td>
                                             <td className="pl-6 py-3 whitespace-nowrap">
