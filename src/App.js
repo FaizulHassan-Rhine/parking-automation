@@ -10,6 +10,9 @@ import ReportDownload from './components/ReportDownload/ReportDownload';
 import DataTable from './components/DataTable/DataTable';
 import DetailsSearch from './components/DetailsSearch/DetailsSearch';
 import FakeData from './components/FakeData/FakeData.json';
+import AdminPageTwo from './components/AdminPageTwo/AdminPageTwo';
+import AdminPageTwo2 from './components/AdminPageTwo/AdminPageTwo2';
+import AdminPageThree from './components/AdminPageThree/AdminPageThree';
 
 export const userContextManager = createContext();
 
@@ -30,6 +33,8 @@ function App() {
           <Route path="/report-download" element={<ReportDownload />} />
           <Route path="/data" element={<DataTable />} />
           <Route path="/details-search" element={<DetailsSearch />} />
+          <Route path="/page-two" element={<AdminPageTwo2 />} />
+          <Route path="/page-three" element={<AdminPageThree />} />
         </Routes>
       </userContextManager.Provider>
     </div>
