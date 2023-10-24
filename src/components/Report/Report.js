@@ -2,7 +2,7 @@ import React from "react";
 
 import qrcode from '../../images/barcode.jpg'
 
-const Report = () => {
+const Report = ({vehicle}) => {
 
 
 
@@ -33,12 +33,10 @@ const Report = () => {
                         </div>
 
                         <div>
-                            <p>#SL-001</p>
-                            <p>23-October-23</p>
-                            <p>10:30 A.M</p>
-                            <p>16:45 P.M</p>                          
-                                            
-                           
+                            <p>{vehicle.salesOrderNumber}</p>
+                            <p>{vehicle.date}</p>
+                            <p>{vehicle.entryTime}</p>
+                            <p>{vehicle.exitTime}</p>
                         </div>
 
                     </div>
@@ -52,7 +50,7 @@ const Report = () => {
                         </div>
 
                         <div>
-                        <p> LMN-456</p> 
+                        <p>{vehicle.vehicleNumber}</p>
                             <p>In Queue</p>
                             <p>Automation</p>
                            

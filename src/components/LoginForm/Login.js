@@ -58,7 +58,7 @@ const Login = () => {
               </div>
               <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
                 <form onSubmit={singUpFunc}>
-                <p class="text-2xl font-bold pb-6 mr-4">Login Account</p>
+                <p className="text-2xl font-bold pb-6 mr-4">Login Account</p>
                   <div className="mb-6">
                     <input
                       type="text"

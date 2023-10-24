@@ -9,6 +9,7 @@ import Report from './components/Report/Report';
 import ReportDownload from './components/ReportDownload/ReportDownload';
 import DataTable from './components/DataTable/DataTable';
 import DetailsSearch from './components/DetailsSearch/DetailsSearch';
+import FakeData from './components/FakeData/FakeData.json';
 
 export const userContextManager = createContext();
 
