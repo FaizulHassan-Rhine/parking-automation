@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Report from '../Report/Report';
 import { usePDF } from 'react-to-pdf';
 
-const ReportDownload = () => {
+const ReportDownload = ({vehicle}) => {
     const { toPDF, targetRef } = usePDF({filename: 'page.pdf'});
 
     useEffect(() => {
@@ -13,7 +13,7 @@ const ReportDownload = () => {
        <div>
           {/* <button onClick={() => toPDF()}>Download PDF</button> */}
           <div ref={targetRef} className='fixed left-[1999px]'>
-             <Report/>
+             <Report vehicle={vehicle}/>
           </div>
        </div>
     )
