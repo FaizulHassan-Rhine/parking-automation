@@ -11,7 +11,7 @@ const Search = () => {
 
     return (
         <>
-        <Navbar/>
+            <Navbar />
             {
                 getUserInfo.role == 'security' ? <VehicleSearch /> : <DetailsSearch />
             }
