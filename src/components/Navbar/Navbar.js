@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import avatar from "../../images/avatarProfile.png"
 import logo from "../../images/logo.png"
 import { userContextManager } from '../../App';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [getUserInfo, setUserInfo] = useContext(userContextManager);
     const signOut = () => {
@@ -20,7 +21,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Page 2</a></li>
+      <li><Link to="page-two">Page 2</Link></li>
       
       <li><a>Page 3</a></li>
     </ul>
