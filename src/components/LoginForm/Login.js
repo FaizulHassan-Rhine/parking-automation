@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { FaFacebookSquare, FaGoogle } from "react-icons/fa";
 // import { Link } from "react-router-dom";
-import login from "../../images/login.jpg";
+import login from "../../images/login5.jpg";
 import { users } from "../FakeData/FakeData";
 import { userContextManager } from "../../App";
 import { useNavigate } from "react-router";
@@ -58,10 +58,11 @@ const Login = () => {
               </div>
               <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
                 <form onSubmit={singUpFunc}>
+                <p class="text-2xl font-bold pb-6 mr-4">Login Account</p>
                   <div className="mb-6">
                     <input
                       type="text"
-                      className={"form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" +
+                      className={"form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid  rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white  focus:outline-none" +
                         (getFormData.formValid == false && getFormData.email.required && getFormData.email.value === '' ? 'border-red-500' : 'border-gray-300')}
                       id="exampleFormControlInput2"
                       placeholder="Email address"
@@ -76,7 +77,7 @@ const Login = () => {
                   <div className="mb-6">
                     <input
                       type="password"
-                      className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                      className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white  focus:outline-none"
                       id="exampleFormControlInput2"
                       placeholder="Password"
                       onChange={(e) => setFormData({ ...getFormData, pass: { ...getFormData.pass, value: e.target.value } })}
@@ -89,7 +90,7 @@ const Login = () => {
                   <div className="text-center lg:text-left">
                     <button
                       type="submit"
-                      className="inline-block px-7 py-3 bg-[#59E4A8] text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#59E4A8] hover:shadow-lg focus:bg-[#59E4A8]focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                      className="inline-block px-7 py-3 bg-[#59E4A8] text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#59E4A8] hover:shadow-lg focus:bg-[#59E4A8]focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#D5F7E6] active:shadow-lg transition duration-150 ease-in-out"
                     >
                       Login
                     </button>
