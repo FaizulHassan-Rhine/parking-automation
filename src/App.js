@@ -7,6 +7,7 @@ import Search from './components/Search/Search';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Report from './components/Report/Report';
 import ReportDownload from './components/ReportDownload/ReportDownload';
+import DataTable from './components/DataTable/DataTable';
 
 export const userContextManager = createContext();
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/search" element={<Search />} />
           <Route path="/report" element={<Report />} />
           <Route path="/report-download" element={<ReportDownload />} />
+          <Route path="/data" element={<DataTable />} />
         </Routes>
       </userContextManager.Provider>
     </div>

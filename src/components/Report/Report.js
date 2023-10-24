@@ -59,10 +59,12 @@ const Report = () => {
                     <img className="w-60" src={qrcode}/>
                 </div>
                
-                <div className=" md:w-[700px] mx-auto mt-10 " >
+              <div>
+                  <div className=" md:w-[700px] mx-auto mt-10 " >
                     <hr className="mb-3"></hr>
                     <p className="text-xs text-center  mb-5"> <span className="font-bold">Address:</span> 1600 Amphitheatre Parkway Mountain View, CA 94043, USA <span className="font-bold"> Phone:</span> (650) 253-0000 <span className="font-bold">Email:</span> google@gmail.com</p>
                 </div>
+              </div>
             </div>
 
         </div>
