@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import avatar from "../../images/avatarProfile.png"
 import logo from "../../images/logo.png"
 import { userContextManager } from '../../App';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [getUserInfo, setUserInfo] = useContext(userContextManager);
   const signOut = () => {
