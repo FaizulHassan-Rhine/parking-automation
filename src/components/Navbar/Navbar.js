@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import avatar from "../../images/avatarProfile.png"
-import logo from "../../images/logo.png"
+import logo from "../../images/logo2.png"
 import { userContextManager } from '../../App';
 import { Link } from 'react-router-dom';
 const Navbar = () => {
@@ -12,10 +12,10 @@ const Navbar = () => {
   return (
     <div>
 
-      <div className="navbar shadow-sm2">
+      <div className="navbar py-0 shadow-sm2">
         <div className="navbar-start">
           <div>
-            <img className='w-16' src={logo} />
+            <img className='w-24' src={logo} />
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">

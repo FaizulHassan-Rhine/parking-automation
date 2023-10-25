@@ -75,7 +75,7 @@ const VehicleSearch = () => {
             {Object.keys(getParkingList).length > 0 ? (
                 <div className='flex flex-col items-center'>
                     {/* <QrCodeGen qrString={getParkingList.licensePlate}/> */}
-                    <img className='w-[700px] mt-20' src={qrCode} alt='' />
+                    <img className='w-[700px] mt-5' src={qrCode} alt='' />
                     <p className='text-xl font-semibold'>Vehicle No: {getParkingList.vehicleNumber}</p>
                     <ReportDownload vehicle={getParkingList} />
                 </div>
