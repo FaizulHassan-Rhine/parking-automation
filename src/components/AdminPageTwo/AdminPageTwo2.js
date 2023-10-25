@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import { parkingList } from '../FakeData/FakeData';
 import { Link } from 'react-router-dom';
 
+
 const AdminPageTwo2 = () => {
 
     const countStockLocation = (location)=>{
@@ -14,6 +15,7 @@ const AdminPageTwo2 = () => {
     return (
         <>
             <Navbar />
+        
             <div className='container mx-auto'>
                 <div className='grid grid-cols-3 items-center gap-20 pt-20'>
                     <Link to={"/so-detail/packer-1"} className="card  border-l-2 border-green-400 shadow-xl cursor-pointer">
