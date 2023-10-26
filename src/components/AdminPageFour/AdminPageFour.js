@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import dayjs from 'dayjs';
 import { DatePicker } from 'antd';
 import Navbar from '../Navbar/Navbar';
-import PieChartData from './PieChartData';
+import PieChartDataOld from './PieChartDataOld';
+import PieChartData2 from './PieChartDataNew';
+import PieChartDataNew from './PieChartDataNew';
+
+
 
 const { RangePicker } = DatePicker;
 const dateFormat = 'YYYY-MM-DD';
@@ -24,7 +28,7 @@ const AdminPageFour = () => {
                 </div>
 
                 <div className="flex justify-center mt-0 md:mt-10">
-                    <PieChartData />
+                    <PieChartDataOld/>
                 </div>
 
             </div>

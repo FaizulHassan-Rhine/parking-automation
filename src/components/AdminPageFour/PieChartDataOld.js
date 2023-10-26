@@ -2,15 +2,18 @@ import React from 'react';
 
 import { Pie } from '@ant-design/plots';
 
-const PieChartData = () => {
+const PieChartDataOld = () => {
   const data = [
     {
       type: 'Security Check to Check-In',
       value: 5,
+      
+      
     },
     {
       type: 'Check-In to Packer/WH',
       value: 4,
+    
     },
     {
       type: 'Packer In-time to Packer Out-time',
@@ -25,8 +28,10 @@ const PieChartData = () => {
   const config = {
     appendPadding: 10,
     data,
+    
     angleField: 'value',
     colorField: 'type',
+    
     radius: 1,
     innerRadius: 0.6,
     label: {
@@ -36,6 +41,7 @@ const PieChartData = () => {
       style: {
         textAlign: 'center',
         fontSize: 28,
+        
       },
     },
     interactions: [
@@ -53,13 +59,14 @@ const PieChartData = () => {
           whiteSpace: 'pre-wrap',
           overflow: 'hidden',
           textOverflow: 'ellipsis',
-          fontSize:'60px'
+          fontSize:'60px',
+         
         },
         content: '10s',
       },
     },
   };
-  return <Pie className='w-80 md:w-[770px]' {...config} />;
+  return <Pie className='w-80 md:w-[770px] ' {...config} />;
 };
 
-export default PieChartData;
+export default PieChartDataOld;
