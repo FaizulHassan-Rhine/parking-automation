@@ -4,29 +4,29 @@ export const users =[
       id: 1,
       role: 'admin',
       name: 'John',
-        email: 'john@example.com',
-        password: '123451'
+        email: 'admin@gmail.com',
+        password: '1234'
     },
     {
         id: 2,
         role: 'security',
         name: 'Rhine',
-        email: 'rhine@com.com',
-        password: '123452'
+        email: 'security@gmail.com',
+        password: '1234'
     },
     {
         id: 3,
-        role: 'qc',
+        role: 'checker',
         name: 'Zakir',
-        email: 'zakir@kr.com',
-        password: '123453'
+        email: 'checker@gmail.com',
+        password: '1234'
     },
     {
         id: 4,
-        role: 'member',
+        role: 'storage',
         name: 'Rakib',
-        email: 'rakib@rk.com',
-        password: '123454'
+        email: 'stock@gmail.com',
+        password: '1234'
     },
 ]
 export let parkingList = [

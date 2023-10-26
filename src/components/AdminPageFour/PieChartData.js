@@ -5,29 +5,22 @@ import { Pie } from '@ant-design/plots';
 const PieChartData = () => {
   const data = [
     {
-      type: '分类一',
-      value: 27,
-    },
-    {
-      type: '分类二',
-      value: 25,
-    },
-    {
-      type: '分类三',
-      value: 18,
-    },
-    {
-      type: '分类四',
-      value: 15,
-    },
-    {
-      type: '分类五',
-      value: 10,
-    },
-    {
-      type: '其他',
+      type: 'Security Check to Check-In',
       value: 5,
     },
+    {
+      type: 'Check-In to Packer/WH',
+      value: 4,
+    },
+    {
+      type: 'Packer In-time to Packer Out-time',
+      value: 5,
+    },
+    {
+      type: 'Packer to Check-out',
+      value: 10,
+    },
+   
   ];
   const config = {
     appendPadding: 10,
@@ -42,7 +35,7 @@ const PieChartData = () => {
       content: '{value}',
       style: {
         textAlign: 'center',
-        fontSize: 14,
+        fontSize: 28,
       },
     },
     interactions: [
@@ -60,12 +53,13 @@ const PieChartData = () => {
           whiteSpace: 'pre-wrap',
           overflow: 'hidden',
           textOverflow: 'ellipsis',
+          fontSize:'60px'
         },
-        content: 'AntV\nG2Plot',
+        content: '10s',
       },
     },
   };
-  return <Pie {...config} />;
+  return <Pie className='w-80 md:w-[770px]' {...config} />;
 };
 
 export default PieChartData;
