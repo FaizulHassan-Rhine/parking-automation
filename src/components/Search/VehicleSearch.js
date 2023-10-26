@@ -7,15 +7,8 @@ import QrCodeGen from '../QrCodeGen/QrCodeGen';
 import ReportDownload from '../ReportDownload/ReportDownload';
 import { userContextManager } from '../../App';
 import DataTable from '../DataTable/DataTable';
-<<<<<<< HEAD
-import { FaCheckCircle } from "react-icons/fa";
-import CarAnimation from '../Animation/CarAnimation';
-import BallMoveAnim from '../Animation/BallMoveAnim';
-import DotAnimWorld from '../Animation/DotAnimWorld';
-=======
 import { FaCheckCircle, } from "react-icons/fa";
 import {CgDanger } from "react-icons/cg";
->>>>>>> 4bc8e37af1de089ca0c9c72618a71ab772cbe6e4
 
 
 const VehicleSearch = () => {
