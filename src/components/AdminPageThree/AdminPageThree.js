@@ -51,25 +51,26 @@ const AdminPageThree = () => {
     return (
         <div>
             <Navbar/>
+            <div className='bg-2'>
             <div className="container mx-auto pt-12">
                         <h2 className="mb-10 text-3xl text-center uppercase font-extrabold">S.O Details</h2>
                         <div className="mx-auto rounded-lg">
                             <table className="mx-auto w-[900px] bg-white text-[12px] border rounded-lg">
-                                <thead>
+                                <thead className='rounded-2xl'>
                                     <tr className='h-16'>
                                         
                                         <th className="px-6 py-3 bg-gray-200 text-center  font-medium text-gray-500 uppercase tracking-wider border-b">
-                                            Sales Order (SO) Number
+                                        Vehicle No 
                                         </th>
                                        
                                         <th className="px-6 py-3 bg-gray-200 text-center  font-medium text-gray-500 uppercase tracking-wider border-b">
-                                            Queue No
+                                        Queue No 
                                         </th>
                                         <th className="px-6 py-3 bg-gray-200 text-center font-medium text-gray-500 uppercase tracking-wider border-b">
-                                            Queue Status
+                                        Queue Status
                                         </th>
                                         <th className="px-6 py-3 bg-gray-200 text-center font-medium text-gray-500 uppercase tracking-wider border-b">
-                                        Vehicle Number
+                                         SO No
                                         </th>
                                         <th className="px-6 py-3 bg-gray-200 text-center font-medium text-gray-500 uppercase tracking-wider border-b">
                                         Entry Time
@@ -83,12 +84,12 @@ const AdminPageThree = () => {
                                 */}
                                     </tr>
                                 </thead>
-                                <tbody className="bg-white divide-y divide-gray-300">
+                                <tbody className="bg-white divide-y  divide-gray-300">
                                     {getStockLocation.map((examinee, index) => (
                                         <tr key={index}>
                                            
-                                            <td className="pl-6 py-3 whitespace-nowrap">
-                                                {examinee.salesOrderNumber}
+                                            <td className="pl-6 py-3  whitespace-nowrap">
+                                                {examinee.vehicleNumber}
                                             </td>
                                            
                                             <td className="pl-6 py-3 whitespace-nowrap">
@@ -100,14 +101,14 @@ const AdminPageThree = () => {
                                                 {/* Pending */}
                                             </td>
                                             <td className="pl-6 py-3 whitespace-nowrap">
-                                                {examinee.vehicleNumber}
+                                                {examinee.salesOrderNumber}
                                                 {/* Pending */}
                                             </td>
-                                            <td className="pl-6 py-3 whitespace-nowrap">
+                                            <td className="pl-16 py-3 whitespace-nowrap">
                                                 {examinee.entryTime}
                                                 {/* Pending */}
                                             </td>
-                                            <td className="pl-6 py-3 whitespace-nowrap">
+                                            <td className="pl-16 py-3 whitespace-nowrap">
                                                 {examinee.exitTime}
                                                 {/* Pending */}
                                             </td>
@@ -123,6 +124,7 @@ const AdminPageThree = () => {
                         </div>
 
                     </div>
+            </div>
         </div>
     );
 };

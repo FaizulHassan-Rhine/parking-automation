@@ -7,6 +7,7 @@ import QrCodeGen from '../QrCodeGen/QrCodeGen';
 import ReportDownload from '../ReportDownload/ReportDownload';
 import { userContextManager } from '../../App';
 import DataTable from '../DataTable/DataTable';
+import { FaCheckCircle } from "react-icons/fa";
 
 
 const VehicleSearch = () => {
@@ -78,6 +79,10 @@ const VehicleSearch = () => {
                     <img className='w-[700px] mt-5' src={qrCode} alt='' />
                     <p className='text-xl font-semibold'>Vehicle No: {getParkingList.vehicleNumber}</p>
                     <ReportDownload vehicle={getParkingList} />
+                    <div className='flex items-center mt-10 font-semibold text-4xl gap-3'>
+                        <p className='text-green-500'>Vehicle Found</p>
+                        <p><FaCheckCircle className='text-green-400'/></p>
+                    </div>
                 </div>
             ) : (
                 <p className='text-center text-2xl font-semibold pt-40'>No SO found</p>
