@@ -1,0 +1,78 @@
+.carLoader {
+    width: 150px;
+    height: 150px;
+    background-color: #ff3d00;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.5) inset,
+      0 5px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+  .carLoader:before,
+  .carLoader:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 45%;
+    top: -40%;
+    background-color: #fff;
+    animation: wave 5s linear infinite;
+  }
+  .carLoader:before {
+    border-radius: 30%;
+    background: rgba(255, 255, 255, 0.4);
+    animation: wave 5s linear infinite;
+  }
+  @keyframes wave {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+  .ballMoveLoader{
+    display: block;
+    position: relative;
+    height: 32px;
+    width: 120px;
+    border-bottom: 5px solid #141414;
+    box-sizing: border-box;
+    animation: balancing 2s linear infinite alternate;
+    transform-origin: 50% 100%;
+  }
+  .ballMoveLoader:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #FF3D00;
+    animation: ballbns 2s linear infinite alternate;
+  }
+  .ballMoveLoader:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 20px;
+    width: 20px;
+    transform: translate(-50%, 100%);
+    border-radius: 50%;
+    border: 6px solid #141414;
+  }
+  @keyframes ballbns {
+    0% {  left: 0; transform: translateX(0%); }
+    100% {  left: 100%; transform: translateX(-100%); }
+  }
+  @keyframes balancing {
+    0% {  transform: rotate(-15deg); }
+    50% {  transform: rotate(0deg); }
+    100% {  transform: rotate(15deg); }
+  }
