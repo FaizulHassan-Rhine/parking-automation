@@ -3,12 +3,11 @@ import Navbar from '../Navbar/Navbar';
 import { useParams } from 'react-router-dom';
 import { parkingList } from '../FakeData/FakeData';
 import { Pagination } from 'antd';
+import { getSerializer } from 'localforage';
 const AdminPageThree = () => {
-    const [current, setCurrent] = useState(3);
-  const onChange = (page) => {
-    console.log(page);
-    setCurrent(page);
-  };
+    const [currentPage, setCurrentPage] = useState(1);
+    const [getNextData, setNextData] = useState();
+    const [getSuggest, setSuggest] = useState([]);
     const [examinees, setExaminees] = useState([
         {
 
@@ -41,13 +40,48 @@ const AdminPageThree = () => {
     ]);
 
     const [getStockLocation, setStockLocation] = useState([]);
+    const [getSearchString, setSearchString] = useState("");
     const param = useParams();
+
+
+    const itemsPerPage = 3;
+
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+
+    // const currentImages = actionStatus == "filter" ? getSuggest.slice(indexOfFirstItem, indexOfLastItem) : fileInfo.length > getProccessImgIndex ? fileInfo.slice(indexOfFirstItem, indexOfLastItem) : getAfterBeforeImg.slice(indexOfFirstItem, indexOfLastItem) ;
+    const currentImages = getStockLocation.slice(indexOfFirstItem, indexOfLastItem);
+
+
+
+    const onChange = (page) => {
+        console.log(page);
+        setCurrentPage(page);
+    };
+
+    const searchFunc = (e) => {
+        // setSearchString(e.target.value);
+        console.log(e.target.value);
+        if (e.target.value.length > 0) {
+            const allLockData = parkingList.filter(car => car.stockLocation.toLowerCase() === param.stocklocation.toLowerCase());
+
+            const vicleData = allLockData.filter(car => car.vehicleNumber.toLowerCase() === e.target.value.toLowerCase());
+
+            setStockLocation(vicleData);
+            setCurrentPage(1)
+            console.log(vicleData);
+        } else {
+            stockLocationFunc(param.stocklocation);
+        }
+
+    }
 
     const stockLocationFunc = (stockLocation) => {
         console.log(stockLocation);
         const allLockData = parkingList.filter(car => car.stockLocation.toLowerCase() === stockLocation.toLowerCase());
         setStockLocation(allLockData);
     }
+
     useEffect(() => {
 
         stockLocationFunc(param.stocklocation);
@@ -58,99 +92,81 @@ const AdminPageThree = () => {
             <Navbar />
             <div className='bg-2'>
                 <div className="container mx-auto pt-4">
-                       <div className='flex justify-end'>
-                       <div class="relative flex gap-5 items-center w-60 border-2 border-gray-200 h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
-                            <div class="grid place-items-center h-full w-12 text-gray-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                </svg>
-                            </div>
 
-                            <input
-                                class=" h-full w-full outline-none text-sm text-gray-700 pr-2"
-                                type="text"
-                                id="search"
-                                placeholder="Search Vehicle" />
-                        </div>
-                       </div>
-                    <h2 className="mb-10 text-3xl text-center -mt-9 uppercase font-extrabold">Packer 1 Queue Details</h2>
+                    <h2 className="mb-10 text-3xl text-center pt-6 uppercase font-extrabold">Packer 1 Queue Details</h2>
                     <div class='max-w-md mx-auto'>
-                        
+
                     </div>
                     <div className="mx-auto rounded-lg">
-                        <table className="mx-auto w-[900px] bg-white text-[12px] border rounded-lg">
-                            <thead className='rounded-2xl'>
-                                <tr className='h-16'>
+                        <div className='mx-auto w-[900px] flex flex-col gap-3'>
+                            <div>
+                                <div></div>
+                                <div>
+                                    <div className='flex justify-end'>
+                                        <div class="relative py-1 flex gap-2 items-center w-60 border-2 border-gray-200 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
+                                            <div class="grid place-items-center h-full w-12 text-gray-300">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                                </svg>
+                                            </div>
 
-                                    <th className="text-center  py-3 bg-gray-200  font-medium text-gray-500 uppercase tracking-wider border-b">
-                                        Vehicle No
-                                    </th>
+                                            <input
+                                                onChange={searchFunc}
+                                                class=" h-full w-full outline-none text-sm text-gray-700 pr-2"
+                                                type="text"
+                                                id="search"
+                                                placeholder="Search Vehicle" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                                    <th className="px-6 py-3 bg-gray-200 text-center  font-medium text-gray-500 uppercase tracking-wider border-b">
-                                        Queue No
-                                    </th>
-                                    <th className="px-6 py-3 bg-gray-200 text-center font-medium text-gray-500 uppercase tracking-wider border-b">
-                                        Queue Status
-                                    </th>
-                                    <th className="px-6 py-3 bg-gray-200 text-center font-medium text-gray-500 uppercase tracking-wider border-b">
-                                        SO No
-                                    </th>
-                                    {/* <th className="px-6 py-3 bg-gray-200 text-center font-medium text-gray-500 uppercase tracking-wider border-b">
-                                        Entry Time
-                                    </th>
-                                    <th className="px-6 py-3 bg-gray-200 text-center font-medium text-gray-500 uppercase tracking-wider border-b">
-                                        Exit Time
-                                    </th> */}
-                                    {/* <th className="px-6 py-3 bg-gray-200 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-b">
-                                    Details
-                                </th>
-                                */}
-                                </tr>
-                            </thead>
-                            <tbody className="bg-white divide-y  divide-gray-300">
-                                {getStockLocation.map((examinee, index) => (
-                                    <tr key={index}>
 
-                                        <td className=" py-3  whitespace-nowrap">
-                                           <p className='text-center'> {examinee.vehicleNumber}</p>
-                                        </td>
+                            <table className="text-[12px]">
+                                <thead className='rounded-2xl'>
+                                    <tr className='bg-[#1d242d] text-white font-bold  border-b border-black leading-7'>
 
-                                        <td className=" py-3 whitespace-nowrap">
-                                        <p className='text-center'> {examinee.queueNo}</p>
-                                           
-                                            {/* Pending */}
-                                        </td>
-                                        <td className=" py-3 whitespace-nowrap">
-                                        <p className='text-center'> {examinee.queueStatus}</p>
-                                           
-                                            {/* Pending */}
-                                        </td>
-                                        <td className=" py-3 whitespace-nowrap">
-                                        <p className='text-center'> {examinee.salesOrderNumber}</p>
-                                            
-                                            {/* Pending */}
-                                        </td>
-                                        {/* <td className="pl-16 py-3 whitespace-nowrap">
-                                            {examinee.entryTime}
-                                            
-                                        </td>
-                                        <td className="pl-16 py-3 whitespace-nowrap">
-                                            {examinee.exitTime}
-                                            
-                                        </td> */}
-                                        {/* <td className="px-6 py-3 whitespace-nowrap">
-                                        <Link to={`/dashboard/examinee-exam-details/${examinee.id}`} state={{ totalQuestions: examinee.totalQuestion, rightAnswers:examinee.total_right_ans }} className='px-2 py-1 rounded-lg text-white font-semibold bg-cyan-400'>
-                                            View Details
-                                        </Link>
-                                    </td> */}
+                                        <th className="text-center  py-2 font-medium uppercase tracking-wider">
+                                            Vehicle No
+                                        </th>
+
+                                        <th className="px-6 py-2 text-center  font-medium  uppercase tracking-wider">
+                                            Queue No
+                                        </th>
+                                        <th className="px-6 py-2 text-center font-medium  uppercase tracking-wider">
+                                            Queue Status
+                                        </th>
+                                        <th className="px-6 py-2 text-center font-medium uppercase tracking-wider">
+                                            SO No
+                                        </th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody className="[&>tr:nth-child(odd)]:bg-[#28333e] [&>tr:nth-child(even)]:bg-[#212a33] text-gray-200">
+                                    {currentImages.map((examinee, index) => (
+                                        <tr key={index}>
+                                            <td className=" py-3  whitespace-nowrap">
+                                                <p className='text-center'> {examinee.vehicleNumber}</p>
+                                            </td>
+                                            <td className=" py-3 whitespace-nowrap">
+                                                <p className='text-center'> {examinee.queueNo}</p>
+                                            </td>
+                                            <td className=" py-3 whitespace-nowrap">
+                                                <p className='text-center'> {examinee.queueStatus}</p>
+                                            </td>
+                                            <td className=" py-3 whitespace-nowrap">
+                                                <p className='text-center'> {examinee.salesOrderNumber}</p>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
 
-                    <div>
-                    <Pagination current={current} onChange={onChange} total={50} />
+                    <div className='flex justify-center pt-5'>
+                        <Pagination current={currentPage} onChange={onChange} defaultPageSize={itemsPerPage} total={getStockLocation.length} />
+
                     </div>
 
                 </div>
