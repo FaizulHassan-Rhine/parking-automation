@@ -18,15 +18,15 @@ export const users =[
         id: 3,
         role: 'checker',
         name: 'Zakir',
-        email: 'zakir@kr.com',
-        password: '123453'
+        email: 'checker@gmail.com',
+        password: '1234'
     },
     {
         id: 4,
-        role: 'member',
+        role: 'storage',
         name: 'Rakib',
-        email: 'rakib@rk.com',
-        password: '123454'
+        email: 'stock@gmail.com',
+        password: '1234'
     },
 ]
 export let parkingList = [

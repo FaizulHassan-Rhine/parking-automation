@@ -7,7 +7,8 @@ import QrCodeGen from '../QrCodeGen/QrCodeGen';
 import ReportDownload from '../ReportDownload/ReportDownload';
 import { userContextManager } from '../../App';
 import DataTable from '../DataTable/DataTable';
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, } from "react-icons/fa";
+import {CgDanger } from "react-icons/cg";
 
 
 const VehicleSearch = () => {
@@ -85,7 +86,11 @@ const VehicleSearch = () => {
                     </div>
                 </div>
             ) : (
-                <p className='text-center text-2xl font-semibold pt-40'>No SO found</p>
+                <div className='flex items-center gap-2 text-red-600 text-2xl font-semibold pt-40'>
+                    <p className=''>No Results Found</p>
+                <p><CgDanger/></p>
+                </div>
+
             )
             }
 
