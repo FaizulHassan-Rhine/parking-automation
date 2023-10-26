@@ -35,7 +35,7 @@ const PieChartData = () => {
       content: '{value}',
       style: {
         textAlign: 'center',
-        fontSize: 14,
+        fontSize: 28,
       },
     },
     interactions: [
