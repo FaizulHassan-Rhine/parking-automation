@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { FaSortUp, FaSortDown, FaFilter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
-
+import { FaPrint } from "react-icons/fa";
 // import { UserContextManager, apiUrlContextManager } from '../../../App';
 
 
@@ -55,17 +55,22 @@ const DataTable = ({ vehicle=[] }) => {
         <>
             {vehicle.length > 0 ?
                 <>
-                    <div className="container mx-auto pt-12">
-                        <h2 className="mb-10 text-3xl text-center uppercase font-extrabold">S.O Details</h2>
+                    <div className="container mx-auto ">
+                        <div className='flex justify-end mb-2 mr-4'>
+                        <div className='flex items-center justify-center cursor-pointer  p-2 gap-2 bg-blue-400 rounded-full'>
+                        {/* <p className=" font-semibold text-white">Print</p> */}
+                        <p className='text-white text-xl'><FaPrint/></p>
+                        </div>
+                        </div>
                         <div className="mx-auto rounded-lg">
                             <table className="mx-auto w-[900px] bg-white text-[12px] border rounded-lg">
                                 <thead>
-                                    <tr className='h-16'>
+                                    <tr className='h-16 text-[12px]'>
                                         <th className="px-6 py-3 bg-gray-200 text-center  font-medium text-gray-500 uppercase tracking-wider border-b">
                                             SL.No
                                         </th>
                                         <th className="px-6 py-3 bg-gray-200 text-center  font-medium text-gray-500 uppercase tracking-wider border-b">
-                                            Sales Order (SO) Number
+                                            SO.No
                                         </th>
                                         <th
                                             className="px-6 py-3 bg-gray-200 text-left  font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
@@ -95,7 +100,7 @@ const DataTable = ({ vehicle=[] }) => {
                                             Queue No
                                         </th>
                                         <th className="px-6 py-3 bg-gray-200 text-center font-medium text-gray-500 uppercase tracking-wider border-b">
-                                            Queue Status
+                                            Status
                                         </th>
                                         {/* <th className="px-6 py-3 bg-gray-200 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-b">
                                     Details
@@ -103,7 +108,7 @@ const DataTable = ({ vehicle=[] }) => {
                                 */}
                                     </tr>
                                 </thead>
-                                <tbody className="bg-white divide-y divide-gray-300">
+                                <tbody className="bg-white divide-y divide-gray-300 text-[12px]">
                                     {vehicle.map((examinee, index) => (
                                         <tr key={index}>
                                             <td className="pl-6 py-3 whitespace-nowrap">
@@ -123,24 +128,27 @@ const DataTable = ({ vehicle=[] }) => {
                                                 {examinee.deliveryAddress}
                                                 {/* Pending */}
                                             </td>
-                                            <td className="pl-6 py-3 whitespace-nowrap">
-                                                {examinee.Product}
+                                            <td className="pl-8 py-3 whitespace-nowrap">
+                                                {/* {examinee.Product} */}
+                                                <p>******</p>
                                                 {/* Pending */}
                                             </td>
-                                            <td className="pl-6 py-3 whitespace-nowrap">
-                                                {examinee.Quantity}
+                                            <td className="pl-8 py-3 whitespace-nowrap">
+                                                {/* {examinee.Quantity} */}
+                                                <p>******</p>
                                                 {/* Pending */}
                                             </td>
-                                            <td className="pl-6 py-3 whitespace-nowrap">
-                                                {examinee.stockLocation}
+                                            <td className="pr-3 py-3 whitespace-nowrap">
+                                               <p className="border rounded-2xl text-center p-1 border-green-500"> {examinee.stockLocation}</p>
                                                 {/* Pending */}
                                             </td>
-                                            <td className="pl-6 py-3 whitespace-nowrap">
-                                                {examinee.queueNo}
+                                            <td className="pr-3 py-3 whitespace-nowrap">
+                                            <p className="border rounded-2xl text-center p-1 border-green-500">  {examinee.queueNo}</p>
+                                               
                                                 {/* Pending */}
                                             </td>
-                                            <td className="pl-6 py-3 whitespace-nowrap">
-                                                {examinee.queueStatus}
+                                            <td className="pr-3 py-3 whitespace-nowrap">
+                                                <p className="border rounded-2xl text-center p-1 border-green-500"> {examinee.queueStatus} </p>
                                                 {/* Pending */}
                                             </td>
                                             {/* <td className="px-6 py-3 whitespace-nowrap">

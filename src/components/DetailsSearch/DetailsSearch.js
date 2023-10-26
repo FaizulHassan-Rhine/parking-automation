@@ -45,7 +45,7 @@ const DetailsSearch = () => {
                             </div>
                         </div>
 
-                        <div className="dropdown dropdown-bottom drop  absolute top-8 right-14 ">
+                        {/* <div className="dropdown dropdown-bottom drop  absolute top-8 right-14 ">
                             <label tabIndex={0} className="btn  btn-circle avatar">
                                 <div className="w-16 rounded-full">
                                     <img src={avatar} alt='' />
@@ -60,7 +60,7 @@ const DetailsSearch = () => {
                                     <button onClick={signOut}>Logout</button>
                                 </li>
                             </ul>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 

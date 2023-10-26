@@ -7,10 +7,15 @@ import QrCodeGen from '../QrCodeGen/QrCodeGen';
 import ReportDownload from '../ReportDownload/ReportDownload';
 import { userContextManager } from '../../App';
 import DataTable from '../DataTable/DataTable';
+<<<<<<< HEAD
 import { FaCheckCircle } from "react-icons/fa";
 import CarAnimation from '../Animation/CarAnimation';
 import BallMoveAnim from '../Animation/BallMoveAnim';
 import DotAnimWorld from '../Animation/DotAnimWorld';
+=======
+import { FaCheckCircle, } from "react-icons/fa";
+import {CgDanger } from "react-icons/cg";
+>>>>>>> 4bc8e37af1de089ca0c9c72618a71ab772cbe6e4
 
 
 const VehicleSearch = () => {
@@ -89,13 +94,11 @@ const VehicleSearch = () => {
                     </div>
                 </div>
             ) : (
-                // <p className='text-center text-2xl font-semibold pt-40'>No SO found</p>
-             
-                // <div className='text-center text-2xl font-semibold pt-40'>   <CarAnimation/></div>
-                <div className='flex justify-center h-[400px] w-full'>
-                    {/* <DotAnimWorld/> */}
-                    {/* <BallMoveAnim/> */}
+                <div className='flex items-center gap-2 text-red-600 text-2xl font-semibold pt-40'>
+                    <p className=''>No Results Found</p>
+                <p><CgDanger/></p>
                 </div>
+
             )
             }
 
