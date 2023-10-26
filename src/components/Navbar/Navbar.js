@@ -10,9 +10,10 @@ const Navbar = () => {
   }
 
   return (
-    <div>
 
-      <div className="navbar py-0 shadow-sm2">
+
+    <div className="navbar py-0 shadow-sm2">
+      <div className='container mx-auto'>
         <div className="navbar-start">
           <div>
             <img className='w-24' src={logo} />
@@ -31,7 +32,7 @@ const Navbar = () => {
               <img src={avatar} />
             </div>
           </label>
-          <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-32">
+          <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-28">
             <li>
               <a className="justify-between">
                 Profile
@@ -44,6 +45,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
+  
   );
 };
 
