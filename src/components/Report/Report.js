@@ -61,12 +61,11 @@ const Report = ({vehicle}) => {
                     </div>
                 </div>
 
-                <div className="flex justify-center mt-10">
+                <div className="flex justify-center mt-32">
                     <img className="opacity-5" src={checked}/>
                 </div>
                 
-               
-              <div>
+              <div className="pt-[250px]">
                   <div className=" md:w-[700px] mx-auto mt-10 " >
                     <hr className="mb-3"></hr>
                     <p className="text-xs text-center  mb-5"> <span className="font-bold">Address:</span> 1600 Amphitheatre Parkway Mountain View, CA 94043, USA <span className="font-bold"> Phone:</span> (650) 253-0000 <span className="font-bold">Email:</span> google@gmail.com</p>
