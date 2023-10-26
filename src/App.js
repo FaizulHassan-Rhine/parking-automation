@@ -13,6 +13,7 @@ import FakeData from './components/FakeData/FakeData.json';
 import AdminPageTwo from './components/AdminPageTwo/AdminPageTwo';
 import AdminPageTwo2 from './components/AdminPageTwo/AdminPageTwo2';
 import AdminPageThree from './components/AdminPageThree/AdminPageThree';
+import AdminPageThreeV2 from './components/AdminPageThree/AdminPageThreeV2';
 
 export const userContextManager = createContext();
 
@@ -37,6 +38,7 @@ function App() {
 
           <Route path="/page-two" element={<AdminPageTwo2 />} />
           <Route path="/page-three" element={<AdminPageThree />} />
+          <Route path="/page-three2" element={<AdminPageThreeV2 />} />
         </Routes>
       </userContextManager.Provider>
     </div>
