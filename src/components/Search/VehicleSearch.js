@@ -87,7 +87,7 @@ const VehicleSearch = () => {
                     </div>
                 </div>
             ) : (
-                <div className='flex items-center gap-2 text-red-600 text-2xl font-semibold pt-40'>
+                <div className='flex items-center justify-center gap-2 text-red-600 text-5xl font-semibold pt-40'>
                     <p className=''>No Results Found</p>
                 <p><CgDanger/></p>
                 </div>
