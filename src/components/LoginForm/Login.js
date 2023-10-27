@@ -30,7 +30,7 @@ const Login = () => {
        if (getFormData.pass.value.length > 0) {
           setUserInfo(checkCredentials(getFormData.email.value, getFormData.pass.value))
           console.log(checkCredentials(getFormData.email.value, getFormData.pass.value))
-          navigate('/search/parking')
+          navigate('/dashboard/search')
           // console.log(getFormData)
       }
     } else {
@@ -54,12 +54,12 @@ const Login = () => {
           <div className="px-6 h-full text-gray-800">
             <div className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6">
               <div className="grow-0 pt-8 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0">
-                <img src={login} className="w-full rounded-lg" alt="Sample image" />
+                <img src={login} className="w-[98%] rounded-lg" alt="Sample image" />
               </div>
               <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
-                <form onSubmit={singUpFunc}>
-                <p className="text-2xl font-bold pb-6 mr-4">Login Account</p>
-                  <div className="mb-6">
+                <form onSubmit={singUpFunc} className="flex flex-col gap-3">
+                <p className="text-2xl font-bolbmr-4 font-bold pb-3">Login Account</p>
+                  <div>
                     <input
                       type="text"
                       className={"form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid  rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white  focus:outline-none" +
@@ -74,7 +74,7 @@ const Login = () => {
                     </p>
                   </div>
 
-                  <div className="mb-6">
+                  <div>
                     <input
                       type="password"
                       className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white  focus:outline-none"

@@ -14,7 +14,6 @@ import {CgDanger } from "react-icons/cg";
 const VehicleSearch = () => {
     const [getSearchString, setSearchString] = useState("")
     const [getParkingList, setParkingList] = useState({});
-    const [getFoundCar, setFoundCar] = useState(false);
     const [getUserInfo, setUserInfo] = useContext(userContextManager);
 
     const signOut = () => {
@@ -24,6 +23,7 @@ const VehicleSearch = () => {
     const searchFunc = (e) => {
 
         e.preventDefault()
+        setSearchString(e.target.value);
 
         const foundCar = parkingList.find(car => car.vehicleNumber === e.target.value);
 
@@ -87,10 +87,12 @@ const VehicleSearch = () => {
                     </div>
                 </div>
             ) : (
+                getSearchString.length > 0 && 
                 <div className='flex items-center justify-center gap-2 text-red-600 text-5xl font-semibold pt-40'>
-                    <p className=''>No Results Found</p>
+                 <p className=''>No Results Found</p>
                 <p><CgDanger/></p>
                 </div>
+            
 
             )
             }

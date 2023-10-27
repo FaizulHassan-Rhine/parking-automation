@@ -1,0 +1,42 @@
+@media print {
+    /* styles here */
+    @page { size: landscape; }
+    * {
+        visibility: hidden;
+        /* padding: 0 !important;
+        margin: 0 !important;
+        border: 0 !important;
+        border-spacing: 0 !important;
+        box-sizing: border-box !important; */
+    }
+
+    /* Show element to print, and any children he has. */
+    .printView,  .printView * {
+        visibility: initial;
+    }
+    .printView {
+        position: fixed;
+        height: 100%;
+        width:100%!important;
+        padding:0!important;
+        margin:0!important;
+        background-color: red  !important;
+        top:0; 
+        left: 0;
+    }
+    .printView .printViewTitle {
+        height: auto !important;
+        padding-bottom: 40px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .printView table {
+        width:100%!important;
+        padding: 0!important;
+        margin: 0!important;
+        border: 0!important;
+        border-spacing: 0!important;
+    }
+
+}
