@@ -16,6 +16,9 @@ import AdminPageThree from './components/AdminPageThree/AdminPageThree';
 import AdminPageThreeV2 from './components/AdminPageThree/AdminPageThreeV2';
 import AdminPageFour from './components/AdminPageFour/AdminPageFour';
 import AdminPageTwoV3 from './components/AdminPageTwo/AdminPageTwoV3';
+import Report2 from './components/Report/ReportChecker';
+import ReportChecker from './components/Report/ReportChecker';
+import ReportStorage from './components/Report/ReportStorage';
 
 export const userContextManager = createContext();
 
@@ -43,6 +46,8 @@ function App() {
           <Route path="/page-three" element={<AdminPageThree />} />
           <Route path="/page-three2" element={<AdminPageThreeV2 />} />
           <Route path="/page-four" element={<AdminPageFour />} />
+          <Route path="/report-checker" element={<ReportChecker />} />
+          <Route path="/report-storage" element={<ReportStorage />} />
         </Routes>
       </userContextManager.Provider>
     </div>
