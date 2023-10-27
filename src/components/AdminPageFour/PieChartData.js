@@ -2,26 +2,28 @@ import React from 'react';
 
 import { Pie } from '@ant-design/plots';
 
-const PieChartDataOld = () => {
+const PieChartData = () => {
   const data = [
     {
       type: 'Security Check to Check-In',
       value: 5,
-      
-      
+       
+   
     },
     {
       type: 'Check-In to Packer/WH',
       value: 4,
-    
+   
     },
     {
       type: 'Packer In-time to Packer Out-time',
       value: 5,
+    
     },
     {
       type: 'Packer to Check-out',
       value: 10,
+      
     },
    
   ];
@@ -33,6 +35,10 @@ const PieChartDataOld = () => {
     colorField: 'type',
     
     radius: 1,
+    color: ['#F49880',
+    '#01BFBF',
+    '#008BDE',
+    '#FF9C00',],
     innerRadius: 0.6,
     label: {
       type: 'inner',
@@ -41,6 +47,7 @@ const PieChartDataOld = () => {
       style: {
         textAlign: 'center',
         fontSize: 28,
+   
         
       },
     },
@@ -66,7 +73,7 @@ const PieChartDataOld = () => {
       },
     },
   };
-  return <Pie className='w-80 md:w-[770px] ' {...config} />;
+  return <Pie className='w-80 text-5xl md:w-[820px] ' {...config} />;
 };
 
-export default PieChartDataOld;
+export default PieChartData;
