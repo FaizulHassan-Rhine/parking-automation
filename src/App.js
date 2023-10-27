@@ -16,9 +16,12 @@ import AdminPageThree from './components/AdminPageThree/AdminPageThree';
 import AdminPageThreeV2 from './components/AdminPageThree/AdminPageThreeV2';
 import AdminPageFour from './components/AdminPageFour/AdminPageFour';
 import AdminPageTwoV3 from './components/AdminPageTwo/AdminPageTwoV3';
+
 import Report2 from './components/Report/ReportChecker';
 import ReportChecker from './components/Report/ReportChecker';
 import ReportStorage from './components/Report/ReportStorage';
+import Navbar from './components/Navbar/Navbar';
+
 
 export const userContextManager = createContext();
 
@@ -28,11 +31,16 @@ function App() {
   return (
     <div className="App">
       <userContextManager.Provider value={[getUserInfo, setUserInfo]}>
+      <Navbar />
+
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard/" element={<PrivateRoute />}>
-            <Route path="search" element={<Search />} />
+            <Route path="dash" element={<Search />} />
+            <Route path="queue-info" element={<AdminPageTwoV3 />} />
+            <Route path="gigo" element={<AdminPageFour />} />
+            <Route path="stock-info" element={<AdminPageTwoV3 />} />
           </Route>
           <Route path="/search" element={<Search />} />
           <Route path="/report" element={<Report />} />

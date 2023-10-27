@@ -30,7 +30,7 @@ const Login = () => {
        if (getFormData.pass.value.length > 0) {
           setUserInfo(checkCredentials(getFormData.email.value, getFormData.pass.value))
           console.log(checkCredentials(getFormData.email.value, getFormData.pass.value))
-          navigate('/dashboard/search')
+          navigate('/dashboard/dash')
           // console.log(getFormData)
       }
     } else {

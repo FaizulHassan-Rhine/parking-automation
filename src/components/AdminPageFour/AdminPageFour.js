@@ -16,7 +16,6 @@ const AdminPageFour = () => {
 
     return (
         <>
-            <Navbar />
             <div className='container mx-auto'>
                
                     <div className='flex justify-center mt-3 '>

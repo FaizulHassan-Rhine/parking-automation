@@ -2,14 +2,19 @@ import React, { useContext } from 'react';
 import avatar from "../../images/avatarProfile.png"
 import logo from "../../images/logo2.png"
 import { userContextManager } from '../../App';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   const [getUserInfo, setUserInfo] = useContext(userContextManager);
+  const location = useLocation();
+
   const signOut = () => {
     setUserInfo({})
   }
 
   return (
+    <>
+    {location.pathname !== '/' && 
+    
     <div className="navbar py-0 shadow-sm2 bg-white">
       <div className='container mx-auto'>
         <div className="navbar-start">
@@ -20,11 +25,14 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
+          {getUserInfo.role === 'admin' && 
+          
           <ul className="flex gap-8 cursor-pointer">
-            <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300'><Link>Queue Info</Link></li>
-            <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300'><Link>GIGO Summary</Link></li>
-            <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300 '><Link>Stock Info</Link></li>
+            <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300'><Link to="/dashboard/queue-info">Queue Info</Link></li>
+            <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300'><Link to="/dashboard/gigo">GIGO Summary</Link></li>
+            <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300 '><Link to="/dashboard/stock-info">Stock Info</Link></li>
           </ul>
+          }
         </div>
         <div className="dropdown dropdown-bottom navbar navbar-end  ">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -45,7 +53,8 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-
+  }
+    </>
   );
 };
 

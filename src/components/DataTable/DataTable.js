@@ -67,9 +67,9 @@ const DataTable = ({ vehicle = [] }) => {
                             <table className="mx-auto w-[900px] bg-white text-[12px] border rounded-lg">
                                 <thead>
                                     <tr className='h-12 text-[12px] bg-par-blue-dark text-white'>
-                                        {/* <th className="px-6 py-3 bg-gray-200 text-center  font-medium text-gray-500 uppercase tracking-wider border-b">
+                                        <th className="px-6 py-3  text-center  font-medium uppercase tracking-wider border-b">
                                             SL.No
-                                        </th> */}
+                                        </th>
                                         <th className="px-6 py-3 text-center  font-medium  uppercase tracking-wider border-b">
                                             SO.No
                                         </th>
@@ -112,9 +112,9 @@ const DataTable = ({ vehicle = [] }) => {
                                 <tbody className="bg-white divide-y divide-gray-300  text-[12px]">
                                     {vehicle.map((examinee, index) => (
                                         <tr key={index}>
-                                            {/* <td className="pl-6 py-3 whitespace-nowrap">
+                                            <td className="pl-6 py-3 whitespace-nowrap">
                                                 {examinee.sl}
-                                            </td> */}
+                                            </td>
                                             <td className="pl-6 py-3 whitespace-nowrap">
                                                 {examinee.salesOrderNumber}
                                             </td>
@@ -139,16 +139,16 @@ const DataTable = ({ vehicle = [] }) => {
                                                 {/* Pending */}
                                             </td>
                                             <td className="pr-3 py-3 whitespace-nowrap">
-                                                <p className="border rounded-2xl text-center p-1 border-green-500"> {examinee.stockLocation}</p>
+                                                <p className="border rounded-2xl text-center p-1 border-green-500 first-letter:uppercase"> {examinee.stockLocation}</p>
                                                 {/* Pending */}
                                             </td>
                                             <td className="pr-3 py-3 whitespace-nowrap">
-                                                <p className="border rounded-2xl text-center p-1 border-green-500">  {examinee.queueNo}</p>
+                                                <p className="border rounded-2xl text-center p-1 border-green-500 first-letter:uppercase">  {examinee.queueNo}</p>
 
                                                 {/* Pending */}
                                             </td>
                                             <td className="pr-3 py-3 whitespace-nowrap">
-                                                <p className="border rounded-2xl text-center p-1 border-green-500"> {examinee.queueStatus} </p>
+                                                <p className="border rounded-2xl text-center p-1 border-green-500 first-letter:uppercase"> {examinee.queueStatus} </p>
                                                 {/* Pending */}
                                             </td>
                                             {/* <td className="px-6 py-3 whitespace-nowrap">
