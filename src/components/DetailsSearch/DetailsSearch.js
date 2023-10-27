@@ -4,6 +4,7 @@ import { userContextManager } from '../../App';
 import DataTable from '../DataTable/DataTable';
 import { parkingList } from '../FakeData/FakeData';
 import { CgDanger } from "react-icons/cg";
+import ReportChecker from '../Report/ReportChecker';
 
 const DetailsSearch = () => {
     const [getSearchString, setSearchString] = useState("")
@@ -51,8 +52,12 @@ const DetailsSearch = () => {
                 </div>
 
                 {getParkingList.length > 0 ? (
-
+                    <>
                     <DataTable vehicle={getParkingList} />
+                    <div className='fixed left-[-9999px]'>
+                     <ReportChecker vehicle={getParkingList} />
+                    </div>
+                    </>
                 ) : (
 
                     getSearchString.length > 0 &&

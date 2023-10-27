@@ -239,7 +239,7 @@ export let parkingList = [
       "deliveryAddress": "456 Elm Avenue, Townsville, CA 54321",
       "Product": "Product-4",
       "Quantity": 60,
-      "stockLocation": "warehouse-1",
+      "stockLocation": "Warehouse-1",
       "queueNo": "01",
       "queueStatus": "In Queue",
       "vehicleNumber": "DHA-MET-6754",
