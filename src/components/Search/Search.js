@@ -12,7 +12,6 @@ const Search = () => {
 
     return (
         <>
-            <Navbar />
 
             {
                 getUserInfo.role === "security" &&
@@ -25,7 +24,7 @@ const Search = () => {
                 getUserInfo.role === 'checker' &&
 
                 <div className='flex justify-center pt-3'>
-                    <h1 className='text-3xl font-bold uppercase'>Vehicle Checking Details</h1>
+                    <h1 className='text-3xl font-bold uppercase '>Vehicle Checking Details</h1>
                 </div>
             }
             {

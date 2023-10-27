@@ -4,7 +4,8 @@ import { useParams } from 'react-router-dom';
 import { parkingList } from '../FakeData/FakeData';
 import { Pagination } from 'antd';
 import { getSerializer } from 'localforage';
-const AdminPageThree = () => {
+
+const StockDetails = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [getNextData, setNextData] = useState();
     const [getSuggest, setSuggest] = useState([]);
@@ -63,7 +64,7 @@ const AdminPageThree = () => {
         // setSearchString(e.target.value);
         console.log(e.target.value);
         if (e.target.value.length > 0) {
-            const allLockData = parkingList.filter(car => car.stockLocation.toLowerCase() === param.stocklocation.toLowerCase());
+            const allLockData = parkingList.filter(car => car.stockLocation.toLowerCase() === param.stock.toLowerCase());
 
             const vicleData = allLockData.filter(car => car.vehicleNumber.toLowerCase() === e.target.value.toLowerCase());
 
@@ -71,7 +72,7 @@ const AdminPageThree = () => {
             setCurrentPage(1)
             console.log(vicleData);
         } else {
-            stockLocationFunc(param.stocklocation);
+            stockLocationFunc(param.stock);
         }
 
     }
@@ -84,13 +85,12 @@ const AdminPageThree = () => {
 
     useEffect(() => {
 
-        stockLocationFunc(param.stocklocation);
+        stockLocationFunc(param.stock);
 
     }, [])
     return (
         <div className='flex flex-col h-screen bg-[#f5f5f5]'>
-            <Navbar />
-            {/* {bg-2 } */}
+
             <div>
                 <div className="container mx-auto pt-4">
 
@@ -101,7 +101,7 @@ const AdminPageThree = () => {
                     <div className="mx-auto rounded-lg">
                         <div className='mx-auto w-[900px] flex flex-col gap-3'>
                             <div className='flex'>
-                                <div className='flex gap-16'>
+                                {/* <div className='flex gap-16'>
                                     <div className='flex gap-[10px] items-center bg-par-blue-light text-white font-bold relative rounded-tl-lg rounded-bl-lg'>
                                         <div className='whitespace-nowrap px-4'>
                                             <h2 className="text-sm">No. of Vehicle Served </h2>
@@ -121,7 +121,7 @@ const AdminPageThree = () => {
                                             <p className=''>20s</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className='w-full'>
                                     <div className='flex justify-end'>
                                         <div class="relative py-1 flex gap-2 items-center w-60 border-2 border-gray-200 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
@@ -148,17 +148,21 @@ const AdminPageThree = () => {
                                     <tr className='bg-par-blue-dark text-white font-bold  border-b border-black leading-7'>
 
                                         <th className="text-center  py-2 font-medium uppercase tracking-wider">
-                                            Vehicle No
+                                            SL No
                                         </th>
 
                                         <th className="px-6 py-2 text-center  font-medium  uppercase tracking-wider">
-                                            Queue No
+                                            Packer Name
                                         </th>
                                         <th className="px-6 py-2 text-center font-medium  uppercase tracking-wider">
-                                            Queue Status
+                                            Product Name
                                         </th>
                                         <th className="px-6 py-2 text-center font-medium uppercase tracking-wider">
-                                            SL No
+                                            Quantity
+                                        </th>
+                                        
+                                        <th className="px-6 py-2 text-center font-medium uppercase tracking-wider">
+                                            Status
                                         </th>
                                     </tr>
                                 </thead>
@@ -166,16 +170,20 @@ const AdminPageThree = () => {
                                     {currentImages.map((examinee, index) => (
                                         <tr key={index}>
                                             <td className=" py-3  whitespace-nowrap">
-                                                <p className='text-center'> {examinee.vehicleNumber}</p>
+                                                <p className='text-center'> {examinee.sl}</p>
                                             </td>
                                             <td className=" py-3 whitespace-nowrap">
-                                                <p className='text-center'> {examinee.queueNo}</p>
+                                                <p className='text-center'> {examinee.stockLocation}</p>
                                             </td>
+                                            <td className=" py-3 whitespace-nowrap">
+                                                <p className='text-center'> {examinee.Product}</p>
+                                            </td>
+                                            <td className=" py-3 whitespace-nowrap">
+                                                <p className='text-center'> {examinee.Quantity}</p>
+                                            </td>
+                                            
                                             <td className=" py-3 whitespace-nowrap">
                                                 <p className='text-center'> {examinee.queueStatus}</p>
-                                            </td>
-                                            <td className=" py-3 whitespace-nowrap">
-                                                <p className='text-center'> {examinee.sl}</p>
                                             </td>
                                         </tr>
                                     ))}
@@ -196,4 +204,4 @@ const AdminPageThree = () => {
     );
 };
 
-export default AdminPageThree;
+export default StockDetails;

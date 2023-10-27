@@ -17,6 +17,14 @@ import AdminPageThreeV2 from './components/AdminPageThree/AdminPageThreeV2';
 import AdminPageFour from './components/AdminPageFour/AdminPageFour';
 import AdminPageTwoV3 from './components/AdminPageTwo/AdminPageTwoV3';
 
+import Report2 from './components/Report/ReportChecker';
+import ReportChecker from './components/Report/ReportChecker';
+import ReportStorage from './components/Report/ReportStorage';
+import Navbar from './components/Navbar/Navbar';
+import StockDetails from './components/AdminPageThree/StockDetails';
+import StockInfo from './components/AdminPageTwo/StockInfo';
+
+
 export const userContextManager = createContext();
 
 function App() {
@@ -25,11 +33,16 @@ function App() {
   return (
     <div className="App">
       <userContextManager.Provider value={[getUserInfo, setUserInfo]}>
+      <Navbar />
+
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard/" element={<PrivateRoute />}>
-            <Route path="search" element={<Search />} />
+            <Route path="dash" element={<Search />} />
+            <Route path="queue-info" element={<AdminPageTwoV3 />} />
+            <Route path="gigo" element={<AdminPageFour />} />
+            <Route path="stock-info" element={<StockInfo />} />
           </Route>
           <Route path="/search" element={<Search />} />
           <Route path="/report" element={<Report />} />
@@ -37,12 +50,15 @@ function App() {
           <Route path="/data" element={<DataTable />} />
           <Route path="/details-search" element={<DetailsSearch />} />
           <Route path="/so-detail/:stocklocation" element={<AdminPageThree />} />
+          <Route path="/stock-details/:stock" element={<StockDetails />} />
 
           {/* <Route path="/page-two" element={<AdminPageTwo2 />} /> */}
           <Route path="/page-two" element={<AdminPageTwoV3 />} />
           <Route path="/page-three" element={<AdminPageThree />} />
           <Route path="/page-three2" element={<AdminPageThreeV2 />} />
           <Route path="/page-four" element={<AdminPageFour />} />
+          <Route path="/report-checker" element={<ReportChecker />} />
+          <Route path="/report-storage" element={<ReportStorage />} />
         </Routes>
       </userContextManager.Provider>
     </div>

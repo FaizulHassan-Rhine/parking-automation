@@ -18,7 +18,7 @@ const DetailsSearch = () => {
         e.preventDefault()
         // console.log(e.target.value);
         setSearchString(e.target.value);
-        const foundCar = parkingList.filter(car => car.vehicleNumber === e.target.value);
+        const foundCar = parkingList.filter(car => car.vehicleNumber === e.target.value || car.sl === e.target.value);
 
         if (foundCar) {
             console.log("Car found:", foundCar);
