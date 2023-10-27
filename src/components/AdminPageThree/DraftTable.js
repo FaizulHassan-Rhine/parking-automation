@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { parkingList } from '../FakeData/FakeData';
 import { Pagination } from 'antd';
 import { getSerializer } from 'localforage';
-const AdminPageThree = () => {
+const DraftTable = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [getNextData, setNextData] = useState();
     const [getSuggest, setSuggest] = useState([]);
@@ -88,10 +88,9 @@ const AdminPageThree = () => {
 
     }, [])
     return (
-        <div className='flex flex-col h-screen bg-[#f5f5f5]'>
+        <div>
             <Navbar />
-            {/* {bg-2 } */}
-            <div>
+            <div className='bg-2'>
                 <div className="container mx-auto pt-4">
 
                     <h2 className="mb-10 text-3xl text-center pt-6 uppercase font-extrabold">Packer 1 Queue Details</h2>
@@ -100,29 +99,30 @@ const AdminPageThree = () => {
                     </div>
                     <div className="mx-auto rounded-lg">
                         <div className='mx-auto w-[900px] flex flex-col gap-3'>
-                            <div className='flex'>
-                                <div className='flex gap-8'>
-                                    <div className='flex gap-[10px] items-center bg-par-blue-light text-white font-bold relative rounded-tl-lg rounded-bl-lg'>
-                                        <div className='whitespace-nowrap px-4'>
-                                            <h2 className="text-sm">No. of Vehicle Served </h2>
-                                            <span className=""></span>
+                            <div>
+                                {/* <div className='flex items-center gap-7 -mb-10'>
+                                    <div className='flex items-center gap-3'>
+                                        <div>
+                                            <h2 className="text-[16px] leading-[56px] font-semibold ">No. of Vehicle Served </h2>
+                                            <span className="w-[160px] h-1 bg-[#01BFBF] rounded-full block mt-[-22px]"></span>
                                         </div>
-                                        <div className='bg-par-blue-dark flex justify-center items-center py-[7px] px-[13px] text-xl text-white absolute left-[99%] rounded-lg'>
-                                            <p className=''>10</p>
+                                        <div className='flex items-center justify-center cursor-pointer p-2 bg-[#01BFBF] rounded-full'>
+                                            <p className='h-6 w-6 text-white font-semibold text-center'>10</p>
                                         </div>
-                                    </div>
 
-                                    <div className='flex gap-[10px] items-center bg-par-blue-light text-white font-bold relative rounded-tl-lg rounded-bl-lg'>
-                                        <div className='whitespace-nowrap px-4'>
-                                            <h2 className="text-sm">Loading Time Per Vehicle </h2>
-                                            <span className=""></span>
-                                        </div>
-                                        <div className='bg-par-blue-dark flex justify-center items-center py-[7px] px-[13px] text-xl text-white absolute left-[99%] rounded-lg'>
-                                            <p className=''>20s</p>
-                                        </div>
                                     </div>
-                                </div>
-                                <div className='w-full'>
+                                    <div className='flex items-center gap-3'>
+                                        <div>
+                                            <h2 className="text-[16px] leading-[56px] font-semibold ">Loading Time Per Vehicle </h2>
+                                            <span className="w-[185px] h-1 bg-[#F49880] rounded-full block mt-[-22px]"></span>
+                                        </div>
+                                        <div className='flex items-center justify-center cursor-pointer p-2 bg-[#F49880] rounded-full'>
+                                            <p className='h-6 w-6 text-white font-semibold text-center'>20s</p>
+                                        </div>
+
+                                    </div>
+                                </div> */}
+                                <div>
                                     <div className='flex justify-end'>
                                         <div class="relative py-1 flex gap-2 items-center w-60 border-2 border-gray-200 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
                                             <div class="grid place-items-center h-full w-12 text-gray-300">
@@ -143,9 +143,9 @@ const AdminPageThree = () => {
                             </div>
 
 
-                            <table className="text-[12px] shadow-md">
+                            <table className="text-[12px]">
                                 <thead className='rounded-2xl'>
-                                    <tr className='bg-par-blue-dark text-white font-bold  border-b border-black leading-7'>
+                                    <tr className='bg-[#1d242d] text-white font-bold  border-b border-black leading-7'>
 
                                         <th className="text-center  py-2 font-medium uppercase tracking-wider">
                                             Vehicle No
@@ -158,11 +158,11 @@ const AdminPageThree = () => {
                                             Queue Status
                                         </th>
                                         <th className="px-6 py-2 text-center font-medium uppercase tracking-wider">
-                                            SL No
+                                            SO No
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody className="[&>tr:nth-child(odd)]:bg-gray-50 [&>tr:nth-child(even)]:bg-gray-200 text-gray-950">
+                                <tbody className="[&>tr:nth-child(odd)]:bg-[#28333e] [&>tr:nth-child(even)]:bg-[#212a33] text-gray-200">
                                     {currentImages.map((examinee, index) => (
                                         <tr key={index}>
                                             <td className=" py-3  whitespace-nowrap">
@@ -175,7 +175,7 @@ const AdminPageThree = () => {
                                                 <p className='text-center'> {examinee.queueStatus}</p>
                                             </td>
                                             <td className=" py-3 whitespace-nowrap">
-                                                <p className='text-center'> {examinee.sl}</p>
+                                                <p className='text-center'> {examinee.salesOrderNumber}</p>
                                             </td>
                                         </tr>
                                     ))}
@@ -196,4 +196,5 @@ const AdminPageThree = () => {
     );
 };
 
-export default AdminPageThree;
+export default DraftTable;
+
