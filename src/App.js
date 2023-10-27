@@ -15,6 +15,7 @@ import AdminPageTwo2 from './components/AdminPageTwo/AdminPageTwo2';
 import AdminPageThree from './components/AdminPageThree/AdminPageThree';
 import AdminPageThreeV2 from './components/AdminPageThree/AdminPageThreeV2';
 import AdminPageFour from './components/AdminPageFour/AdminPageFour';
+import AdminPageTwoV3 from './components/AdminPageTwo/AdminPageTwoV3';
 
 export const userContextManager = createContext();
 
@@ -27,8 +28,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/search/" element={<PrivateRoute />}>
-            <Route path="parking" element={<Search />} />
+          <Route path="/dashboard/" element={<PrivateRoute />}>
+            <Route path="search" element={<Search />} />
           </Route>
           <Route path="/search" element={<Search />} />
           <Route path="/report" element={<Report />} />
@@ -37,7 +38,8 @@ function App() {
           <Route path="/details-search" element={<DetailsSearch />} />
           <Route path="/so-detail/:stocklocation" element={<AdminPageThree />} />
 
-          <Route path="/page-two" element={<AdminPageTwo2 />} />
+          {/* <Route path="/page-two" element={<AdminPageTwo2 />} /> */}
+          <Route path="/page-two" element={<AdminPageTwoV3 />} />
           <Route path="/page-three" element={<AdminPageThree />} />
           <Route path="/page-three2" element={<AdminPageThreeV2 />} />
           <Route path="/page-four" element={<AdminPageFour />} />

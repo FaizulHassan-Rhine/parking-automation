@@ -3,6 +3,7 @@ import avatar from "../../images/avatarProfile.png"
 import { userContextManager } from '../../App';
 import DataTable from '../DataTable/DataTable';
 import { parkingList } from '../FakeData/FakeData';
+import { CgDanger } from "react-icons/cg";
 
 const DetailsSearch = () => {
     const [getSearchString, setSearchString] = useState("")
@@ -15,7 +16,8 @@ const DetailsSearch = () => {
     const searchFunc = (e) => {
 
         e.preventDefault()
-        console.log(e.target.value);
+        // console.log(e.target.value);
+        setSearchString(e.target.value);
         const foundCar = parkingList.filter(car => car.vehicleNumber === e.target.value);
 
         if (foundCar) {
@@ -31,7 +33,7 @@ const DetailsSearch = () => {
         <div>
             <div className='container mx-auto '>
                 <div className='relative'>
-                    <div className="flex justify-center  relative p-2 py-6 ">
+                    <div className="flex justify-center  relative p-2 pt-6 pb-1">
                         <div className="bg-white items-center justify-between w-[60%] flex rounded-full shadow-lg p-2 mb-5 sticky" >
 
                             <input onChange={searchFunc} className="font-bold uppercase rounded-full w-full py-4 pl-4 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline lg:text-sm text-xs" type="text" placeholder="Search" />
@@ -45,26 +47,22 @@ const DetailsSearch = () => {
                             </div>
                         </div>
 
-                        {/* <div className="dropdown dropdown-bottom drop  absolute top-8 right-14 ">
-                            <label tabIndex={0} className="btn  btn-circle avatar">
-                                <div className="w-16 rounded-full">
-                                    <img src={avatar} alt='' />
-                                </div>
-                            </label>
-                            <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-32">
-                                <li>
-                                    <a className="justify-between ">Profile</a>
-                                </li>
-
-                                <li>
-                                    <button onClick={signOut}>Logout</button>
-                                </li>
-                            </ul>
-                        </div> */}
                     </div>
                 </div>
 
-                <DataTable vehicle={getParkingList} />
+                {getParkingList.length > 0 ? (
+
+                    <DataTable vehicle={getParkingList} />
+                ) : (
+
+                    getSearchString.length > 0 &&
+                    <div className='flex items-center justify-center gap-2 text-red-600 text-5xl font-semibold pt-40'>
+                        <p className=''>No Results Found</p>
+                        <p><CgDanger /></p>
+                    </div>
+
+                )
+                }
 
             </div>
         </div>

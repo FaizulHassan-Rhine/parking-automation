@@ -2,10 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { FaSortUp, FaSortDown, FaFilter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import { FaPrint } from "react-icons/fa";
+import { userContextManager } from '../../App';
 // import { UserContextManager, apiUrlContextManager } from '../../../App';
 
 
-const DataTable = ({ vehicle=[] }) => {
+const DataTable = ({ vehicle = [] }) => {
+    const [getUserInfo, setUserInfo] = useContext(userContextManager);
+
     const [examinees, setExaminees] = useState([
         { SL: "1", So_No: 1, Customer: 'Jhon Wick', C_Address: "789 Elm Road, Villagetown, NY 67890", D_Address: "789 Elm Road, Villagetown, NY 67890", Product: "Gadget Y", Quantity: "5", Stock_Location: "Packer-3", Queue_No: "2", Queue_Status: "In Queue" },
         { SL: "1", So_No: 1, Customer: 'Jhon Wick', C_Address: "789 Elm Road, Villagetown, NY 67890", D_Address: "789 Elm Road, Villagetown, NY 67890", Product: "Gadget Y", Quantity: "5", Stock_Location: "Packer-3", Queue_No: "2", Queue_Status: "In Queue" },
@@ -52,17 +55,15 @@ const DataTable = ({ vehicle=[] }) => {
 
     return (
 
-        <>
-            {vehicle.length > 0 ?
                 <>
                     <div className="container mx-auto ">
                         <div className='flex justify-end mb-2 mr-4'>
-                        <div className='flex items-center justify-center cursor-pointer  p-2 gap-2 bg-blue-400 rounded-full'>
-                        {/* <p className=" font-semibold text-white">Print</p> */}
-                        <p className='text-white text-xl'><FaPrint/></p>
+                            <div className='flex items-center justify-center cursor-pointer  p-2 gap-2 bg-blue-400 rounded-full'>
+                                <p onClick={() => { window.print() }} className='text-white text-xl'><FaPrint /></p>
+                            </div>
                         </div>
-                        </div>
-                        <div className="mx-auto rounded-lg">
+                        <div className="mx-auto rounded-lg printView">
+                            <h2 className='printViewTitle invisible h-0'>Queue Details</h2>
                             <table className="mx-auto w-[900px] bg-white text-[12px] border rounded-lg">
                                 <thead>
                                     <tr className='h-16 text-[12px]'>
@@ -129,22 +130,21 @@ const DataTable = ({ vehicle=[] }) => {
                                                 {/* Pending */}
                                             </td>
                                             <td className="pl-8 py-3 whitespace-nowrap">
-                                                {/* {examinee.Product} */}
-                                                <p>******</p>
-                                                {/* Pending */}
+                                                {getUserInfo.role == 'storage' && examinee.Product}
+                                                {getUserInfo.role == 'checker' && <p>******</p>}
                                             </td>
                                             <td className="pl-8 py-3 whitespace-nowrap">
-                                                {/* {examinee.Quantity} */}
-                                                <p>******</p>
+                                                {getUserInfo.role == 'storage' && examinee.Quantity}
+                                                {getUserInfo.role == 'checker' && <p>******</p>}
                                                 {/* Pending */}
                                             </td>
                                             <td className="pr-3 py-3 whitespace-nowrap">
-                                               <p className="border rounded-2xl text-center p-1 border-green-500"> {examinee.stockLocation}</p>
+                                                <p className="border rounded-2xl text-center p-1 border-green-500"> {examinee.stockLocation}</p>
                                                 {/* Pending */}
                                             </td>
                                             <td className="pr-3 py-3 whitespace-nowrap">
-                                            <p className="border rounded-2xl text-center p-1 border-green-500">  {examinee.queueNo}</p>
-                                               
+                                                <p className="border rounded-2xl text-center p-1 border-green-500">  {examinee.queueNo}</p>
+
                                                 {/* Pending */}
                                             </td>
                                             <td className="pr-3 py-3 whitespace-nowrap">
@@ -163,9 +163,6 @@ const DataTable = ({ vehicle=[] }) => {
                         </div>
 
                     </div>
-                </> :
-                <p className='text-center text-2xl font-semibold pt-40'>No SO found</p>
-            }
         </>
 
     );
