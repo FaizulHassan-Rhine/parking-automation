@@ -31,12 +31,16 @@
         font-weight: bold;
         text-align: center;
     }
-    .printView table {
+    /* .printView table {
         width:100%!important;
         padding: 0!important;
         margin: 0!important;
         border: 0!important;
         border-spacing: 0!important;
+        border: thin solid black; 
     }
+    .printView table tr {
+        width: 100% !important;
+    } */
 
 }

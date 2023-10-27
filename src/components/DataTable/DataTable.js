@@ -62,8 +62,8 @@ const DataTable = ({ vehicle = [] }) => {
                                 <p onClick={() => { window.print() }} className='text-white text-xl'><FaPrint /></p>
                             </div>
                         </div>
-                        <div className="mx-auto rounded-lg printView">
-                            <h2 className='printViewTitle invisible h-0'>Queue Details</h2>
+                        <div className="mx-auto rounded-lg ">
+                            {/* <h2 className='printViewTitle invisible h-0'>Queue Details</h2> */}
                             <table className="mx-auto w-[900px] bg-white text-[12px] border rounded-lg">
                                 <thead>
                                     <tr className='h-12 text-[12px] bg-par-blue-dark text-white'>
