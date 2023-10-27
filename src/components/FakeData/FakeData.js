@@ -31,12 +31,12 @@ export const users =[
 ]
 export let parkingList = [
     {
-      "sl": "01",
+      "sl": "#SL-0000001-23",
       "salesOrderNumber": "#SO-MN-0001",
       "Customer": "John Doe",
       "customerAddress": "123 Main Street, Cityville, CA 12345",
       "deliveryAddress": "456 Elm Avenue, Townsville, CA 54321",
-      "Product": "Widget X",
+      "Product": "Product-1",
       "Quantity": 100,
       "stockLocation": "Packer-1",
       "queueNo": "01",
@@ -48,7 +48,7 @@ export let parkingList = [
       "vehicleMaximumWeight": "2000 kg"
     },
     {
-      "sl": "02",
+      "sl": "#SL-0000002-23",
       "salesOrderNumber": "#SO-MN-0002",
       "Customer": "Jane Smith",
       "customerAddress": "789 Elm Road, Villagetown, NY 67890",
@@ -65,7 +65,7 @@ export let parkingList = [
       "vehicleMaximumWeight": "2500 kg"
     },
     {
-      "sl": "03",
+      "sl": "#SL-0000003-23",
       "salesOrderNumber": "#SO-MN-0003",
       "Customer": "Robert Johnson",
       "customerAddress": "456 Pine Avenue, Forestville, TX 34567",
@@ -82,7 +82,7 @@ export let parkingList = [
       "vehicleMaximumWeight": "1800 kg"
     },
     {
-      "sl": "04",
+      "sl": "#SL-0000004-23",
       "salesOrderNumber": "#SO-MN-0004",
       "Customer": "Susan Lee",
       "customerAddress": "567 Maple Drive, Riverside, FL 23456",
@@ -99,7 +99,7 @@ export let parkingList = [
       "vehicleMaximumWeight": "2200 kg"
     },
     {
-      "sl": "05",
+      "sl": "#SL-0000005-23",
       "salesOrderNumber": "#SO-MN-0005",
       "Customer": "Michael Wilson",
       "customerAddress": "789 Oak Street, Hillside, CA 45678",
@@ -116,7 +116,7 @@ export let parkingList = [
       "vehicleMaximumWeight": "2800 kg"
     },
     {
-      "sl": "06",
+      "sl": "#SL-0000006-23",
       "salesOrderNumber": "#SO-MN-0006",
       "Customer": "Laura Davis",
       "customerAddress": "123 Elm Road, Mountainville, TX 12345",
@@ -133,7 +133,7 @@ export let parkingList = [
       "vehicleMaximumWeight": "2600 kg"
     },
     {
-      "sl": "07",
+      "sl": "#SL-0000007-23",
       "salesOrderNumber": "#SO-MN-0007",
       "Customer": "Daniel Brown",
       "customerAddress": "456 Cedar Lane, Riverside, NY 45678",
@@ -150,7 +150,7 @@ export let parkingList = [
       "vehicleMaximumWeight": "2300 kg"
     },
     {
-      "sl": "08",
+      "sl": "#SL-0000008-23",
       "salesOrderNumber": "#SO-MN-0008",
       "Customer": "Emily Green",
       "customerAddress": "234 Birch Drive, Mountainville, CA 23456",
@@ -167,7 +167,7 @@ export let parkingList = [
       "vehicleMaximumWeight": "2100 kg"
     },
     {
-      "sl": "09",
+      "sl": "#SL-0000009-23",
       "salesOrderNumber": "#SO-MN-0009",
       "Customer": "Jacob Parker",
       "customerAddress": "987 Pine Street, Lakeside, FL 98765",
@@ -184,7 +184,7 @@ export let parkingList = [
       "vehicleMaximumWeight": "2400 kg"
     },
     {
-      "sl": "10",
+      "sl": "#SL-0000010-23",
       "salesOrderNumber": "#SO-MN-0010",
       "Customer": "Olivia Taylor",
       "customerAddress": "456 Cedar Road, Hillside, TX 45678",
@@ -200,13 +200,13 @@ export let parkingList = [
       "date": "23-October-23",
       "vehicleMaximumWeight": "2700 kg"
     },{
-      "sl": "11",
+      "sl": "#SL-0000001-23",
       "salesOrderNumber": "#SO-MN-0001",
       "Customer": "John Doe",
       "customerAddress": "123 Main Street, Cityville, CA 12345",
       "deliveryAddress": "456 Elm Avenue, Townsville, CA 54321",
-      "Product": "Widget X",
-      "Quantity": 100,
+      "Product": "Product-2",
+      "Quantity": 40,
       "stockLocation": "Packer-1",
       "queueNo": "01",
       "queueStatus": "In Queue",
@@ -216,14 +216,14 @@ export let parkingList = [
       "date": "23-October-23",
       "vehicleMaximumWeight": "2000 kg"
     },{
-      "sl": "12",
+      "sl": "#SL-0000001-23",
       "salesOrderNumber": "#SO-MN-0001",
       "Customer": "John Doe",
       "customerAddress": "123 Main Street, Cityville, CA 12345",
       "deliveryAddress": "456 Elm Avenue, Townsville, CA 54321",
-      "Product": "Widget X",
-      "Quantity": 100,
-      "stockLocation": "Packer-1",
+      "Product": "Product-3",
+      "Quantity": 50,
+      "stockLocation": "Packer-3",
       "queueNo": "01",
       "queueStatus": "In Queue",
       "vehicleNumber": "DHA-MET-6754",
@@ -232,14 +232,14 @@ export let parkingList = [
       "date": "23-October-23",
       "vehicleMaximumWeight": "2000 kg"
     },{
-      "sl": "13",
+      "sl": "#SL-0000001-23",
       "salesOrderNumber": "#SO-MN-0001",
       "Customer": "John Doe",
       "customerAddress": "123 Main Street, Cityville, CA 12345",
       "deliveryAddress": "456 Elm Avenue, Townsville, CA 54321",
-      "Product": "Widget X",
-      "Quantity": 100,
-      "stockLocation": "Warehouse-1",
+      "Product": "Product-4",
+      "Quantity": 60,
+      "stockLocation": "warehouse-1",
       "queueNo": "01",
       "queueStatus": "In Queue",
       "vehicleNumber": "DHA-MET-6754",
