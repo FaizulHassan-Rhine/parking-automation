@@ -21,6 +21,8 @@ import Report2 from './components/Report/ReportChecker';
 import ReportChecker from './components/Report/ReportChecker';
 import ReportStorage from './components/Report/ReportStorage';
 import Navbar from './components/Navbar/Navbar';
+import StockDetails from './components/AdminPageThree/StockDetails';
+import StockInfo from './components/AdminPageTwo/StockInfo';
 
 
 export const userContextManager = createContext();
@@ -40,7 +42,7 @@ function App() {
             <Route path="dash" element={<Search />} />
             <Route path="queue-info" element={<AdminPageTwoV3 />} />
             <Route path="gigo" element={<AdminPageFour />} />
-            <Route path="stock-info" element={<AdminPageTwoV3 />} />
+            <Route path="stock-info" element={<StockInfo />} />
           </Route>
           <Route path="/search" element={<Search />} />
           <Route path="/report" element={<Report />} />
@@ -48,6 +50,7 @@ function App() {
           <Route path="/data" element={<DataTable />} />
           <Route path="/details-search" element={<DetailsSearch />} />
           <Route path="/so-detail/:stocklocation" element={<AdminPageThree />} />
+          <Route path="/stock-details/:stock" element={<StockDetails />} />
 
           {/* <Route path="/page-two" element={<AdminPageTwo2 />} /> */}
           <Route path="/page-two" element={<AdminPageTwoV3 />} />
