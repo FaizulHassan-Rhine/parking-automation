@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import qrcode from '../../images/barcode.jpg'
 import checked from '../../images/checked.jpg'
-const ReportChecker = () => {
+import { userContextManager } from '../../App';
+const ReportChecker = ({ vehicle = [] }) => {
+    const [getUserInfo, setUserInfo] = useContext(userContextManager);
     return (
         <div>
             <div className="container mx-auto">
@@ -103,45 +105,45 @@ const ReportChecker = () => {
                                     </tr>
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-300  text-[12px]">
-                                    {/* {vehicle.map((examinee, index) => ( */}
-                                        <tr >
-                                            {/* <td className="pl-6 py-3 whitespace-nowrap">
-                                                {examinee.sl}
-                                            </td> */}
+                                    {vehicle.map((examinee, index) => (
+                                        <tr key={index}>
                                             <td className="pl-6 py-3 whitespace-nowrap">
-                                                {/* {examinee.salesOrderNumber} */}
+                                                {examinee.sl}
+                                            </td>
+                                            <td className="pl-6 py-3 whitespace-nowrap">
+                                                {examinee.salesOrderNumber}
                                             </td>
                                             <td className="px-6 py-3 whitespace-nowrap">
-                                                {/* {examinee.Customer} */}
+                                                {examinee.Customer}
                                             </td>
                                             <td className="pl-6 py-3 whitespace-nowrap">
-                                                {/* {examinee.customerAddress} */}
+                                                {examinee.customerAddress}
                                                 {/* Pending */}
                                             </td>
                                             <td className="pl-6 py-3 whitespace-nowrap">
-                                                {/* {examinee.deliveryAddress} */}
+                                                {examinee.deliveryAddress}
                                                 {/* Pending */}
                                             </td>
                                             <td className="pl-8 py-3 whitespace-nowrap">
-                                                 {/* {getUserInfo.role == 'storage' && examinee.Product}
-                                                {getUserInfo.role == 'checker' && <p>******</p>} */}
+                                                 {getUserInfo.role == 'storage' && examinee.Product}
+                                                {getUserInfo.role == 'checker' && <p>******</p>}
                                             </td> 
                                             <td className="pl-8 py-3 whitespace-nowrap">
-                                                {/* {getUserInfo.role == 'storage' && examinee.Quantity}
+                                                 {getUserInfo.role == 'storage' && examinee.Quantity}
                                                 {getUserInfo.role == 'checker' && <p>******</p>}
-                                                Pending */}
+                                                Pending 
                                             </td>
                                             <td className="pr-3 py-3 whitespace-nowrap">
-                                                {/* <p className="border rounded-2xl text-center p-1 border-green-500"> {examinee.stockLocation}</p> */}
+                                                <p className="border rounded-2xl text-center p-1 border-green-500"> {examinee.stockLocation}</p>
                                                 {/* Pending */}
                                             </td>
                                             <td className="pr-3 py-3 whitespace-nowrap">
-                                                {/* <p className="border rounded-2xl text-center p-1 border-green-500">  {examinee.queueNo}</p> */}
+                                                <p className="border rounded-2xl text-center p-1 border-green-500">  {examinee.queueNo}</p>
 
                                                 {/* Pending */}
                                             </td>
                                             <td className="pr-3 py-3 whitespace-nowrap">
-                                                {/* <p className="border rounded-2xl text-center p-1 border-green-500"> {examinee.queueStatus} </p> */}
+                                                <p className="border rounded-2xl text-center p-1 border-green-500"> {examinee.queueStatus} </p>
                                                 {/* Pending */}
                                             </td>
                                             {/* <td className="px-6 py-3 whitespace-nowrap">
@@ -150,7 +152,7 @@ const ReportChecker = () => {
                                         </Link>
                                     </td> */}
                                         </tr>
-                                    {/* ))} */}
+                                     ))}
                                 </tbody>
                             </table>
                 </div>

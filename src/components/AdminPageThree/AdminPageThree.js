@@ -89,7 +89,7 @@ const AdminPageThree = () => {
     }, [])
     return (
         <div className='flex flex-col h-screen bg-[#f5f5f5]'>
-            <Navbar />
+            {/* <Navbar /> */}
             {/* {bg-2 } */}
             <div>
                 <div className="container mx-auto pt-4">
