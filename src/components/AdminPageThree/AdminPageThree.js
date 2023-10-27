@@ -100,7 +100,28 @@ const AdminPageThree = () => {
                     <div className="mx-auto rounded-lg">
                         <div className='mx-auto w-[900px] flex flex-col gap-3'>
                             <div>
-                                <div></div>
+                                <div className='flex items-center gap-7 -mb-10'>
+                                <div className='flex items-center gap-3'>
+                                   <div>
+                                   <h2 className="text-[16px] leading-[56px] font-semibold ">No. of Vehicle Served </h2>
+                                    <span className="w-[160px] h-1 bg-[#01BFBF] rounded-full block mt-[-22px]"></span>
+                                   </div>
+                                   <div className='flex items-center justify-center cursor-pointer p-2 bg-[#01BFBF] rounded-full'>
+                                    <p className='h-6 w-6 text-white font-semibold text-center'>10</p>
+                                   </div>
+                                    
+                                </div>
+                                <div className='flex items-center gap-3'>
+                                   <div>
+                                   <h2 className="text-[16px] leading-[56px] font-semibold ">Loading Time Per Vehicle </h2>
+                                    <span className="w-[185px] h-1 bg-[#F49880] rounded-full block mt-[-22px]"></span>
+                                   </div>
+                                   <div className='flex items-center justify-center cursor-pointer p-2 bg-[#F49880] rounded-full'>
+                                    <p className='h-6 w-6 text-white font-semibold text-center'>20s</p>
+                                   </div>
+                                    
+                                </div>
+                                </div>
                                 <div>
                                     <div className='flex justify-end'>
                                         <div class="relative py-1 flex gap-2 items-center w-60 border-2 border-gray-200 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
