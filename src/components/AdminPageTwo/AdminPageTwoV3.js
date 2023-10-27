@@ -26,7 +26,7 @@ const AdminPageTwoV3 = () => {
                     <div className='flex flex-col gap-4'>
 
                         <div className='flex justify-center mt-4'>
-                            <h1 className='text-3xl font-bold'>Queue Tracking </h1>
+                            <h1 className='text-3xl font-bold uppercase'>Queue Tracking </h1>
                         </div>
                         <div className='flex flex-col gap-5'>
                             <div>
