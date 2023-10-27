@@ -10,13 +10,13 @@ const Navbar = () => {
   }
 
   return (
-
-
-    <div className="navbar py-0 shadow-sm2">
+    <div className="navbar py-0 shadow-sm2 bg-white">
       <div className='container mx-auto'>
         <div className="navbar-start">
-          <div>
-            <img className='w-24' src={logo} />
+          <div className='flex'>
+            <Link to="/" className='w-24'>
+              <img className='w-full' src={logo} />
+            </Link>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -45,7 +45,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-  
+
   );
 };
 
