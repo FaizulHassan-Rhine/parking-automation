@@ -19,13 +19,13 @@ const Navbar = () => {
             <img className='w-24' src={logo} />
           </div>
         </div>
-        {/* <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal">
-            <li><a>Page 2</a></li>
-
-            <li><a>Page 3</a></li>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="flex gap-8 cursor-pointer">
+            <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300'><Link>Queue Info</Link></li>
+            <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300'><Link>GIGO Summary</Link></li>
+            <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300 '><Link>Stock Info</Link></li>
           </ul>
-        </div> */}
+        </div>
         <div className="dropdown dropdown-bottom navbar navbar-end  ">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">

@@ -57,7 +57,7 @@ const DataTable = ({ vehicle = [] }) => {
 
                 <>
                     <div className="container mx-auto ">
-                        <div className='flex justify-end mb-2 mr-4'>
+                        <div className='flex justify-end mb-4'>
                             <div className='flex items-center justify-center cursor-pointer  p-2 gap-2 bg-blue-400 rounded-full'>
                                 <p onClick={() => { window.print() }} className='text-white text-xl'><FaPrint /></p>
                             </div>
@@ -66,41 +66,41 @@ const DataTable = ({ vehicle = [] }) => {
                             <h2 className='printViewTitle invisible h-0'>Queue Details</h2>
                             <table className="mx-auto w-[900px] bg-white text-[12px] border rounded-lg">
                                 <thead>
-                                    <tr className='h-16 text-[12px]'>
-                                        <th className="px-6 py-3 bg-gray-200 text-center  font-medium text-gray-500 uppercase tracking-wider border-b">
+                                    <tr className='h-12 text-[12px] bg-par-blue-dark text-white'>
+                                        {/* <th className="px-6 py-3 bg-gray-200 text-center  font-medium text-gray-500 uppercase tracking-wider border-b">
                                             SL.No
-                                        </th>
-                                        <th className="px-6 py-3 bg-gray-200 text-center  font-medium text-gray-500 uppercase tracking-wider border-b">
+                                        </th> */}
+                                        <th className="px-6 py-3 text-center  font-medium  uppercase tracking-wider border-b">
                                             SO.No
                                         </th>
                                         <th
-                                            className="px-6 py-3 bg-gray-200 text-left  font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
-                                            onClick={sortNumbers}
+                                            className="px-6 py-3  text-center  font-medium  uppercase tracking-wider cursor-pointer border-b"
+                                          
                                         >
                                             Customer
 
                                         </th>
 
 
-                                        <th className="px-6 py-3 bg-gray-200 text-center  font-medium text-gray-500 uppercase tracking-wider border-b">
+                                        <th className="px-6 py-3  text-center  font-medium  uppercase tracking-wider border-b">
                                             Customer Address
                                         </th>
-                                        <th className="px-6 py-3 bg-gray-200 text-center font-medium text-gray-500 uppercase tracking-wider border-b">
+                                        <th className="px-6 py-3  text-center font-medium uppercase tracking-wider border-b">
                                             Delivery Address
                                         </th>
-                                        <th className="px-6 py-3 bg-gray-200 text-center font-medium text-gray-500 uppercase tracking-wider border-b">
+                                        <th className="px-6 py-3  text-center font-medium  uppercase tracking-wider border-b">
                                             Product
                                         </th>
-                                        <th className="px-6 py-3 bg-gray-200 text-center  font-medium text-gray-500 uppercase tracking-wider border-b">
+                                        <th className="px-6 py-3  text-center  font-medium  uppercase tracking-wider border-b">
                                             Quantity
                                         </th>
-                                        <th className="px-6 py-3 bg-gray-200 text-center  font-medium text-gray-500 uppercase tracking-wider border-b">
-                                            Stock Location
+                                        <th className="px-6 py-3  text-center  font-medium  uppercase tracking-wider border-b">
+                                            Storage
                                         </th>
-                                        <th className="px-6 py-3 bg-gray-200 text-center  font-medium text-gray-500 uppercase tracking-wider border-b">
-                                            Queue No
+                                        <th className="px-6 py-3  text-center  font-medium uppercase tracking-wider border-b">
+                                            Que.No
                                         </th>
-                                        <th className="px-6 py-3 bg-gray-200 text-center font-medium text-gray-500 uppercase tracking-wider border-b">
+                                        <th className="px-6 py-3  text-center font-medium  uppercase tracking-wider border-b">
                                             Status
                                         </th>
                                         {/* <th className="px-6 py-3 bg-gray-200 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-b">
@@ -109,12 +109,12 @@ const DataTable = ({ vehicle = [] }) => {
                                 */}
                                     </tr>
                                 </thead>
-                                <tbody className="bg-white divide-y divide-gray-300 text-[12px]">
+                                <tbody className="bg-white divide-y divide-gray-300  text-[12px]">
                                     {vehicle.map((examinee, index) => (
                                         <tr key={index}>
-                                            <td className="pl-6 py-3 whitespace-nowrap">
+                                            {/* <td className="pl-6 py-3 whitespace-nowrap">
                                                 {examinee.sl}
-                                            </td>
+                                            </td> */}
                                             <td className="pl-6 py-3 whitespace-nowrap">
                                                 {examinee.salesOrderNumber}
                                             </td>

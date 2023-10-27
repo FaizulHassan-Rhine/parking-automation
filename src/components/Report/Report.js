@@ -14,7 +14,7 @@ const Report = ({vehicle}) => {
                     {/* <img className="h-8 w-44 mb-2" src={logo} alt="" /> */}
                <div className="flex items-center gap-10">
                <div>
-                <p className="text-3xl font-bold">Security & Adminstration</p>
+                <p className="text-3xl font-bold uppercase">Security & Adminstration</p>
                 </div>
                     <div className="flex justify-center pt-6">
                     <img className="w-40" src={qrcode}/>
