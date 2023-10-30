@@ -21,40 +21,40 @@ const ReportChecker = ({ vehicle = [] }) => {
                         </div>
                     </div>
                     <div className='flex flex-col pt-5'>
-                        <div className="grid grid-cols-2 gap-[300px] px-[70px] border-black border py-5 w-full   ">
+                        <div className="grid grid-cols-2 gap-[280px] px-[40px] border-black border py-5 w-full   ">
                             <div className="flex md:justify-between gap-5 ml-5 md:ml-0">
                                 <div>
-                                    <p className="font-semibold">SL/N:</p>
-                                    <p className="font-semibold">Date:</p>
-                                    <p className="font-semibold">Vehicle Weight:</p>
-                                    <p className="font-semibold">Vehicle Max Weight:</p>
+                                    <p className="font-semibold whitespace-nowrap">SL/N:</p>
+                                    <p className="font-semibold whitespace-nowrap">Date:</p>
+                                    <p className="font-semibold whitespace-nowrap">Vehicle Weight:</p>
+                                    <p className="font-semibold whitespace-nowrap">Vehicle Max Weight:</p>
                                     {/* <p className="font-semibold">Exit Time:</p> */}
 
 
                                 </div>
 
                                 <div>
-                                    <p>{vehicle[0].sl}</p>
-                                    <p>{vehicle[0].date}</p>
-                                    <p>1600 kg</p>
-                                    <p>{vehicle[0].vehicleMaximumWeight}</p>
+                                    <p className='whitespace-nowrap'>{vehicle[0].sl}</p>
+                                    <p className=' whitespace-nowrap'>{vehicle[0].date}</p>
+                                    <p className=' whitespace-nowrap'>1600 kg</p>
+                                    <p className=' whitespace-nowrap'>{vehicle[0].vehicleMaximumWeight}</p>
                                 </div>
 
                             </div>
                             <div className="flex md:justify-between gap-5 ml-5 md:ml-0">
                                 <div>
-                                    <p className="font-semibold">Vehicle No: </p>
-                                    <p className="font-semibold">Vehicle Status: </p>
-                                    <p className="font-semibold">Service Type: </p>
-                                    <p className="font-semibold">Security Check: </p>
+                                    <p className="font-semibold  whitespace-nowrap">Vehicle No: </p>
+                                    <p className="font-semibold whitespace-nowrap">Vehicle Status: </p>
+                                    <p className="font-semibold whitespace-nowrap">Service Type: </p>
+                                    <p className="font-semibold whitespace-nowrap">Security Check: </p>
                                 </div>
 
                                 <div>
-                                    <p>{vehicle[0].vehicleNumber}</p>
+                                    <p className='whitespace-nowrap'>{vehicle[0].vehicleNumber}</p>
 
-                                    <p>In Queue</p>
-                                    <p>Automation</p>
-                                    <p>Done</p>
+                                    <p className='whitespace-nowrap'>In Queue</p>
+                                    <p className='whitespace-nowrap'>Automation</p>
+                                    <p className='whitespace-nowrap'>Done</p>
 
                                 </div>
                             </div>
@@ -160,12 +160,13 @@ const ReportChecker = ({ vehicle = [] }) => {
                         </table>
                     </div>
 
-                    <div className="pt-[250px]">
+                    <div className="pt-[120PX] hidden">
                         <div className=" md:w-[700px] mx-auto mt-10 " >
                             <hr className="mb-3"></hr>
                             <p className="text-xs text-center  mb-5"> <span className="font-bold">Address:</span> 1600 Amphitheatre Parkway Mountain View, CA 94043, USA <span className="font-bold"> Phone:</span> (650) 253-0000 <span className="font-bold">Email:</span> google@gmail.com</p>
                         </div>
                     </div>
+
                 </div>
 
             </div>
