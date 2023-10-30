@@ -34,7 +34,7 @@ const Report = ({vehicle}) => {
                         </div>
 
                         <div>
-                            <p>01</p>
+                            <p>{vehicle.sl}</p>
                             <p>{vehicle.date}</p>
                             <p>{vehicle.vehicleNumber}</p>
                             

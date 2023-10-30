@@ -1,6 +1,6 @@
 @media print {
     /* styles here */
-    @page { size: landscape; }
+    @page { size: A4 landscape; }
     * {
         visibility: hidden;
         /* padding: 0 !important;
