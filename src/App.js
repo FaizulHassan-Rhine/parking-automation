@@ -23,6 +23,7 @@ import ReportStorage from './components/Report/ReportStorage';
 import Navbar from './components/Navbar/Navbar';
 import StockDetails from './components/AdminPageThree/StockDetails';
 import StockInfo from './components/AdminPageTwo/StockInfo';
+import AdminInputForm from './components/AdminInputForm/AdminInputForm';
 
 
 export const userContextManager = createContext();
@@ -59,6 +60,7 @@ function App() {
           <Route path="/page-four" element={<AdminPageFour />} />
           <Route path="/report-checker" element={<ReportChecker />} />
           <Route path="/report-storage" element={<ReportStorage />} />
+          <Route path="/admin-input-form" element={<AdminInputForm />} />
         </Routes>
       </userContextManager.Provider>
     </div>
