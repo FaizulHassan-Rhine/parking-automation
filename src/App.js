@@ -23,11 +23,9 @@ import ReportStorage from './components/Report/ReportStorage';
 import Navbar from './components/Navbar/Navbar';
 import StockDetails from './components/AdminPageThree/StockDetails';
 import StockInfo from './components/AdminPageTwo/StockInfo';
-<<<<<<< HEAD
 import AdminInputForm from './components/AdminInputForm/AdminInputForm';
-=======
+
 import AdminForm from './components/Form/AdminForm';
->>>>>>> 16a76102068bb4b6175ddbb94ead34c1c0717bfb
 
 
 export const userContextManager = createContext();
@@ -48,6 +46,7 @@ function App() {
             <Route path="queue-info" element={<AdminPageTwoV3 />} />
             <Route path="gigo" element={<AdminPageFour />} />
             <Route path="stock-info" element={<StockInfo />} />
+            <Route path="stock-entry" element={<AdminForm />} />
           </Route>
           <Route path="/search" element={<Search />} />
           <Route path="/report" element={<Report />} />
@@ -64,11 +63,11 @@ function App() {
           <Route path="/page-four" element={<AdminPageFour />} />
           <Route path="/report-checker" element={<ReportChecker />} />
           <Route path="/report-storage" element={<ReportStorage />} />
-<<<<<<< HEAD
+
           <Route path="/admin-input-form" element={<AdminInputForm />} />
-=======
-          <Route path="/admin-form" element={<AdminForm />} />
->>>>>>> 16a76102068bb4b6175ddbb94ead34c1c0717bfb
+
+          
+
         </Routes>
       </userContextManager.Provider>
     </div>
