@@ -10,6 +10,7 @@ import DataTable from '../DataTable/DataTable';
 import { FaCheckCircle, } from "react-icons/fa";
 import { CgDanger } from "react-icons/cg";
 import DataTableVehicle from '../DataTable/DataTableVehicle';
+import DataTableVehicleList from '../DataTable/DataTableVehicleList';
 
 
 const VehicleSearch = () => {
@@ -115,6 +116,7 @@ const VehicleSearch = () => {
                         </div> */}
                         {/* <ReportDownload vehicle={getVehicleList} /> */}
                     </div>
+                    <DataTableVehicleList vehicle={getVehicleList} />
 
                 </div>
 
