@@ -6,15 +6,27 @@ import { userContextManager } from '../../App';
 const ReportChecker = ({ vehicle = [] }) => {
     const [getUserInfo, setUserInfo] = useContext(userContextManager);
     return (
-        <div className='printView'>
+        <div className='printView '>
             <div className="container mx-auto">
                 <div >
-                    <div className="bg-white flex flex-col items-center mt-10">
+                    <div className="font-bold flex flex-col items-center mt-10">
                         {/* <img className="h-8 w-44 mb-2" src={logo} alt="" /> */}
                         <div className="flex items-center gap-10">
-                            <div>
-                                <p className="text-3xl font-bold uppercase">Vehicle Checking Details</p>
-                            </div>
+                        {
+                getUserInfo.role === 'checker' &&
+
+                <div >
+                    <h1 className="text-3xl font-bold uppercase">Vehicle Checking Details</h1>
+                </div>
+            }
+                      {
+                getUserInfo.role === 'storage' &&
+
+                <div >
+                    <h1 className="text-3xl font-bold uppercase">Storage Checking Details</h1>
+                </div>
+            }
+                            
                             <div className="flex justify-center pt-6">
                                 <img className="w-40" src={qrcode} />
                             </div>
@@ -65,14 +77,14 @@ const ReportChecker = ({ vehicle = [] }) => {
                         <table className="mx-auto w-[900px] bg-white text-[12px] border rounded-lg">
                             <thead>
                                 <tr className='h-12 text-[12px] bg-par-blue-dark text-white'>
-                                    <th className="px-6 py-3  text-center  font-medium uppercase tracking-wider border-b">
+                                    <th className="px-6 py-3  text-center  font-bold uppercase tracking-wider border-b">
                                         SL.No
                                     </th>
-                                    <th className="px-6 py-3 text-center  font-medium  uppercase tracking-wider border-b">
+                                    <th className="px-6 py-3 text-center  font-bold  uppercase tracking-wider border-b">
                                         SO.No
                                     </th>
                                     <th
-                                        className="px-6 py-3  text-center  font-medium  uppercase tracking-wider cursor-pointer border-b"
+                                        className="px-6 py-3  text-center  font-bold  uppercase tracking-wider cursor-pointer border-b"
 
                                     >
                                         Customer
@@ -80,25 +92,25 @@ const ReportChecker = ({ vehicle = [] }) => {
                                     </th>
 
 
-                                    <th className="px-6 py-3  text-center  font-medium  uppercase tracking-wider border-b">
+                                    <th className="px-6 py-3  text-center  font-bold  uppercase tracking-wider border-b">
                                         Customer Address
                                     </th>
-                                    <th className="px-6 py-3  text-center font-medium uppercase tracking-wider border-b">
+                                    <th className="px-6 py-3  text-center font-bold uppercase tracking-wider border-b">
                                         Delivery Address
                                     </th>
-                                    <th className="px-6 py-3  text-center font-medium  uppercase tracking-wider border-b">
+                                    <th className="px-6 py-3  text-center font-bold  uppercase tracking-wider border-b">
                                         Product
                                     </th>
-                                    <th className="px-6 py-3  text-center  font-medium  uppercase tracking-wider border-b">
+                                    <th className="px-6 py-3  text-center  font-bold  uppercase tracking-wider border-b">
                                         Quantity
                                     </th>
-                                    <th className="px-6 py-3  text-center  font-medium  uppercase tracking-wider border-b">
+                                    <th className="px-6 py-3  text-center  font-bold  uppercase tracking-wider border-b">
                                         Storage
                                     </th>
-                                    <th className="px-6 py-3  text-center  font-medium uppercase tracking-wider border-b">
+                                    <th className="px-6 py-3  text-center  font-bold uppercase tracking-wider border-b">
                                         Que.No
                                     </th>
-                                    <th className="px-6 py-3  text-center font-medium  uppercase tracking-wider border-b">
+                                    <th className="px-6 py-3  text-center font-bold  uppercase tracking-wider border-b">
                                         Status
                                     </th>
                                     {/* <th className="px-6 py-3 bg-gray-200 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-b">
