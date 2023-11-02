@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { parkingList } from '../FakeData/FakeData';
 import { Pagination } from 'antd';
 import { getSerializer } from 'localforage';
+
 const AdminStockFile = () => {
     const [stockFile, setStockFile] = useState([
         {
