@@ -40,6 +40,47 @@ export let vehicleList = [
     "queueStatus": "Parking",
     "vehicleNumber": "DHA-MET-6755",
     "vehicleMaximumWeight": "2000 kg"
+  },  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Demo Customer",
+    "customerAddress": "Demo Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6756",
+    "vehicleMaximumWeight": "2000 kg"
+  },  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Demo Customer",
+    "customerAddress": "Demo Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6757",
+    "vehicleMaximumWeight": "2000 kg"
+  },
+  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Demo Customer",
+    "customerAddress": "Demo Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6758",
+    "vehicleMaximumWeight": "2000 kg"
+  },  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Demo Customer",
+    "customerAddress": "Demo Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6759",
+    "vehicleMaximumWeight": "2000 kg"
   }
 
 ]
