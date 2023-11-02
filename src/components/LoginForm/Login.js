@@ -1,10 +1,12 @@
 import React, { useContext, useState } from "react";
 import { FaFacebookSquare, FaGoogle } from "react-icons/fa";
 // import { Link } from "react-router-dom";
-import login from "../../images/login5.jpg";
+import login from "../../images/truck4.png";
+import title from "../../images/title.png";
 import { users } from "../FakeData/FakeData";
 import { userContextManager } from "../../App";
 import { useNavigate } from "react-router";
+import "./style.css"
 
 const Login = () => {
   const [getUserInfo, setUserInfo] = useContext(userContextManager);
@@ -49,12 +51,16 @@ const Login = () => {
 
   return (
     <div>
-      <div>
+      <div className="background">
         <section className="container mx-auto">
+          <div className="flex justify-end items-center gap-4 pt-5">
+            <img className="w-12" src={title}/>
+            <p className="font-bold text-[50px]">Dispatch Automation</p>
+          </div>
           <div className="px-6 h-full text-gray-800">
-            <div className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6">
+            <div className="flex xl:justify-center mt-4 lg:justify-between justify-center items-center flex-wrap h-full g-6">
               <div className="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12">
-                <img src={login} className="w-[98%] rounded-lg" alt="Sample image" />
+                <img src={login} className="w-full h-[500px] rounded-lg" alt="Sample image" />
               </div>
               <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
                 <form onSubmit={singUpFunc} className="flex flex-col gap-3">
@@ -90,7 +96,7 @@ const Login = () => {
                   <div className="text-center lg:text-left">
                     <button
                       type="submit"
-                      className="inline-block px-7 py-3 bg-[#59E4A8] text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#59E4A8] hover:shadow-lg focus:bg-[#59E4A8]focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#D5F7E6] active:shadow-lg transition duration-150 ease-in-out"
+                      className="inline-block px-7 py-3 bg-[#66B710] text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#66B710] hover:shadow-lg focus:bg-[#59E4A8]focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#D5F7E6] active:shadow-lg transition duration-150 ease-in-out"
                     >
                       Login
                     </button>

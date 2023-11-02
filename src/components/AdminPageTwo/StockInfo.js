@@ -44,7 +44,7 @@ const StockInfo = () => {
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Packer 1</h2>
-                                        <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p>
+                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
                                 <Link to={"/stock-details/packer-2"}
@@ -54,7 +54,7 @@ const StockInfo = () => {
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Packer 2</h2>
-                                        <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p>
+                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
 
@@ -65,7 +65,7 @@ const StockInfo = () => {
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Packer 3</h2>
-                                        <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p>
+                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
 
@@ -76,7 +76,7 @@ const StockInfo = () => {
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Warehouse-1</h2>
-                                        <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p>
+                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
 
@@ -87,7 +87,7 @@ const StockInfo = () => {
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Warehouse-2</h2>
-                                        <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p>
+                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
 
@@ -98,7 +98,7 @@ const StockInfo = () => {
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Parking</h2>
-                                        <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p>
+                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
 

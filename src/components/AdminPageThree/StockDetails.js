@@ -170,7 +170,7 @@ const StockDetails = () => {
                                     {currentImages.map((examinee, index) => (
                                         <tr key={index}>
                                             <td className=" py-3  whitespace-nowrap">
-                                                <p className='text-center'> {examinee.sl}</p>
+                                                <p className='text-center'> {index + 1}</p>
                                             </td>
                                             <td className=" py-3 whitespace-nowrap">
                                                 <p className='text-center'> {examinee.stockLocation}</p>
@@ -183,7 +183,7 @@ const StockDetails = () => {
                                             </td>
                                             
                                             <td className=" py-3 whitespace-nowrap">
-                                                <p className='text-center'> {examinee.queueStatus}</p>
+                                                <p className='text-center'> {examinee.queueStockStatus}</p>
                                             </td>
                                         </tr>
                                     ))}

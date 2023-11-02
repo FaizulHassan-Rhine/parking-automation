@@ -31,6 +31,7 @@ const Navbar = () => {
             <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300'><Link to="/dashboard/queue-info">Queue Info</Link></li>
             <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300'><Link to="/dashboard/gigo">GIGO Summary</Link></li>
             <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300 '><Link to="/dashboard/stock-info">Stock Info</Link></li>
+            <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300 '><Link to="/dashboard/stock-entry">Stock Entry</Link></li>
           </ul>
           }
         </div>

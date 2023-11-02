@@ -29,8 +29,24 @@ export const users =[
         password: '1234'
     },
 ]
+export let vehicleList = [
+  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Demo Customer",
+    "customerAddress": "Demo Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6755",
+    "vehicleMaximumWeight": "2000 kg"
+  }
+
+]
+
 export let parkingList = [
     {
+      "sn":"01",
       "sl": "#SL-0000001-23",
       "salesOrderNumber": "#SO-MN-0001",
       "Customer": "John Doe",
@@ -40,6 +56,7 @@ export let parkingList = [
       "Quantity": 100,
       "stockLocation": "Packer-1",
       "queueNo": "01",
+      "queueStockStatus": "Active",
       "queueStatus": "In Queue",
       "vehicleNumber": "DHA-MET-6754",
       "entryTime": "10:30 A.M",
@@ -48,6 +65,7 @@ export let parkingList = [
       "vehicleMaximumWeight": "2000 kg"
     },
     {
+      "sn":"01",
       "sl": "#SL-0000002-23",
       "salesOrderNumber": "#SO-MN-0002",
       "Customer": "Jane Smith",
@@ -57,6 +75,7 @@ export let parkingList = [
       "Quantity": 75,
       "stockLocation": "Packer-3",
       "queueNo": "02",
+      "queueStockStatus": "Active",
       "queueStatus": "In Queue",
       "vehicleNumber": "CHA-MET-2309",
       "entryTime": "10:30 A.M",
@@ -74,6 +93,7 @@ export let parkingList = [
       "Quantity": 50,
       "stockLocation": "Warehouse-1",
       "queueNo": "03",
+      "queueStockStatus": "Active",
       "queueStatus": "In Queue",
       "vehicleNumber": "DHA-MET-1234",
       "entryTime": "10:30 A.M",
@@ -91,6 +111,7 @@ export let parkingList = [
       "Quantity": 30,
       "stockLocation": "Packer-1",
       "queueNo": "04",
+      "queueStockStatus": "Active",
       "queueStatus": "In Queue",
       "vehicleNumber": "CHA-MET-5678",
       "entryTime": "10:30 A.M",
@@ -108,6 +129,7 @@ export let parkingList = [
       "Quantity": 90,
       "stockLocation": "Packer-3",
       "queueNo": "05",
+      "queueStockStatus": "Active",
       "queueStatus": "In Queue",
       "vehicleNumber": "DHA-MET-9876",
       "entryTime": "10:30 A.M",
@@ -125,6 +147,7 @@ export let parkingList = [
       "Quantity": 70,
       "stockLocation": "Warehouse-2",
       "queueNo": "06",
+      "queueStockStatus": "Deactive",
       "queueStatus": "In Queue",
       "vehicleNumber": "CHA-MET-4321",
       "entryTime": "10:30 A.M",
@@ -142,6 +165,7 @@ export let parkingList = [
       "Quantity": 40,
       "stockLocation": "Packer-1",
       "queueNo": "07",
+      "queueStockStatus": "Active",
       "queueStatus": "In Queue",
       "vehicleNumber": "DHA-MET-5678",
       "entryTime": "10:30 A.M",
@@ -159,6 +183,7 @@ export let parkingList = [
       "Quantity": 60,
       "stockLocation": "Packer-3",
       "queueNo": "08",
+      "queueStockStatus": "Active",
       "queueStatus": "In Queue",
       "vehicleNumber": "CHA-MET-7890",
       "entryTime": "10:30 A.M",
@@ -176,6 +201,7 @@ export let parkingList = [
       "Quantity": 35,
       "stockLocation": "Parking",
       "queueNo": "09",
+      "queueStockStatus": "Active",
       "queueStatus": "In Queue",
       "vehicleNumber": "DHA-MET-2468",
       "entryTime": "10:30 A.M",
@@ -193,6 +219,7 @@ export let parkingList = [
       "Quantity": 45,
       "stockLocation": "Packer-2",
       "queueNo": "10",
+      "queueStockStatus": "Dective",
       "queueStatus": "In Queue",
       "vehicleNumber": "CHA-MET-5432",
       "entryTime": "10:30 A.M",
@@ -209,6 +236,7 @@ export let parkingList = [
       "Quantity": 40,
       "stockLocation": "Packer-1",
       "queueNo": "01",
+      "queueStockStatus": "Active",
       "queueStatus": "In Queue",
       "vehicleNumber": "DHA-MET-6754",
       "entryTime": "10:30 A.M",
@@ -225,6 +253,7 @@ export let parkingList = [
       "Quantity": 50,
       "stockLocation": "Packer-3",
       "queueNo": "01",
+      "queueStockStatus": "Active",
       "queueStatus": "In Queue",
       "vehicleNumber": "DHA-MET-6754",
       "entryTime": "10:30 A.M",
@@ -241,6 +270,7 @@ export let parkingList = [
       "Quantity": 60,
       "stockLocation": "Warehouse-1",
       "queueNo": "01",
+      "queueStockStatus": "Active",
       "queueStatus": "In Queue",
       "vehicleNumber": "DHA-MET-6754",
       "entryTime": "10:30 A.M",
