@@ -26,6 +26,7 @@ import StockInfo from './components/AdminPageTwo/StockInfo';
 import AdminInputForm from './components/AdminInputForm/AdminInputForm';
 
 import AdminForm from './components/Form/AdminForm';
+import AdminStockFile from './components/AdminStockFile/AdminStockFile';
 
 
 export const userContextManager = createContext();
@@ -63,6 +64,7 @@ function App() {
           <Route path="/page-four" element={<AdminPageFour />} />
           <Route path="/report-checker" element={<ReportChecker />} />
           <Route path="/report-storage" element={<ReportStorage />} />
+          <Route path="/stock-data" element={<AdminStockFile />} />
 
           <Route path="/admin-input-form" element={<AdminInputForm />} />
 
