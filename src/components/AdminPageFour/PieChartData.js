@@ -69,7 +69,7 @@ const PieChartData = () => {
           fontSize:'60px',
          
         },
-        content: '24s',
+        content: '24m',
       },
     },
   };
