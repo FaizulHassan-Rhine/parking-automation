@@ -29,6 +29,21 @@ export const users =[
         password: '1234'
     },
 ]
+export let vehicleList = [
+  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Demo Customer",
+    "customerAddress": "Demo Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6755",
+    "vehicleMaximumWeight": "2000 kg"
+  }
+
+]
+
 export let parkingList = [
     {
       "sn":"01",
