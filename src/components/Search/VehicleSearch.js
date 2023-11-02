@@ -2,7 +2,7 @@
 import React, { useContext, useState } from 'react';
 import qrCode from "../../images/barcode.jpg"
 import avatar from "../../images/avatarProfile.png"
-import { parkingList } from '../FakeData/FakeData';
+import { parkingList, vehicleList } from '../FakeData/FakeData';
 import QrCodeGen from '../QrCodeGen/QrCodeGen';
 import ReportDownload from '../ReportDownload/ReportDownload';
 import { userContextManager } from '../../App';
@@ -15,6 +15,7 @@ import DataTableVehicle from '../DataTable/DataTableVehicle';
 const VehicleSearch = () => {
     const [getSearchString, setSearchString] = useState("")
     const [getParkingList, setParkingList] = useState([]);
+    const [getVehicleList, setVehicleList] = useState([]);
     const [getUserInfo, setUserInfo] = useContext(userContextManager);
 
     const signOut = () => {
@@ -27,13 +28,19 @@ const VehicleSearch = () => {
         setSearchString(e.target.value);
 
         const foundCar = parkingList.filter(car => car.vehicleNumber === e.target.value);
+        const vehicleCar = vehicleList.filter(car => car.vehicleNumber === e.target.value);
 
-        if (foundCar) {
+        if (foundCar.length > 0) {
             console.log("Car found:", foundCar);
+            setVehicleList([])
             setParkingList(foundCar);
+        }else if(vehicleCar.length > 0){
+            setParkingList([]);
+            setVehicleList(vehicleCar)
+            console.log("found vehicle");
         } else {
-            setParkingList({});
-
+            setParkingList([]);
+            setVehicleList([]);
             console.log("Car not found");
         }
     }
@@ -76,7 +83,7 @@ const VehicleSearch = () => {
             </div>
 
 
-            {Object.keys(getParkingList).length > 0 ? (
+            {getParkingList.length > 0 ? (
                 <div className='flex flex-col'>
                     <div className='flex items-center justify-center'>
                         {/* <QrCodeGen qrString={getParkingList.licensePlate}/> */}
@@ -94,7 +101,24 @@ const VehicleSearch = () => {
 
                 </div>
 
-            ) : (
+            ) : getVehicleList.length > 0 ? (
+                <div className='flex flex-col'>
+                    <div className='flex items-center justify-center'>
+                        {/* <QrCodeGen qrString={getParkingList.licensePlate}/> */}
+                        <div>
+                            <img className='w-[180px]' src={qrCode} alt='' />
+                            <p className='text-xs text-center font-semibold'>Vehicle No: {getVehicleList[0].vehicleNumber}</p>
+                        </div>
+                        {/* <div className='flex items-center mt-0 font-semibold gap-3 text-xs'>
+                        <p className='text-green-500 text-center'>Vehicle Found</p>
+                        <p><FaCheckCircle className='text-green-400'/></p>
+                        </div> */}
+                        {/* <ReportDownload vehicle={getVehicleList} /> */}
+                    </div>
+
+                </div>
+
+            ): (
                 getSearchString.length > 0 &&
                 <div className='flex items-center justify-center gap-2 text-red-600 text-5xl font-semibold pt-40'>
                     <p className=''>No Results Found</p>
@@ -105,6 +129,7 @@ const VehicleSearch = () => {
             )
             }
 
+{console.log(getVehicleList.length)}
 
 
         </div>

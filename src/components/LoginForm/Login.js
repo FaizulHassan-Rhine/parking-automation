@@ -53,14 +53,14 @@ const Login = () => {
     <div>
       <div className="background">
         <section className="container mx-auto">
-          <div className="flex justify-end items-center gap-4 pt-5">
-            <img className="w-12" src={title}/>
-            <p className="font-bold text-[50px]">Dispatch Automation</p>
+          <div className="flex justify-center md:justify-end items-center gap-4 pt-5">
+            <img className="w-8 md:w-12" src={title}/>
+            <p className="font-bold  text-xl md:text-[50px]">Dispatch Automation</p>
           </div>
           <div className="px-6 h-full text-gray-800">
             <div className="flex xl:justify-center mt-4 lg:justify-between justify-center items-center flex-wrap h-full g-6">
               <div className="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12">
-                <img src={login} className="w-full h-[500px] rounded-lg" alt="Sample image" />
+                <img src={login} className="w-full  rounded-lg" alt="Sample image" />
               </div>
               <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
                 <form onSubmit={singUpFunc} className="flex flex-col gap-3">
