@@ -76,9 +76,12 @@ const Navbar = () => {
                 <Link to="/dashboard/stock-entry" onClick={closeModal} className='p-16 font-semibold bg-slate-200 hover:bg-green-200 shadow-lg rounded-2xl  cursor-pointer '>
                   <p  className='text-xl font-bold'>Manually</p>
                 </Link>
+
+
                 <button className='p-16  bg-slate-200 hover:bg-green-200 shadow-lg rounded-2xl cursor-pointer'>
                 <p className='text-xl font-bold'>Choose File</p>
                 </button>
+
               </div>
               
             </div>
