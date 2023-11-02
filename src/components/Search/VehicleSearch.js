@@ -8,12 +8,13 @@ import ReportDownload from '../ReportDownload/ReportDownload';
 import { userContextManager } from '../../App';
 import DataTable from '../DataTable/DataTable';
 import { FaCheckCircle, } from "react-icons/fa";
-import {CgDanger } from "react-icons/cg";
+import { CgDanger } from "react-icons/cg";
+import DataTableVehicle from '../DataTable/DataTableVehicle';
 
 
 const VehicleSearch = () => {
     const [getSearchString, setSearchString] = useState("")
-    const [getParkingList, setParkingList] = useState({});
+    const [getParkingList, setParkingList] = useState([]);
     const [getUserInfo, setUserInfo] = useContext(userContextManager);
 
     const signOut = () => {
@@ -25,7 +26,7 @@ const VehicleSearch = () => {
         e.preventDefault()
         setSearchString(e.target.value);
 
-        const foundCar = parkingList.find(car => car.vehicleNumber === e.target.value);
+        const foundCar = parkingList.filter(car => car.vehicleNumber === e.target.value);
 
         if (foundCar) {
             console.log("Car found:", foundCar);
@@ -76,23 +77,30 @@ const VehicleSearch = () => {
 
 
             {Object.keys(getParkingList).length > 0 ? (
-                <div className='flex flex-col items-center'>
-                    {/* <QrCodeGen qrString={getParkingList.licensePlate}/> */}
-                    <img className='w-[700px] mt-5' src={qrCode} alt='' />
-                    <p className='text-xl font-semibold'>Vehicle No: {getParkingList.vehicleNumber}</p>
-                    <ReportDownload vehicle={getParkingList} />
-                    <div className='flex items-center mt-10 font-semibold text-4xl gap-3'>
-                        <p className='text-green-500'>Vehicle Found</p>
+                <div className='flex flex-col'>
+                    <div className='flex items-center justify-center'>
+                        {/* <QrCodeGen qrString={getParkingList.licensePlate}/> */}
+                        <div>
+                            <img className='w-[180px]' src={qrCode} alt='' />
+                            <p className='text-xs text-center font-semibold'>Vehicle No: {getParkingList[0].vehicleNumber}</p>
+                        </div>
+                        {/* <div className='flex items-center mt-0 font-semibold gap-3 text-xs'>
+                        <p className='text-green-500 text-center'>Vehicle Found</p>
                         <p><FaCheckCircle className='text-green-400'/></p>
+                        </div> */}
+                        <ReportDownload vehicle={getParkingList} />
                     </div>
+                    <DataTableVehicle vehicle={getParkingList} />
+
                 </div>
+
             ) : (
-                getSearchString.length > 0 && 
+                getSearchString.length > 0 &&
                 <div className='flex items-center justify-center gap-2 text-red-600 text-5xl font-semibold pt-40'>
-                 <p className=''>No Results Found</p>
-                <p><CgDanger/></p>
+                    <p className=''>No Results Found</p>
+                    <p><CgDanger /></p>
                 </div>
-            
+
 
             )
             }

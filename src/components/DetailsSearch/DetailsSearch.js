@@ -53,10 +53,10 @@ const DetailsSearch = () => {
 
                 {getParkingList.length > 0 ? (
                     <>
-                    <DataTable vehicle={getParkingList} />
-                    <div className='fixed left-[-9999px]'>
-                     <ReportChecker vehicle={getParkingList} />
-                    </div>
+                        <DataTable vehicle={getParkingList} />
+                        <div className='fixed left-[-9999px]'>
+                            <ReportChecker vehicle={getParkingList} />
+                        </div>
                     </>
                 ) : (
 
