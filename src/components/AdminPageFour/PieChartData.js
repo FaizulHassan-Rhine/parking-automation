@@ -6,23 +6,23 @@ const PieChartData = () => {
   const data = [
     {
       type: 'Security Check to Check-In',
-      value: 5,
+      value: 2.52,
        
    
     },
     {
       type: 'Check-In to Packer/WH',
-      value: 4,
+      value: 4.2,
    
     },
     {
       type: 'Packer In-time to Packer Out-time',
-      value: 5,
+      value: 5.3,
     
     },
     {
       type: 'Packer to Check-out',
-      value: 10,
+      value: 10.05,
       
     },
    
@@ -46,7 +46,7 @@ const PieChartData = () => {
       content: '{value}',
       style: {
         textAlign: 'center',
-        fontSize: 28,
+        fontSize: 24,
    
         
       },
@@ -66,10 +66,10 @@ const PieChartData = () => {
           whiteSpace: 'pre-wrap',
           overflow: 'hidden',
           textOverflow: 'ellipsis',
-          fontSize:'60px',
+          fontSize:'40px',
          
         },
-        content: '24m',
+        content: '22.07m',
       },
     },
   };
