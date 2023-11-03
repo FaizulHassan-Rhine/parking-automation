@@ -31,7 +31,7 @@ const AdminPageTwo2 = () => {
                     </div>
                 </div>
                 <div className='grid  sm:grid-cols-2  lg:grid-cols-3  items-center gap-20 pt-10'>
-                    <Link to={"/so-detail/packer-1"} className="card bg border-l-2 border-green-400 border-r-8 rounded-r-full  shadow-xl cursor-pointer">
+                    <Link to={"/dashboard/so-detail/packer-1"} className="card bg border-l-2 border-green-400 border-r-8 rounded-r-full  shadow-xl cursor-pointer">
                         <div className="card-body">
                             <h2 className="font-bold text-2xl text-green-400 text-center">Packer 1</h2>
 
@@ -42,7 +42,7 @@ const AdminPageTwo2 = () => {
                         </div>
                     </Link>
 
-                    <Link to={"/so-detail/packer-2"} className="card bg border-l-2 border-r-8 rounded-r-full border-green-400 shadow-xl cursor-pointer">
+                    <Link to={"/dashboard/so-detail/packer-2"} className="card bg border-l-2 border-r-8 rounded-r-full border-green-400 shadow-xl cursor-pointer">
                         <div className="card-body">
                             <h2 className="font-bold text-2xl text-green-400 text-center">Packer 2</h2>
 
@@ -54,7 +54,7 @@ const AdminPageTwo2 = () => {
                         </div>
                     </Link>
 
-                    <Link to={"/so-detail/packer-3"} className="card bg border-l-2 border-r-8 rounded-r-full border-green-400 shadow-xl cursor-pointer">
+                    <Link to={"/dashboard/so-detail/packer-3"} className="card bg border-l-2 border-r-8 rounded-r-full border-green-400 shadow-xl cursor-pointer">
                         <div className="card-body">
                             <h2 className="font-bold text-2xl text-green-400 text-center">Packer 3</h2>
 
@@ -66,7 +66,7 @@ const AdminPageTwo2 = () => {
                         </div>
                     </Link>
 
-                    <Link to={"/so-detail/warehouse-1"} className="card bg border-l-2 border-yellow-400 border-r-8 rounded-r-full shadow-xl cursor-pointer">
+                    <Link to={"/dashboard/so-detail/warehouse-1"} className="card bg border-l-2 border-yellow-400 border-r-8 rounded-r-full shadow-xl cursor-pointer">
                         <div className="card-body">
                             <h2 className="font-bold text-2xl text-yellow-400 text-center">Warehouse 1</h2>
 
@@ -78,7 +78,7 @@ const AdminPageTwo2 = () => {
                         </div>
                     </Link>
 
-                    <Link to={"/so-detail/warehouse-2"} className="card bg border-l-2 border-yellow-400 border-r-8 rounded-r-full shadow-xl cursor-pointer">
+                    <Link to={"/dashboard/so-detail/warehouse-2"} className="card bg border-l-2 border-yellow-400 border-r-8 rounded-r-full shadow-xl cursor-pointer">
                         <div className="card-body">
                             <h2 className="font-bold text-2xl text-yellow-400 text-center">Warehouse 2</h2>
 
@@ -90,7 +90,7 @@ const AdminPageTwo2 = () => {
                         </div>
                     </Link>
 
-                    <Link to={"/so-detail/parking"} className="card bg border-l-2 border-pink-400 border-r-8 rounded-r-full shadow-xl cursor-pointer">
+                    <Link to={"/dashboard/so-detail/parking"} className="card bg border-l-2 border-pink-400 border-r-8 rounded-r-full shadow-xl cursor-pointer">
                         <div className="card-body ">
                             <h2 className="font-bold text-2xl text-pink-400 text-center">Parking </h2>
                             <div className="flex justify-center">

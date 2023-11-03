@@ -112,7 +112,7 @@ const VehicleSearch = () => {
                         <p className='text-green-500 text-center'>Vehicle Found</p>
                         <p><FaCheckCircle className='text-green-400'/></p>
                         </div> */}
-                        {/* <ReportDownload vehicle={getVehicleList} /> */}
+                        <ReportDownload vehicle={getVehicleList[0]} />
                     </div>
                     <DataTableVehicleList vehicle={getVehicleList} />
 

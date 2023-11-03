@@ -36,7 +36,7 @@ const AdminPageTwoV3 = () => {
                             </div>
                             <div className='grid  sm:grid-cols-2  lg:grid-cols-3  items-center gap-4'>
 
-                                <Link to={"/so-detail/packer-1"}
+                                <Link to={"/dashboard/so-detail/packer-1"}
                                     className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark  group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
                                         <h1 className='font-bold text-6xl text-center'>{countStockLocation("Packer-1")}</h1>
@@ -46,7 +46,7 @@ const AdminPageTwoV3 = () => {
                                         {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
-                                <Link to={"/so-detail/packer-2"}
+                                <Link to={"/dashboard/so-detail/packer-2"}
                                     className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
                                         <h1 className='font-bold text-6xl text-center'>{countStockLocation("Packer-2")}</h1>
@@ -57,7 +57,7 @@ const AdminPageTwoV3 = () => {
                                     </div>
                                 </Link>
 
-                                <Link to={"/so-detail/packer-3"}
+                                <Link to={"/dashboard/so-detail/packer-3"}
                                     className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
                                         <h1 className='font-bold text-6xl text-center'>{countStockLocation("Packer-3")}</h1>
@@ -68,7 +68,7 @@ const AdminPageTwoV3 = () => {
                                     </div>
                                 </Link>
 
-                                <Link to={"/so-detail/warehouse-1"}
+                                <Link to={"/dashboard/so-detail/warehouse-1"}
                                     className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
                                         <h1 className='font-bold text-6xl text-center'>{countStockLocation("warehouse-1")}</h1>
@@ -79,7 +79,7 @@ const AdminPageTwoV3 = () => {
                                     </div>
                                 </Link>
 
-                                <Link to={"/so-detail/warehouse-2"}
+                                <Link to={"/dashboard/so-detail/warehouse-2"}
                                     className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
                                         <h1 className='font-bold text-6xl text-center'>{countStockLocation("warehouse-2")}</h1>
@@ -90,7 +90,7 @@ const AdminPageTwoV3 = () => {
                                     </div>
                                 </Link>
 
-                                <Link to={"/so-detail/parking"}
+                                <Link to={"/dashboard/so-detail/parking"}
                                     className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
                                         <h1 className='font-bold text-6xl text-center'>{countStockLocation("parking")}</h1>
