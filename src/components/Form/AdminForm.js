@@ -22,7 +22,7 @@ const AdminForm = () => {
                     </div>
                     <div className='flex flex-col items-center'>
                         <div className='mt-4'>
-                            <form onSubmit={singUpFunc} className='flex flex-col gap-10 p-10  w-[700px] bg-white rounded-lg shadow-sm2'>
+                            <form onSubmit={singUpFunc} className='flex flex-col gap-10 p-10 w-[300px] sm:w-[500px] md:w-[700px] bg-white rounded-lg shadow-sm2'>
                                 <div className='flex flex-col  gap-[20px]'>
 
                                     <div className='flex flex-col gap-[20px]'>

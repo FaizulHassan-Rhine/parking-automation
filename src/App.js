@@ -48,6 +48,7 @@ function App() {
             <Route path="gigo" element={<AdminPageFour />} />
             <Route path="stock-info" element={<StockInfo />} />
             <Route path="stock-entry" element={<AdminForm />} />
+            <Route path="stock-data" element={<AdminStockFile />} />
           </Route>
           <Route path="/search" element={<Search />} />
           <Route path="/report" element={<Report />} />
@@ -64,7 +65,6 @@ function App() {
           <Route path="/page-four" element={<AdminPageFour />} />
           <Route path="/report-checker" element={<ReportChecker />} />
           <Route path="/report-storage" element={<ReportStorage />} />
-          <Route path="/stock-data" element={<AdminStockFile />} />
 
           <Route path="/admin-input-form" element={<AdminInputForm />} />
 
