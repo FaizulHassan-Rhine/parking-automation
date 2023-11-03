@@ -53,7 +53,7 @@ const Login = () => {
     <div>
       <div className="background">
         <section className="container mx-auto">
-          <div className="flex justify-center md:justify-end items-center gap-4 pt-5">
+          <div className="flex justify-center md:justify-end items-center gap-4 pt-10">
             <img className="w-8 md:w-12" src={title}/>
             <p className="font-bold  text-xl md:text-[50px]">Dispatch Automation</p>
           </div>
@@ -96,7 +96,7 @@ const Login = () => {
                   <div className="text-center lg:text-left">
                     <button
                       type="submit"
-                      className="inline-block px-7 py-3 bg-[#66B710] text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#66B710] hover:shadow-lg focus:bg-[#59E4A8]focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#D5F7E6] active:shadow-lg transition duration-150 ease-in-out"
+                      className="inline-block px-7 py-3 bg-[#66B710] text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#66B710] hover:shadow-lg focus:bg-[#59E4A8]focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#66B710] active:shadow-lg transition duration-150 ease-in-out"
                     >
                       Login
                     </button>
