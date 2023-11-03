@@ -23,7 +23,7 @@ const AdminPageTwoV3 = () => {
             {/* <Navbar /> */}
             <div className='bg-[#f5f5f5] pt-5 pb-12'>
                 <div className='container mx-auto'>
-                    <div className='flex flex-col gap-4'>
+                    <div className='flex flex-col gap-0'>
 
                         <div className='flex justify-center mt-4'>
                             <h1 className='text-3xl font-bold uppercase'>Queue Tracking </h1>
@@ -34,8 +34,7 @@ const AdminPageTwoV3 = () => {
                                     <RangePicker size='small' className='p-2 w-80 text-sm bg-gray-200' defaultValue={[dayjs('2023-10-25', dateFormat), dayjs('2023-10-26', dateFormat)]} showTime />
                                 </div>
                             </div>
-
-                            <div className='grid  sm:grid-cols-2  lg:grid-cols-3  items-center gap-20'>
+                            <div className='grid  sm:grid-cols-2  lg:grid-cols-3  items-center gap-4'>
 
                                 <Link to={"/so-detail/packer-1"}
                                     className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">

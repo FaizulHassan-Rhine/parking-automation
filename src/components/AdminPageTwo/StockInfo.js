@@ -23,7 +23,7 @@ const StockInfo = () => {
             {/* <Navbar /> */}
             <div className='bg-[#f5f5f5] pt-5 pb-12'>
                 <div className='container mx-auto'>
-                    <div className='flex flex-col gap-4'>
+                    <div className='flex flex-col gap-0'>
 
                         <div className='flex justify-center mt-4'>
                             <h1 className='text-3xl font-bold uppercase'>Stock Status </h1>
@@ -35,7 +35,7 @@ const StockInfo = () => {
                                 </div>
                             </div>
 
-                            <div className='grid  sm:grid-cols-2  lg:grid-cols-3  items-center gap-20'>
+                            <div className='grid  sm:grid-cols-2  lg:grid-cols-3  items-center gap-4'>
 
                                 <Link to={"/stock-details/packer-1"}
                                     className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">

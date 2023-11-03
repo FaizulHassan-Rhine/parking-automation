@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import avatar from "../../images/avatarProfile.png"
 import logo from "../../images/logo2.png"
 import { userContextManager } from '../../App';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import "./Navbar.css";
 import { redirect } from "react-router-dom";
 
@@ -38,7 +38,7 @@ const Navbar = () => {
     if (!allowedExtensions.exec(data)) {
       console.log("valid file");
       navigate('/stock-data');
-      closeModal(); 
+      closeModal();
     } else { console.log("invalid file") }
   }
 
@@ -59,10 +59,30 @@ const Navbar = () => {
               {getUserInfo.role === 'admin' &&
 
                 <ul className="flex gap-8 cursor-pointer">
-                  <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300'><Link to="/dashboard/queue-info">Queue Info</Link></li>
-                  <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300'><Link to="/dashboard/gigo">GIGO Summary</Link></li>
-                  <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300 '><Link to="/dashboard/stock-info">Stock Info</Link></li>
-                  <li className='hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300 '><Link onClick={openModal} >Stock Entry</Link></li>
+                  <li>
+                    <NavLink
+                      className={({ isActive, isPending }) =>
+                        isActive ? "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
+                      }
+                      to="/dashboard/queue-info">Queue Info</NavLink></li>
+
+                  <li>
+                    <NavLink to="/dashboard/gigo"
+                    className={({ isActive, isPending }) =>
+                    isActive ? "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
+                  }
+                    >GIGO Summary</NavLink></li>
+                    
+                  <li><NavLink
+                  className={({ isActive, isPending }) =>
+                  isActive ? "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
+                  }
+                 to="/dashboard/stock-info">Stock Info</NavLink></li>
+                  <li><NavLink 
+                  className={({ isActive, isPending }) =>
+                  isActive ?"hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
+                }
+                 onClick={openModal} >Stock Entry</NavLink></li>
 
                 </ul>
               }

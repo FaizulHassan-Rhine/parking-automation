@@ -96,12 +96,10 @@ const VehicleSearch = () => {
                         <p className='text-green-500 text-center'>Vehicle Found</p>
                         <p><FaCheckCircle className='text-green-400'/></p>
                         </div> */}
-                        <ReportDownload vehicle={getParkingList} />
+                        <ReportDownload vehicle={getParkingList[0]} />
                     </div>
                     <DataTableVehicle vehicle={getParkingList} />
-
                 </div>
-
             ) : getVehicleList.length > 0 ? (
                 <div className='flex flex-col'>
                     <div className='flex items-center justify-center'>
