@@ -64,7 +64,9 @@ const ReportChecker = ({ vehicle = [] }) => {
                                 <div>
                                     <p className='whitespace-nowrap'>{vehicle[0].vehicleNumber}</p>
 
-                                    <p className='whitespace-nowrap'>In Queue</p>
+                                    <p className='whitespace-nowrap'> 
+                                    {getUserInfo.role == 'storage' ? 'Loading Products' : 'In Queue'}
+                                    </p>
                                     <p className='whitespace-nowrap'>Automation</p>
                                     <p className='whitespace-nowrap'>Done</p>
 
@@ -78,7 +80,7 @@ const ReportChecker = ({ vehicle = [] }) => {
                             <thead>
                                 <tr className='h-12 text-[12px] bg-par-blue-dark text-white'>
                                     <th className="px-6 py-3  text-center  font-bold uppercase tracking-wider border-b">
-                                        SL.No
+                                        SL
                                     </th>
                                     <th className="px-6 py-3 text-center  font-bold  uppercase tracking-wider border-b">
                                         SO.No
@@ -123,7 +125,8 @@ const ReportChecker = ({ vehicle = [] }) => {
                                 {vehicle.map((examinee, index) => (
                                     <tr key={index}>
                                         <td className="pl-6 py-3 whitespace-nowrap">
-                                            {examinee.sl}
+                                            {/* {examinee.sl} */}
+                                            {index + 1}
                                         </td>
                                         <td className="pl-6 py-3 whitespace-nowrap">
                                             {examinee.salesOrderNumber}

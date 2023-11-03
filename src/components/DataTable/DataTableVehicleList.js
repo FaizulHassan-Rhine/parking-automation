@@ -48,17 +48,17 @@ const DataTableVehicleList = ({ vehicle = [] }) => {
                                 <tbody className="bg-white divide-y divide-gray-300  text-[12px]">
                                     {vehicle.map((examinee, index) => (
                                         <tr key={index}>
-                                            <td className="pl-6 py-3 whitespace-nowrap">
+                                            <td className="pl-6 py-3 whitespace-nowrap text-center">
                                                 {examinee.sl}
                                             </td>
                                           
-                                            <td className="px-6 py-3 whitespace-nowrap">
+                                            <td className="px-6 py-3 whitespace-nowrap text-center">
                                                 {examinee.Customer}
                                             </td>
-                                            <td className="px-6 py-3 whitespace-nowrap">
+                                            <td className="px-6 py-3 whitespace-nowrap text-center">
                                                 {examinee.customerAddress}
                                             </td>
-                                            <td className="pl-6 py-3 whitespace-nowrap">
+                                            <td className="pl-6 py-3 whitespace-nowrap text-center">
                                                 {examinee.vehicleMaximumWeight}
                                                 {/* Pending */}
                                             </td>

@@ -269,10 +269,10 @@ export let parkingList = [
       "vehicleMaximumWeight": "2700 kg"
     },{
       "sl": "#SL-0000001-23",
-      "salesOrderNumber": "#SO-MN-0001",
+      "salesOrderNumber": "#SO-MN-0002",
       "Customer": "John Doe",
       "customerAddress": "123 Main Street, Cityville, CA 12345",
-      "deliveryAddress": "456 Elm Avenue, Townsville, CA 54321",
+      "deliveryAddress": "105 Elm Avenue, Townsville, CA 54321",
       "Product": "Product-2",
       "Quantity": 40,
       "stockLocation": "Packer-1",
@@ -286,10 +286,10 @@ export let parkingList = [
       "vehicleMaximumWeight": "2000 kg"
     },{
       "sl": "#SL-0000001-23",
-      "salesOrderNumber": "#SO-MN-0001",
+      "salesOrderNumber": "#SO-MN-0003",
       "Customer": "John Doe",
       "customerAddress": "123 Main Street, Cityville, CA 12345",
-      "deliveryAddress": "456 Elm Avenue, Townsville, CA 54321",
+      "deliveryAddress": "350 Elm Avenue, Townsville, CA 54321",
       "Product": "Product-3",
       "Quantity": 50,
       "stockLocation": "Packer-3",
@@ -306,7 +306,7 @@ export let parkingList = [
       "salesOrderNumber": "#SO-MN-0001",
       "Customer": "John Doe",
       "customerAddress": "123 Main Street, Cityville, CA 12345",
-      "deliveryAddress": "456 Elm Avenue, Townsville, CA 54321",
+      "deliveryAddress": "874 Elm Avenue, Townsville, CA 54321",
       "Product": "Product-4",
       "Quantity": 60,
       "stockLocation": "Warehouse-1",

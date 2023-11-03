@@ -61,7 +61,7 @@ const DataTableVehicle = ({ vehicle = [] }) => {
                                 <thead>
                                     <tr className='h-12 text-[12px] bg-par-blue-dark text-white'>
                                         <th className="px-6 py-3  text-center  font-medium uppercase tracking-wider border-b">
-                                            SL.No
+                                            SL
                                         </th>
                                         <th className="px-6 py-3 text-center  font-medium  uppercase tracking-wider border-b">
                                             SO.No
@@ -106,7 +106,8 @@ const DataTableVehicle = ({ vehicle = [] }) => {
                                     {vehicle.map((examinee, index) => (
                                         <tr key={index}>
                                             <td className="pl-6 py-3 whitespace-nowrap">
-                                                {examinee.sl}
+                                                {/* {examinee.sl} */}
+                                                {index+1}
                                             </td>
                                             <td className="pl-6 py-3 whitespace-nowrap">
                                                 {examinee.salesOrderNumber}
