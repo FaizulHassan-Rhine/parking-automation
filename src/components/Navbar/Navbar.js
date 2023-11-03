@@ -37,9 +37,12 @@ const Navbar = () => {
 
     if (!allowedExtensions.exec(data)) {
       console.log("valid file");
-      navigate('/stock-data');
+      navigate('/dashboard/stock-data');
       closeModal();
+      e.target.value = '';
     } else { console.log("invalid file") }
+
+    console.log(data)
   }
 
   return (
@@ -87,10 +90,7 @@ const Navbar = () => {
                 </ul>
               }
             </div>
-
             <div>
-
-
               {isOpen && (
                 <div className="main-modal fixed w-full inset-0 z-50  overflow-hidden flex justify-center items-center">
                   <div className="modal-container bg-white shadow-xl w-5/12  mx-auto rounded-xl z-50 ">

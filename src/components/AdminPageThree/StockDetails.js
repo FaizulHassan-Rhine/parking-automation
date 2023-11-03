@@ -20,7 +20,6 @@ const StockDetails = () => {
             exitTime: "03:45 P.M",
         },
         {
-
             Sales: "#SO-MN-0001",
             Queue_No: "01",
             Queue_Status: "In Queue",
@@ -29,7 +28,6 @@ const StockDetails = () => {
             exitTime: "03:45 P.M",
         },
         {
-
             Sales: "#SO-MN-0001",
             Queue_No: "01",
             Queue_Status: "In Queue",
@@ -130,7 +128,6 @@ const StockDetails = () => {
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                                 </svg>
                                             </div>
-
                                             <input
                                                 onChange={searchFunc}
                                                 class=" h-full w-full outline-none text-sm text-gray-700 pr-2"
@@ -160,7 +157,7 @@ const StockDetails = () => {
                                         <th className="px-6 py-2 text-center font-medium uppercase tracking-wider">
                                             Quantity
                                         </th>
-                                        
+
                                         <th className="px-6 py-2 text-center font-medium uppercase tracking-wider">
                                             Status
                                         </th>
@@ -181,7 +178,7 @@ const StockDetails = () => {
                                             <td className=" py-3 whitespace-nowrap">
                                                 <p className='text-center'> {examinee.Quantity}</p>
                                             </td>
-                                            
+
                                             <td className=" py-3 whitespace-nowrap">
                                                 <p className='text-center'> {examinee.queueStockStatus}</p>
                                             </td>
