@@ -142,20 +142,13 @@ const VehicleSearch = () => {
                         </div>
                         <DataTableVehicleList  vehicle={getCarList} />
                     </div>
-
-                    <div className='flex justify-center pt-10 md:-ml-[520px] ml-0 '>
-                                <h1 className='font-semibold text-green-700'>Corporate Registered Vehicle</h1>
-                            </div>
-                    <DataTableVehicleList vehicle={getCarList} />
-                </div>
-            ): (
-                getSearchString.length > 0 &&
-                <div className='flex items-center justify-center gap-2 text-red-600 text-xl md:text-5xl font-semibold pt-40'>
-                    <p className=''>No Results Found</p>
-                    <p><CgDanger /></p>
-                </div>
-            )
-            
+                ) : (
+                    getSearchString.length > 0 &&
+                    <div className='flex items-center justify-center gap-2 text-red-600 text-5xl font-semibold pt-40'>
+                        <p className=''>No Results Found</p>
+                        <p><CgDanger /></p>
+                    </div>
+                )
             }
 
             {console.log(getVehicleList.length)}
