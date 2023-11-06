@@ -98,7 +98,7 @@ const AdminPageThree = () => {
                     <div class='max-w-md mx-auto'>
 
                     </div>
-                    <div className='w-full overflow-x-scroll sm:overflow-auto mt-12 sm:mt-0'>
+                    <div className='w-full lg:w-[900px] mx-auto overflow-x-scroll sm:overflow-auto mt-12 sm:mt-0'>
                     <div className="mx-auto rounded-lg">
                         <div className='mx-auto  flex flex-col gap-3'>
                             <div className='flex flex-col-reverse gap-5  md:flex-row'>
