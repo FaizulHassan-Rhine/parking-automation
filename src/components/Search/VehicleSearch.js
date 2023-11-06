@@ -108,6 +108,9 @@ const VehicleSearch = () => {
                         </div> */}
                         <ReportDownload vehicle={getParkingList[0]} />
                     </div>
+                    <div className='flex justify-center pt-10 md:-ml-[430px] ml-0 '>
+                                <h1 className='font-semibold text-green-700'>Vehicle Registered for the Upcoming SO</h1>
+                            </div>
                     <DataTableVehicle vehicle={getParkingList} />
                 </div>
             ) : getVehicleList.length > 0 ? (
@@ -115,15 +118,17 @@ const VehicleSearch = () => {
                     <div className='flex items-center justify-center'>
                         {/* <QrCodeGen qrString={getParkingList.licensePlate}/> */}
                         <div>
+                          
                             <img className='w-[180px]' src={qrCode} alt='' />
                             <p className='text-xs text-center font-semibold'>Vehicle No: {getVehicleList[0].vehicleNumber}</p>
+                            
                         </div>
-                        {/* <div className='flex items-center mt-0 font-semibold gap-3 text-xs'>
-                        <p className='text-green-500 text-center'>Vehicle Found</p>
-                        <p><FaCheckCircle className='text-green-400'/></p>
-                        </div> */}
+                       
                         <ReportDownload vehicle={getVehicleList[0]} />
                     </div>
+                    <div className='flex justify-center pt-10 md:-ml-[430px] ml-0 '>
+                                <h1 className='font-semibold text-green-700'>Vehicle Registered for the Valid SO</h1>
+                            </div>
                     <DataTableVehicleList vehicle={getVehicleList} />
 
                 </div>
@@ -138,6 +143,9 @@ const VehicleSearch = () => {
                         </div>
                         <ReportDownload vehicle={getCarList[0]} />
                     </div>
+                    <div className='flex justify-center pt-10 md:-ml-[520px] ml-0 '>
+                                <h1 className='font-semibold text-green-700'>Corporate Registered Vehicle</h1>
+                            </div>
                     <DataTableVehicleList vehicle={getCarList} />
                 </div>
             ): (

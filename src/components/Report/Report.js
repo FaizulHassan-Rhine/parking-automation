@@ -58,6 +58,15 @@ const Report = ({ vehicle }) => {
                         </div>
                     </div>
                 </div>
+                <div className="ml-10">
+                    <h1 className="text-xs"><span className="font-bold">Note:</span> Vehicle Registered for the Upcoming SO</h1>
+                </div>
+                {/* <div className="ml-10">
+                    <h1 className="text-xs"><span className="font-bold">Note:</span> Vehicle Registered for the Valid SO</h1>
+                </div>
+                <div className="ml-10">
+                    <h1 className="text-xs"><span className="font-bold">Note:</span> Corporate Registered Vehicle</h1>
+                </div> */}
 
                 <div className="flex justify-center mt-32">
                     <img className="opacity-5" src={checked} />

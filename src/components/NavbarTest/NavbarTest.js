@@ -54,11 +54,11 @@ const NavbarTest = () => {
     return (
         <>
             {location.pathname !== '/' &&
-                <div className="w-full bg-white sticky top-0 z-[999]">
+                <div className="w-full bg-white sticky shadow-md top-0 z-[999]">
                     <div className="container mx-auto">
 
 
-                        <nav className="w-full bg-white">
+                        <nav className="w-full bg-white ">
                             <div className=" justify-between px-4 mx-auto lg:max-w-7xl lg:items-center lg:flex lg:px-8">
                                 <div>
                                     <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
