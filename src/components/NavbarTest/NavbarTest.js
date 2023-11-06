@@ -59,48 +59,12 @@ const NavbarTest = () => {
 
 
                         <nav className="w-full bg-white ">
-                            <div className=" justify-between px-4 mx-auto lg:max-w-7xl lg:items-center lg:flex lg:px-8">
+                            <div className="flex justify-between px-4 mx-auto w-full lg:items-center lg:flex lg:px-8">
                                 <div>
                                     <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
                                         <Link to="/" >
                                             <img className='w-24' src={logo} />
                                         </Link>
-                                        <div className="lg:hidden">
-                                            <button
-                                                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-                                                onClick={() => setNavbar(!navbar)}
-                                            >
-                                                {navbar ? (
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        className="w-6 h-6 text-black"
-                                                        viewBox="0 0 20 20"
-                                                        fill="currentColor"
-                                                    >
-                                                        <path
-                                                            fillRule="evenodd"
-                                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                                            clipRule="evenodd"
-                                                        />
-                                                    </svg>
-                                                ) : (
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        className="w-6 h-6 text-black"
-                                                        fill="none"
-                                                        viewBox="0 0 24 24"
-                                                        stroke="currentColor"
-                                                        strokeWidth={2}
-                                                    >
-                                                        <path
-                                                            strokeLinecap="round"
-                                                            strokeLinejoin="round"
-                                                            d="M4 6h16M4 12h16M4 18h16"
-                                                        />
-                                                    </svg>
-                                                )}
-                                            </button>
-                                        </div>
                                     </div>
                                 </div>
                                 <div>
@@ -135,19 +99,34 @@ const NavbarTest = () => {
                                                         isActive ? "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
                                                     }
                                                     onClick={openModal} >Stock Entry</NavLink></li>
+                                                <li className='flex justify-center'>
+                                                    <div className={`flex  lg:hidden justify-center dropdown dropdown-bottom navbar navbar-end w-[150px]`}>
+                                                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                                            <div className="w-10 rounded-full">
+                                                                <img src={avatar} />
+                                                            </div>
+                                                        </label>
+                                                        <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-28">
+                                                            <li>
+                                                                <a className="justify-between">
+                                                                    Profile
 
+                                                                </a>
+                                                            </li>
+
+                                                            <li> <button onClick={signOut}>Logout</button></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
                                             </ul>
                                         }
-
-
-
-
 
                                     </div>
                                 </div>
                                 <div>
 
-                                    <div className="dropdown dropdown-bottom navbar navbar-end hidden lg:block">
+                                    <div className={`dropdown dropdown-bottom navbar navbar-end 
+                                     ${getUserInfo.role == 'admin' ? "hidden lg:block" : ""}`}>
                                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                             <div className="w-10 rounded-full">
                                                 <img src={avatar} />
@@ -194,16 +173,55 @@ const NavbarTest = () => {
 
                                                 </div>
                                             </div>
-                                                <a href={require('./file/sample.xlsx')} download="sample.xlsx" className='absolute flex flex-col items-center z-50  bottom-[10px] right-[10px] p-[10px] pt-5 rounded-lg bg-par-blue-dark '>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" className='animate-bounce'>
-                                                        <path d="M8 12L12 16M12 16L16 12M12 16V8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    <p className='text-sm text-white'>Sample Excel File</p>
-                                                </a>
+                                            <a href={require('./file/sample.xlsx')} download="sample.xlsx" className='absolute flex flex-col items-center z-50  bottom-[10px] right-[10px] p-[10px] pt-5 rounded-lg bg-par-blue-dark '>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" className='animate-bounce'>
+                                                    <path d="M8 12L12 16M12 16L16 12M12 16V8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                                <p className='text-sm text-white'>Sample Excel File</p>
+                                            </a>
                                             <div className='absolute top-0 left-0 w-full h-full bg-black opacity-40'></div>
                                         </div>
                                     )}
                                 </div>
+
+                                        {/* mobile menu triger button */}
+                                            
+                                        <div className={`${getUserInfo.role == 'admin' ? "lg:hidden" : "hidden"}`}>
+                                            <button
+                                                className="p-2 mt-[10px] text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                                                onClick={() => setNavbar(!navbar)}
+                                            >
+                                                {navbar ? (
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        className="w-6 h-6 text-black"
+                                                        viewBox="0 0 20 20"
+                                                        fill="currentColor"
+                                                    >
+                                                        <path
+                                                            fillRule="evenodd"
+                                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                            clipRule="evenodd"
+                                                        />
+                                                    </svg>
+                                                ) : (
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        className="w-6 h-6 text-black"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor"
+                                                        strokeWidth={2}
+                                                    >
+                                                        <path
+                                                            strokeLinecap="round"
+                                                            strokeLinejoin="round"
+                                                            d="M4 6h16M4 12h16M4 18h16"
+                                                        />
+                                                    </svg>
+                                                )}
+                                            </button>
+                                        </div>
 
                             </div>
                         </nav>
