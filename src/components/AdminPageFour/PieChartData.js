@@ -73,7 +73,7 @@ const PieChartData = () => {
       },
     },
   };
-  return <Pie className='w-80 text-5xl md:w-[820px] ' {...config} />;
+  return <Pie className='w-[400px] text-5xl md:w-[820px] ' {...config} />;
 };
 
 export default PieChartData;

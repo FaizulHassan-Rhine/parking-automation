@@ -98,7 +98,7 @@ const DraftTable = () => {
 
                     </div>
                     <div className="mx-auto rounded-lg">
-                        <div className='mx-auto flex flex-col gap-3'>
+                        <div className='mx-auto w-[900px] flex flex-col gap-3'>
                             <div>
                                 {/* <div className='flex items-center gap-7 -mb-10'>
                                     <div className='flex items-center gap-3'>
