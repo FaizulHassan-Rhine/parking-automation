@@ -38,12 +38,12 @@ const VehicleSearch = () => {
             setVehicleList([])
             setCarList([])
             setParkingList(foundCar);
-        }else if(vehicleCar.length > 0){
+        } else if (vehicleCar.length > 0) {
             setParkingList([]);
             setCarList([])
             setVehicleList(vehicleCar)
             console.log("found vehicle");
-        } else if(carListCar.length > 0){
+        } else if (carListCar.length > 0) {
             setParkingList([]);
             setVehicleList([])
             setCarList(carListCar)
@@ -97,67 +97,61 @@ const VehicleSearch = () => {
             {getParkingList.length > 0 ? (
                 <div className='flex flex-col'>
                     <div className='flex items-center justify-center'>
-                        {/* <QrCodeGen qrString={getParkingList.licensePlate}/> */}
                         <div>
                             <img className='w-[180px]' src={qrCode} alt='' />
                             <p className='text-xs text-center font-semibold'>Vehicle No: {getParkingList[0].vehicleNumber}</p>
                         </div>
-                        {/* <div className='flex items-center mt-0 font-semibold gap-3 text-xs'>
-                        <p className='text-green-500 text-center'>Vehicle Found</p>
-                        <p><FaCheckCircle className='text-green-400'/></p>
-                        </div> */}
-                        <ReportDownload vehicle={getParkingList[0]} />
+                        <ReportDownload note="Vehicle Registered for the Upcoming SO" vehicle={getParkingList[0]} />
                     </div>
                     <div className='flex justify-center pt-10 md:-ml-[430px] ml-0 '>
-                                <h1 className='font-semibold text-green-700'>Vehicle Registered for the Upcoming SO</h1>
-                            </div>
-                    <DataTableVehicle vehicle={getParkingList} />
+                        <h1 className='font-semibold text-green-700'>Vehicle Registered for the Upcoming SO</h1>
+                    </div>
+                    <DataTableVehicle  vehicle={getParkingList} />
                 </div>
             ) : getVehicleList.length > 0 ? (
                 <div className='flex flex-col'>
                     <div className='flex items-center justify-center'>
-                        {/* <QrCodeGen qrString={getParkingList.licensePlate}/> */}
                         <div>
-                          
+
                             <img className='w-[180px]' src={qrCode} alt='' />
                             <p className='text-xs text-center font-semibold'>Vehicle No: {getVehicleList[0].vehicleNumber}</p>
-                            
+
                         </div>
-                       
-                        <ReportDownload vehicle={getVehicleList[0]} />
+
+                        <ReportDownload note="Vehicle Registered for the Valid SO" vehicle={getVehicleList[0]} />
                     </div>
                     <div className='flex justify-center pt-10 md:-ml-[430px] ml-0 '>
-                                <h1 className='font-semibold text-green-700'>Vehicle Registered for the Valid SO</h1>
-                            </div>
-                    <DataTableVehicleList vehicle={getVehicleList} />
+                        <h1 className='font-semibold text-green-700'>Vehicle Registered for the Valid SO</h1>
+                    </div>
+                    <DataTableVehicleList  vehicle={getVehicleList} />
 
                 </div>
 
             ) :
-            getCarList.length > 0 ? (
-                <div className='flex flex-col'>
-                    <div className='flex items-center justify-center'>
-                        <div>
-                            <img className='w-[180px]' src={qrCode} alt='' />
-                            <p className='text-xs text-center font-semibold'>Vehicle No: {getCarList[0].vehicleNumber}</p>
-                        </div>
-                        <ReportDownload vehicle={getCarList[0]} />
-                    </div>
-                    <div className='flex justify-center pt-10 md:-ml-[520px] ml-0 '>
-                                <h1 className='font-semibold text-green-700'>Corporate Registered Vehicle</h1>
+                getCarList.length > 0 ? (
+                    <div className='flex flex-col'>
+                        <div className='flex items-center justify-center'>
+                            <div>
+                                <img className='w-[180px]' src={qrCode} alt='' />
+                                <p className='text-xs text-center font-semibold'>Vehicle No: {getCarList[0].vehicleNumber}</p>
                             </div>
-                    <DataTableVehicleList vehicle={getCarList} />
-                </div>
-            ): (
-                getSearchString.length > 0 &&
-                <div className='flex items-center justify-center gap-2 text-red-600 text-5xl font-semibold pt-40'>
-                    <p className=''>No Results Found</p>
-                    <p><CgDanger /></p>
-                </div>
-            )
+                            <ReportDownload note="Corporate Registered Vehicle" vehicle={getCarList[0]} />
+                        </div>
+                        <div className='flex justify-center pt-10 md:-ml-[520px] ml-0 '>
+                            <h1 className='font-semibold text-green-700'>Corporate Registered Vehicle</h1>
+                        </div>
+                        <DataTableVehicleList  vehicle={getCarList} />
+                    </div>
+                ) : (
+                    getSearchString.length > 0 &&
+                    <div className='flex items-center justify-center gap-2 text-red-600 text-5xl font-semibold pt-40'>
+                        <p className=''>No Results Found</p>
+                        <p><CgDanger /></p>
+                    </div>
+                )
             }
 
-{console.log(getVehicleList.length)}
+            {console.log(getVehicleList.length)}
 
 
         </div>
