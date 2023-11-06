@@ -3,7 +3,7 @@ import React from "react";
 import qrcode from '../../images/barcode.jpg'
 import checked from '../../images/checked.jpg'
 
-const Report = ({ vehicle }) => {
+const Report = ({note="", vehicle }) => {
 
 
 
@@ -58,9 +58,11 @@ const Report = ({ vehicle }) => {
                         </div>
                     </div>
                 </div>
+                {note.length > 0 && 
                 <div className="ml-10">
-                    <h1 className="text-xs"><span className="font-bold">Note:</span> Vehicle Registered for the Upcoming SO</h1>
+                    <h1 className="text-xs"><span className="font-bold">Note: </span>{note}</h1>
                 </div>
+                }
                 {/* <div className="ml-10">
                     <h1 className="text-xs"><span className="font-bold">Note:</span> Vehicle Registered for the Valid SO</h1>
                 </div>
