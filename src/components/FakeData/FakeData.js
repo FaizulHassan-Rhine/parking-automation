@@ -43,6 +43,7 @@ export let CarList = [
     "queueStockStatus": "Active",
     "queueStatus": "Parking",
     "vehicleNumber": "DHA-MET-6760",
+    "date": "23-October-23",
     "vehicleMaximumWeight": "2000 kg"
   },  {
     "sn":"01",
@@ -53,6 +54,7 @@ export let CarList = [
     "queueStockStatus": "Active",
     "queueStatus": "Parking",
     "vehicleNumber": "DHA-MET-6761",
+    "date": "23-October-23",
     "vehicleMaximumWeight": "2000 kg"
   },  {
     "sn":"01",
@@ -63,6 +65,7 @@ export let CarList = [
     "queueStockStatus": "Active",
     "queueStatus": "Parking",
     "vehicleNumber": "DHA-MET-6762",
+    "date": "23-October-23",
     "vehicleMaximumWeight": "2000 kg"
   },
   {
@@ -74,6 +77,7 @@ export let CarList = [
     "queueStockStatus": "Active",
     "queueStatus": "Parking",
     "vehicleNumber": "DHA-MET-6763",
+    "date": "23-October-23",
     "vehicleMaximumWeight": "2000 kg"
   },  {
     "sn":"01",
@@ -84,6 +88,7 @@ export let CarList = [
     "queueStockStatus": "Active",
     "queueStatus": "Parking",
     "vehicleNumber": "DHA-MET-6764",
+    "date": "23-October-23",
     "vehicleMaximumWeight": "2000 kg"
   }
 
