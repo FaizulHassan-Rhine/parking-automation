@@ -148,7 +148,6 @@ export let vehicleList = [
   }
 
 ]
-
 export let parkingList = [
     {
       "sn":"01",
