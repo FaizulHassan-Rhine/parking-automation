@@ -17,21 +17,21 @@ const Search = () => {
                 getUserInfo.role === "security" &&
 
                 <div className='flex justify-center pt-3'>
-                    <h1 className='text-3xl font-bold uppercase'>Security & Adminstration</h1>
+                    <h1 className='text-xl md:text-3xl font-bold uppercase'>Security & Adminstration</h1>
                 </div>
             }
             {
                 getUserInfo.role === 'checker' &&
 
                 <div className='flex justify-center pt-3'>
-                    <h1 className='text-3xl font-bold uppercase '>Vehicle Checking Details</h1>
+                    <h1 className='text-xl md:text-3xl font-bold uppercase '>Vehicle Checking Details</h1>
                 </div>
             }
             {
                 getUserInfo.role === 'storage' &&
 
                 <div className='flex justify-center pt-3'>
-                    <h1 className='text-3xl font-bold uppercase'>Storage Checking Details</h1>
+                    <h1 className='text-xl md:text-3xl font-bold uppercase'>Storage Checking Details</h1>
                 </div>
             }
             {

@@ -33,6 +33,61 @@ export const users =[
         password: '1234'
     },
 ]
+export let CarList = [
+  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Corporate Customer",
+    "customerAddress": "Corporate Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6760",
+    "vehicleMaximumWeight": "2000 kg"
+  },  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Corporate Customer",
+    "customerAddress": "Corporate Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6761",
+    "vehicleMaximumWeight": "2000 kg"
+  },  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Corporate Customer",
+    "customerAddress": "Corporate Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6762",
+    "vehicleMaximumWeight": "2000 kg"
+  },
+  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Corporate Customer",
+    "customerAddress": "Corporate Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6763",
+    "vehicleMaximumWeight": "2000 kg"
+  },  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Corporate Customer",
+    "customerAddress": "Corporate Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6764",
+    "vehicleMaximumWeight": "2000 kg"
+  }
+
+]
 export let vehicleList = [
   {
     "sn":"01",
