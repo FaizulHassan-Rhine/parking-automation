@@ -27,6 +27,7 @@ import AdminInputForm from './components/AdminInputForm/AdminInputForm';
 
 import AdminForm from './components/Form/AdminForm';
 import AdminStockFile from './components/AdminStockFile/AdminStockFile';
+import NavbarTest from './components/NavbarTest/NavbarTest';
 
 
 export const userContextManager = createContext();
@@ -37,7 +38,8 @@ function App() {
   return (
     <div className="App">
       <userContextManager.Provider value={[getUserInfo, setUserInfo]}>
-      <Navbar />
+      {/* <Navbar /> */}
+      <NavbarTest/>
 
         <Routes>
           <Route path="/" element={<Login />} />
@@ -67,6 +69,7 @@ function App() {
           <Route path="/report-storage" element={<ReportStorage />} />
 
           <Route path="/admin-input-form" element={<AdminInputForm />} />
+          {/* <Route path="/navbar-test" element={<NavbarTest />} /> */}
 
           
 
