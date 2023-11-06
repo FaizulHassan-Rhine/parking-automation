@@ -98,7 +98,7 @@ const DraftTable = () => {
 
                     </div>
                     <div className="mx-auto rounded-lg">
-                        <div className='mx-auto w-[900px] flex flex-col gap-3'>
+                        <div className='mx-auto flex flex-col gap-3'>
                             <div>
                                 {/* <div className='flex items-center gap-7 -mb-10'>
                                     <div className='flex items-center gap-3'>
@@ -142,45 +142,47 @@ const DraftTable = () => {
                                 </div>
                             </div>
 
+                            <div className='w-full overflow-x-scroll sm:overflow-auto mt-12 sm:mt-0'>
+                                <table className="text-[12px]">
+                                    <thead className='rounded-2xl'>
+                                        <tr className='bg-[#1d242d] text-white font-bold  border-b border-black leading-7'>
 
-                            <table className="text-[12px]">
-                                <thead className='rounded-2xl'>
-                                    <tr className='bg-[#1d242d] text-white font-bold  border-b border-black leading-7'>
+                                            <th className="text-center  py-2 font-medium uppercase tracking-wider">
+                                                Vehicle No
+                                            </th>
 
-                                        <th className="text-center  py-2 font-medium uppercase tracking-wider">
-                                            Vehicle No
-                                        </th>
-
-                                        <th className="px-6 py-2 text-center  font-medium  uppercase tracking-wider">
-                                            Queue No
-                                        </th>
-                                        <th className="px-6 py-2 text-center font-medium  uppercase tracking-wider">
-                                            Queue Status
-                                        </th>
-                                        <th className="px-6 py-2 text-center font-medium uppercase tracking-wider">
-                                            SO No
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody className="[&>tr:nth-child(odd)]:bg-[#28333e] [&>tr:nth-child(even)]:bg-[#212a33] text-gray-200">
-                                    {currentImages.map((examinee, index) => (
-                                        <tr key={index}>
-                                            <td className=" py-3  whitespace-nowrap">
-                                                <p className='text-center'> {examinee.vehicleNumber}</p>
-                                            </td>
-                                            <td className=" py-3 whitespace-nowrap">
-                                                <p className='text-center'> {examinee.queueNo}</p>
-                                            </td>
-                                            <td className=" py-3 whitespace-nowrap">
-                                                <p className='text-center'> {examinee.queueStatus}</p>
-                                            </td>
-                                            <td className=" py-3 whitespace-nowrap">
-                                                <p className='text-center'> {examinee.salesOrderNumber}</p>
-                                            </td>
+                                            <th className="px-6 py-2 text-center  font-medium  uppercase tracking-wider">
+                                                Queue No
+                                            </th>
+                                            <th className="px-6 py-2 text-center font-medium  uppercase tracking-wider">
+                                                Queue Status
+                                            </th>
+                                            <th className="px-6 py-2 text-center font-medium uppercase tracking-wider">
+                                                SO No
+                                            </th>
                                         </tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody className="[&>tr:nth-child(odd)]:bg-[#28333e] [&>tr:nth-child(even)]:bg-[#212a33] text-gray-200">
+                                        {currentImages.map((examinee, index) => (
+                                            <tr key={index}>
+                                                <td className=" py-3  whitespace-nowrap">
+                                                    <p className='text-center'> {examinee.vehicleNumber}</p>
+                                                </td>
+                                                <td className=" py-3 whitespace-nowrap">
+                                                    <p className='text-center'> {examinee.queueNo}</p>
+                                                </td>
+                                                <td className=" py-3 whitespace-nowrap">
+                                                    <p className='text-center'> {examinee.queueStatus}</p>
+                                                </td>
+                                                <td className=" py-3 whitespace-nowrap">
+                                                    <p className='text-center'> {examinee.salesOrderNumber}</p>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+
                         </div>
 
                     </div>

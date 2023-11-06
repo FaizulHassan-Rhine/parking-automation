@@ -1,6 +1,15 @@
 @media print {
+
     /* styles here */
-    @page { size: A4 landscape; }
+    @page {
+        size: A4 landscape;
+        margin: 0;
+        mso-header-space: auto;
+        mso-footer-space: auto;
+    }
+    body {
+        background-image: initial; /* Set to 'initial' to enable background images */
+      }
     * {
         visibility: hidden;
         /* padding: 0 !important;
@@ -11,19 +20,22 @@
     }
 
     /* Show element to print, and any children he has. */
-    .printView,  .printView * {
+    .printView,
+    .printView * {
         visibility: initial;
     }
+
     .printView {
         position: fixed;
         height: 100%;
-        width:100%!important;
-        padding:0!important;
-        margin:0!important;
-        background-color: white  !important;
-        top:0; 
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background-color: white !important;
+        top: 0;
         left: 0;
     }
+
     .printView .printViewTitle {
         height: auto !important;
         padding-bottom: 40px;
@@ -31,6 +43,7 @@
         font-weight: bold;
         text-align: center;
     }
+
     /* .printView table {
         width:100%!important;
         padding: 0!important;

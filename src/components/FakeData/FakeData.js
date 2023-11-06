@@ -3,31 +3,90 @@ export const users =[
     {
       id: 1,
       role: 'admin',
-      name: 'John',
+      displayRole: 'ADMIN',
+      name: 'KOWSER ALAM',
         email: 'admin@gmail.com',
         password: '1234'
     },
     {
         id: 2,
         role: 'security',
-        name: 'Rhine',
+        displayRole: 'SECURITY & ADMINISTRATION',
+        name: 'MD S ALAM',
         email: 'security@gmail.com',
         password: '1234'
     },
     {
         id: 3,
         role: 'checker',
-        name: 'Zakir',
-        email: 'checker@gmail.com',
+        displayRole: 'CHECK-IN',
+        name: 'ZAKIR HOSSAIN',
+        email: 'checkin@gmail.com',
         password: '1234'
     },
     {
         id: 4,
         role: 'storage',
-        name: 'Rakib',
-        email: 'stock@gmail.com',
+        displayRole: 'STORAGE',
+        name: 'AMINUL AHMED',
+        email: 'storage@gmail.com',
         password: '1234'
     },
+]
+export let CarList = [
+  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Corporate Customer",
+    "customerAddress": "Corporate Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6760",
+    "vehicleMaximumWeight": "2000 kg"
+  },  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Corporate Customer",
+    "customerAddress": "Corporate Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6761",
+    "vehicleMaximumWeight": "2000 kg"
+  },  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Corporate Customer",
+    "customerAddress": "Corporate Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6762",
+    "vehicleMaximumWeight": "2000 kg"
+  },
+  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Corporate Customer",
+    "customerAddress": "Corporate Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6763",
+    "vehicleMaximumWeight": "2000 kg"
+  },  {
+    "sn":"01",
+    "sl": "#SL-0000001-23",
+    "Customer": "Corporate Customer",
+    "customerAddress": "Corporate Street, Cityville, CA 12345",
+    "queueNo": "01",
+    "queueStockStatus": "Active",
+    "queueStatus": "Parking",
+    "vehicleNumber": "DHA-MET-6764",
+    "vehicleMaximumWeight": "2000 kg"
+  }
+
 ]
 export let vehicleList = [
   {
@@ -39,6 +98,7 @@ export let vehicleList = [
     "queueStockStatus": "Active",
     "queueStatus": "Parking",
     "vehicleNumber": "DHA-MET-6755",
+    "date": "23-October-23",
     "vehicleMaximumWeight": "2000 kg"
   },  {
     "sn":"01",
@@ -49,6 +109,7 @@ export let vehicleList = [
     "queueStockStatus": "Active",
     "queueStatus": "Parking",
     "vehicleNumber": "DHA-MET-6756",
+    "date": "23-October-23",
     "vehicleMaximumWeight": "2000 kg"
   },  {
     "sn":"01",
@@ -59,6 +120,7 @@ export let vehicleList = [
     "queueStockStatus": "Active",
     "queueStatus": "Parking",
     "vehicleNumber": "DHA-MET-6757",
+    "date": "23-October-23",
     "vehicleMaximumWeight": "2000 kg"
   },
   {
@@ -70,6 +132,7 @@ export let vehicleList = [
     "queueStockStatus": "Active",
     "queueStatus": "Parking",
     "vehicleNumber": "DHA-MET-6758",
+    "date": "23-October-23",
     "vehicleMaximumWeight": "2000 kg"
   },  {
     "sn":"01",
@@ -80,11 +143,11 @@ export let vehicleList = [
     "queueStockStatus": "Active",
     "queueStatus": "Parking",
     "vehicleNumber": "DHA-MET-6759",
+    "date": "23-October-23",
     "vehicleMaximumWeight": "2000 kg"
   }
 
 ]
-
 export let parkingList = [
     {
       "sn":"01",
@@ -102,7 +165,7 @@ export let parkingList = [
       "vehicleNumber": "DHA-MET-6754",
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
-      "date": "23-October-23",
+      "date": "23-October-23 12:21 PM",
       "vehicleMaximumWeight": "2000 kg"
     },
     {
@@ -121,7 +184,7 @@ export let parkingList = [
       "vehicleNumber": "CHA-MET-2309",
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
-      "date": "23-October-23",
+      "date": "23-October-23 10:21 P.M",
       "vehicleMaximumWeight": "2500 kg"
     },
     {
@@ -139,7 +202,7 @@ export let parkingList = [
       "vehicleNumber": "DHA-MET-1234",
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
-      "date": "23-October-23",
+      "date": "23-October-23 09:21 PM",
       "vehicleMaximumWeight": "1800 kg"
     },
     {
@@ -157,7 +220,7 @@ export let parkingList = [
       "vehicleNumber": "CHA-MET-5678",
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
-      "date": "23-October-23",
+      "date": "23-October-23 05:21 AM",
       "vehicleMaximumWeight": "2200 kg"
     },
     {
@@ -175,7 +238,7 @@ export let parkingList = [
       "vehicleNumber": "DHA-MET-9876",
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
-      "date": "23-October-23",
+      "date": "23-October-23 03:21 PM",
       "vehicleMaximumWeight": "2800 kg"
     },
     {
@@ -193,7 +256,7 @@ export let parkingList = [
       "vehicleNumber": "CHA-MET-4321",
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
-      "date": "23-October-23",
+      "date": "23-October-23 04:21 PM",
       "vehicleMaximumWeight": "2600 kg"
     },
     {
@@ -211,7 +274,7 @@ export let parkingList = [
       "vehicleNumber": "DHA-MET-5678",
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
-      "date": "23-October-23",
+      "date": "23-October-23 03:21 PM",
       "vehicleMaximumWeight": "2300 kg"
     },
     {
@@ -229,7 +292,7 @@ export let parkingList = [
       "vehicleNumber": "CHA-MET-7890",
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
-      "date": "23-October-23",
+      "date": "23-October-23 12:21 PM",
       "vehicleMaximumWeight": "2100 kg"
     },
     {
@@ -247,7 +310,7 @@ export let parkingList = [
       "vehicleNumber": "DHA-MET-2468",
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
-      "date": "23-October-23",
+      "date": "23-October-23 08:21 PM",
       "vehicleMaximumWeight": "2400 kg"
     },
     {
@@ -265,7 +328,7 @@ export let parkingList = [
       "vehicleNumber": "CHA-MET-5432",
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
-      "date": "23-October-23",
+      "date": "23-October-23 04:10 PM",
       "vehicleMaximumWeight": "2700 kg"
     },{
       "sl": "#SL-0000001-23",
@@ -282,7 +345,7 @@ export let parkingList = [
       "vehicleNumber": "DHA-MET-6754",
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
-      "date": "23-October-23",
+      "date": "23-October-23 12:30 PM",
       "vehicleMaximumWeight": "2000 kg"
     },{
       "sl": "#SL-0000001-23",
@@ -299,7 +362,7 @@ export let parkingList = [
       "vehicleNumber": "DHA-MET-6754",
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
-      "date": "23-October-23",
+      "date": "23-October-23 12:45 PM",
       "vehicleMaximumWeight": "2000 kg"
     },{
       "sl": "#SL-0000001-23",
@@ -316,7 +379,7 @@ export let parkingList = [
       "vehicleNumber": "DHA-MET-6754",
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
-      "date": "23-October-23",
+      "date": "23-October-23 12:56 PM",
       "vehicleMaximumWeight": "2000 kg"
     },
   ]

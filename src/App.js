@@ -27,6 +27,7 @@ import AdminInputForm from './components/AdminInputForm/AdminInputForm';
 
 import AdminForm from './components/Form/AdminForm';
 import AdminStockFile from './components/AdminStockFile/AdminStockFile';
+import NavbarTest from './components/NavbarTest/NavbarTest';
 
 
 export const userContextManager = createContext();
@@ -37,7 +38,8 @@ function App() {
   return (
     <div className="App">
       <userContextManager.Provider value={[getUserInfo, setUserInfo]}>
-      <Navbar />
+      {/* <Navbar /> */}
+      <NavbarTest/>
 
         <Routes>
           <Route path="/" element={<Login />} />
@@ -49,13 +51,14 @@ function App() {
             <Route path="stock-info" element={<StockInfo />} />
             <Route path="stock-entry" element={<AdminForm />} />
             <Route path="stock-data" element={<AdminStockFile />} />
+            <Route path="so-detail/:stocklocation" element={<AdminPageThree />} />
           </Route>
           <Route path="/search" element={<Search />} />
           <Route path="/report" element={<Report />} />
           <Route path="/report-download" element={<ReportDownload />} />
           <Route path="/data" element={<DataTable />} />
           <Route path="/details-search" element={<DetailsSearch />} />
-          <Route path="/so-detail/:stocklocation" element={<AdminPageThree />} />
+          {/* <Route path="/so-detail/:stocklocation" element={<AdminPageThree />} /> */}
           <Route path="/stock-details/:stock" element={<StockDetails />} />
 
           {/* <Route path="/page-two" element={<AdminPageTwo2 />} /> */}
@@ -67,6 +70,7 @@ function App() {
           <Route path="/report-storage" element={<ReportStorage />} />
 
           <Route path="/admin-input-form" element={<AdminInputForm />} />
+          {/* <Route path="/navbar-test" element={<NavbarTest />} /> */}
 
           
 

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import avatar from "../../images/avatarProfile.png"
 import logo from "../../images/logo2.png"
 import { userContextManager } from '../../App';
@@ -45,10 +45,11 @@ const Navbar = () => {
     console.log(data)
   }
 
+
   return (
     <>
       {location.pathname !== '/' &&
-
+        
         <div className="navbar py-0 shadow-sm2 bg-white">
           <div className='container mx-auto'>
             <div className="navbar-start">
@@ -65,27 +66,31 @@ const Navbar = () => {
                   <li>
                     <NavLink
                       className={({ isActive, isPending }) =>
-                        isActive ? "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
+                        isActive ?
+                         "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300"
+                         : location.pathname == "/dashboard/dash" ? "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300"
+                          :
+                           "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
                       }
                       to="/dashboard/queue-info">Queue Info</NavLink></li>
 
                   <li>
                     <NavLink to="/dashboard/gigo"
-                    className={({ isActive, isPending }) =>
-                    isActive ? "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
-                  }
+                      className={({ isActive, isPending }) =>
+                        isActive ? "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
+                      }
                     >GIGO Summary</NavLink></li>
-                    
+
                   <li><NavLink
-                  className={({ isActive, isPending }) =>
-                  isActive ? "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
-                  }
-                 to="/dashboard/stock-info">Stock Info</NavLink></li>
-                  <li><NavLink 
-                  className={({ isActive, isPending }) =>
-                  isActive ?"hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
-                }
-                 onClick={openModal} >Stock Entry</NavLink></li>
+                    className={({ isActive, isPending }) =>
+                      isActive ? "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
+                    }
+                    to="/dashboard/stock-info">Stock Info</NavLink></li>
+                  <li><NavLink
+                    className={({ isActive, isPending }) =>
+                      isActive ? "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
+                    }
+                    onClick={openModal} >Stock Entry</NavLink></li>
 
                 </ul>
               }
@@ -127,7 +132,9 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            <div className="dropdown dropdown-bottom navbar navbar-end  ">
+
+            <div className="dropdown dropdown-bottom navbar navbar-end flex gap-3">
+              <div><p className='text-xs font-bold'>{getUserInfo.name} ({getUserInfo.displayRole})</p></div>
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
                   <img src={avatar} />

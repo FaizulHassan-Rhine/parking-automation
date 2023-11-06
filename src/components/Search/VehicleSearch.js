@@ -2,7 +2,7 @@
 import React, { useContext, useState } from 'react';
 import qrCode from "../../images/barcode.jpg"
 import avatar from "../../images/avatarProfile.png"
-import { parkingList, vehicleList } from '../FakeData/FakeData';
+import { CarList, parkingList, vehicleList } from '../FakeData/FakeData';
 import QrCodeGen from '../QrCodeGen/QrCodeGen';
 import ReportDownload from '../ReportDownload/ReportDownload';
 import { userContextManager } from '../../App';
@@ -17,6 +17,7 @@ const VehicleSearch = () => {
     const [getSearchString, setSearchString] = useState("")
     const [getParkingList, setParkingList] = useState([]);
     const [getVehicleList, setVehicleList] = useState([]);
+    const [getCarList, setCarList] = useState([]);
     const [getUserInfo, setUserInfo] = useContext(userContextManager);
 
     const signOut = () => {
@@ -30,18 +31,27 @@ const VehicleSearch = () => {
 
         const foundCar = parkingList.filter(car => car.vehicleNumber === e.target.value);
         const vehicleCar = vehicleList.filter(car => car.vehicleNumber === e.target.value);
+        const carListCar = CarList.filter(car => car.vehicleNumber === e.target.value);
 
         if (foundCar.length > 0) {
             console.log("Car found:", foundCar);
             setVehicleList([])
+            setCarList([])
             setParkingList(foundCar);
         }else if(vehicleCar.length > 0){
             setParkingList([]);
+            setCarList([])
             setVehicleList(vehicleCar)
             console.log("found vehicle");
+        } else if(carListCar.length > 0){
+            setParkingList([]);
+            setVehicleList([])
+            setCarList(carListCar)
+            console.log("found car list");
         } else {
             setParkingList([]);
             setVehicleList([]);
+            setCarList([])
             console.log("Car not found");
         }
     }
@@ -112,20 +122,30 @@ const VehicleSearch = () => {
                         <p className='text-green-500 text-center'>Vehicle Found</p>
                         <p><FaCheckCircle className='text-green-400'/></p>
                         </div> */}
-                        {/* <ReportDownload vehicle={getVehicleList} /> */}
+                        <ReportDownload vehicle={getVehicleList[0]} />
                     </div>
                     <DataTableVehicleList vehicle={getVehicleList} />
 
                 </div>
 
+            ) :
+            getCarList.length > 0 ? (
+                <div className='flex flex-col'>
+                    <div className='flex items-center justify-center'>
+                        <div>
+                            <img className='w-[180px]' src={qrCode} alt='' />
+                            <p className='text-xs text-center font-semibold'>Vehicle No: {getCarList[0].vehicleNumber}</p>
+                        </div>
+                        <ReportDownload vehicle={getCarList[0]} />
+                    </div>
+                    <DataTableVehicleList vehicle={getCarList} />
+                </div>
             ): (
                 getSearchString.length > 0 &&
                 <div className='flex items-center justify-center gap-2 text-red-600 text-5xl font-semibold pt-40'>
                     <p className=''>No Results Found</p>
                     <p><CgDanger /></p>
                 </div>
-
-
             )
             }
 

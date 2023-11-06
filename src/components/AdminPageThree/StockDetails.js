@@ -97,7 +97,8 @@ const StockDetails = () => {
 
                     </div>
                     <div className="mx-auto rounded-lg">
-                        <div className='mx-auto w-[900px] flex flex-col gap-3'>
+                       <div className='w-full overflow-x-scroll sm:overflow-auto mt-12 sm:mt-0'>
+                       <div className='mx-auto flex flex-col gap-3'>
                             <div className='flex'>
                                 {/* <div className='flex gap-16'>
                                     <div className='flex gap-[10px] items-center bg-par-blue-light text-white font-bold relative rounded-tl-lg rounded-bl-lg'>
@@ -187,6 +188,7 @@ const StockDetails = () => {
                                 </tbody>
                             </table>
                         </div>
+                       </div>
 
                     </div>
 
