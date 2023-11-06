@@ -150,7 +150,7 @@ const VehicleSearch = () => {
                 </div>
             ): (
                 getSearchString.length > 0 &&
-                <div className='flex items-center justify-center gap-2 text-red-600 text-5xl font-semibold pt-40'>
+                <div className='flex items-center justify-center gap-2 text-red-600 text-xl md:text-5xl font-semibold pt-40'>
                     <p className=''>No Results Found</p>
                     <p><CgDanger /></p>
                 </div>
