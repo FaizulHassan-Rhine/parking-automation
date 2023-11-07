@@ -52,6 +52,7 @@ function App() {
             <Route path="stock-entry" element={<AdminForm />} />
             <Route path="stock-data" element={<AdminStockFile />} />
             <Route path="so-detail/:stocklocation" element={<AdminPageThree />} />
+            <Route path="stock-details/:stock" element={<StockDetails />} />
           </Route>
           <Route path="/search" element={<Search />} />
           <Route path="/report" element={<Report />} />
@@ -59,7 +60,7 @@ function App() {
           <Route path="/data" element={<DataTable />} />
           <Route path="/details-search" element={<DetailsSearch />} />
           {/* <Route path="/so-detail/:stocklocation" element={<AdminPageThree />} /> */}
-          <Route path="/stock-details/:stock" element={<StockDetails />} />
+          {/* <Route path="/stock-details/:stock" element={<StockDetails />} /> */}
 
           {/* <Route path="/page-two" element={<AdminPageTwo2 />} /> */}
           <Route path="/page-two" element={<AdminPageTwoV3 />} />
