@@ -92,7 +92,7 @@ const StockDetails = () => {
             <div>
                 <div className="container mx-auto pt-4">
 
-                    <h2 className="mb-10 text-3xl text-center pt-6 uppercase font-extrabold">Packer 1 Queue Details</h2>
+                    <h2 className="mb-10 text-3xl text-center pt-6 uppercase font-extrabold">{param.stock} Queue Details</h2>
                     <div class='max-w-md mx-auto'>
 
                     </div>
