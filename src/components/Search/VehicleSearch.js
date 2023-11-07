@@ -103,8 +103,8 @@ const VehicleSearch = () => {
                         </div>
                         <ReportDownload note="Vehicle Registered for the Upcoming SO" vehicle={getParkingList[0]} />
                     </div>
-                    <div className='flex justify-center pt-10 md:-ml-[430px] ml-0 '>
-                        <h1 className='font-semibold text-green-700'>Vehicle Registered for the Upcoming SO</h1>
+                    <div className='flex justify-center pt-10 md:-ml-[320px] ml-0 '>
+                        <h1 className='font-bold text-xl text-red-800 uppercase'>Vehicle Registered for the Upcoming SO</h1>
                     </div>
                     <DataTableVehicle  vehicle={getParkingList} />
                 </div>
@@ -120,8 +120,8 @@ const VehicleSearch = () => {
 
                         <ReportDownload note="Vehicle Registered for the Valid SO" vehicle={getVehicleList[0]} />
                     </div>
-                    <div className='flex justify-center pt-10 md:-ml-[430px] ml-0 '>
-                        <h1 className='font-semibold text-green-700'>Vehicle Registered for the Valid SO</h1>
+                    <div className='flex justify-center pt-10 md:-ml-[370px] ml-0 '>
+                        <h1 className='font-bold text-xl text-red-800 uppercase'>Vehicle Registered for the Valid SO</h1>
                     </div>
                     <DataTableVehicleList  vehicle={getVehicleList} />
 
@@ -137,8 +137,8 @@ const VehicleSearch = () => {
                             </div>
                             <ReportDownload note="Corporate Registered Vehicle" vehicle={getCarList[0]} />
                         </div>
-                        <div className='flex justify-center pt-10 md:-ml-[520px] ml-0 '>
-                            <h1 className='font-semibold text-green-700'>Corporate Registered Vehicle</h1>
+                        <div className='flex justify-center pt-10 md:-ml-[430px] ml-0 '>
+                            <h1 className='font-bold text-xl text-red-800 uppercase'>Corporate Registered Vehicle</h1>
                         </div>
                         <DataTableVehicleList  vehicle={getCarList} />
                     </div>

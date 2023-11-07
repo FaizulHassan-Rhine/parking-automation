@@ -32,15 +32,18 @@ const ReportChecker = ({ vehicle = [] }) => {
                             </div>
                         </div>
                     </div>
-                    <div className='flex flex-col pt-5'>
-                        <div className="grid grid-cols-2 gap-[280px] px-[40px] border-black border py-5 w-full   ">
+                    <div className='flex flex-col items-center pt-5'>
+                        <div className="grid grid-cols-2 gap-[280px] px-[40px] border-black border py-5 w-[900px]   ">
                             <div className="flex md:justify-between gap-5 ml-5 md:ml-0">
                                 <div>
                                     <p className="font-semibold whitespace-nowrap">SL/N:</p>
                                     <p className="font-semibold whitespace-nowrap">Date:</p>
+                                    <p className="font-semibold whitespace-nowrap">Storage:</p>
                                     <p className="font-semibold whitespace-nowrap">Vehicle Weight:</p>
                                     <p className="font-semibold whitespace-nowrap">Vehicle Max Weight:</p>
-                                    {/* <p className="font-semibold">Exit Time:</p> */}
+                               
+                                   
+                                    
 
 
                                 </div>
@@ -48,25 +51,31 @@ const ReportChecker = ({ vehicle = [] }) => {
                                 <div>
                                     <p className='whitespace-nowrap'>{vehicle[0].sl}</p>
                                     <p className=' whitespace-nowrap'>{vehicle[0].date}</p>
+                                    <p className=' whitespace-nowrap'>{vehicle[0].stockLocation}</p>
                                     <p className=' whitespace-nowrap'>1600 kg</p>
                                     <p className=' whitespace-nowrap'>{vehicle[0].vehicleMaximumWeight}</p>
+                                    
                                 </div>
 
                             </div>
                             <div className="flex md:justify-between gap-5 ml-5 md:ml-0">
                                 <div>
+                                <p className="font-semibold whitespace-nowrap">Queue No:</p>
                                     <p className="font-semibold  whitespace-nowrap">Vehicle No: </p>
                                     <p className="font-semibold whitespace-nowrap">Vehicle Status: </p>
+                                  
                                     <p className="font-semibold whitespace-nowrap">Service Type: </p>
                                     <p className="font-semibold whitespace-nowrap">Security Check: </p>
                                 </div>
 
                                 <div>
+                                <p className='whitespace-nowrap'>{vehicle[0].queueNo}</p>
                                     <p className='whitespace-nowrap'>{vehicle[0].vehicleNumber}</p>
 
                                     <p className='whitespace-nowrap'> 
                                     {getUserInfo.role == 'storage' ? 'Loading Products' : 'In Queue'}
                                     </p>
+                                    
                                     <p className='whitespace-nowrap'>Automation</p>
                                     <p className='whitespace-nowrap'>Done</p>
 
@@ -106,7 +115,7 @@ const ReportChecker = ({ vehicle = [] }) => {
                                     <th className="px-6 py-3  text-center  font-bold  uppercase tracking-wider border-b">
                                         Quantity
                                     </th>
-                                    <th className="px-6 py-3  text-center  font-bold  uppercase tracking-wider border-b">
+                                    {/* <th className="px-6 py-3  text-center  font-bold  uppercase tracking-wider border-b">
                                         Storage
                                     </th>
                                     <th className="px-6 py-3  text-center  font-bold uppercase tracking-wider border-b">
@@ -114,7 +123,7 @@ const ReportChecker = ({ vehicle = [] }) => {
                                     </th>
                                     <th className="px-6 py-3  text-center font-bold  uppercase tracking-wider border-b">
                                         Status
-                                    </th>
+                                    </th> */}
                                     {/* <th className="px-6 py-3 bg-gray-200 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-b">
                                     Details
                                 </th>
@@ -151,19 +160,19 @@ const ReportChecker = ({ vehicle = [] }) => {
                                             {getUserInfo.role == 'checker' && <p>******</p>}
                                             {/* Pending  */}
                                         </td>
-                                        <td className="pr-3 py-3 whitespace-nowrap">
+                                        {/* <td className="pr-3 py-3 whitespace-nowrap">
                                             <p className="border rounded-2xl text-center p-1 border-green-500"> {examinee.stockLocation}</p>
-                                            {/* Pending */}
+                                         
                                         </td>
                                         <td className="pr-3 py-3 whitespace-nowrap">
                                             <p className="border rounded-2xl text-center p-1 border-green-500">  {examinee.queueNo}</p>
 
-                                            {/* Pending */}
+                                           
                                         </td>
                                         <td className="pr-3 py-3 whitespace-nowrap">
                                             <p className="border rounded-2xl text-center p-1 border-green-500"> {examinee.queueStatus} </p>
-                                            {/* Pending */}
-                                        </td>
+                                          
+                                        </td> */}
                                         {/* <td className="px-6 py-3 whitespace-nowrap">
                                         <Link to={`/dashboard/examinee-exam-details/${examinee.id}`} state={{ totalQuestions: examinee.totalQuestion, rightAnswers:examinee.total_right_ans }} className='px-2 py-1 rounded-lg text-white font-semibold bg-cyan-400'>
                                             View Details

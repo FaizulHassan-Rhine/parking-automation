@@ -44,7 +44,8 @@ export let CarList = [
     "queueStatus": "Parking",
     "vehicleNumber": "DHA-MET-6760",
     "date": "23-October-23",
-    "vehicleMaximumWeight": "2000 kg"
+    "vehicleMaximumWeight": "2000 kg",
+   
   },  {
     "sn":"01",
     "sl": "#SL-0000001-23",
@@ -171,7 +172,9 @@ export let parkingList = [
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
       "date": "23-October-23 12:21 PM",
-      "vehicleMaximumWeight": "2000 kg"
+      "vehicleMaximumWeight": "2000 kg",
+      "LoadingStatus":"Complete",
+      "LoadingTime":"20.94 min",
     },
     {
       "sn":"01",
@@ -190,7 +193,9 @@ export let parkingList = [
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
       "date": "23-October-23 10:21 P.M",
-      "vehicleMaximumWeight": "2500 kg"
+      "vehicleMaximumWeight": "2500 kg",
+      "LoadingStatus":"Complete",
+      "LoadingTime":"20.94 min",
     },
     {
       "sl": "#SL-0000003-23",
@@ -208,7 +213,9 @@ export let parkingList = [
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
       "date": "23-October-23 09:21 PM",
-      "vehicleMaximumWeight": "1800 kg"
+      "vehicleMaximumWeight": "1800 kg",
+      "LoadingStatus":"Pending",
+      "LoadingTime":"20.94 min",
     },
     {
       "sl": "#SL-0000004-23",
@@ -226,7 +233,9 @@ export let parkingList = [
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
       "date": "23-October-23 05:21 AM",
-      "vehicleMaximumWeight": "2200 kg"
+      "vehicleMaximumWeight": "2200 kg",
+      "LoadingStatus":"Pending",
+      "LoadingTime":"20.94 min",
     },
     {
       "sl": "#SL-0000005-23",
@@ -244,7 +253,9 @@ export let parkingList = [
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
       "date": "23-October-23 03:21 PM",
-      "vehicleMaximumWeight": "2800 kg"
+      "vehicleMaximumWeight": "2800 kg",
+      "LoadingStatus":"Pending",
+      "LoadingTime":"20.94 min",
     },
     {
       "sl": "#SL-0000006-23",
@@ -262,7 +273,9 @@ export let parkingList = [
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
       "date": "23-October-23 04:21 PM",
-      "vehicleMaximumWeight": "2600 kg"
+      "vehicleMaximumWeight": "2600 kg",
+      "LoadingStatus":"Complete",
+      "LoadingTime":"20.94 min",
     },
     {
       "sl": "#SL-0000007-23",
@@ -280,7 +293,9 @@ export let parkingList = [
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
       "date": "23-October-23 03:21 PM",
-      "vehicleMaximumWeight": "2300 kg"
+      "vehicleMaximumWeight": "2300 kg",
+      "LoadingStatus":"Complete",
+      "LoadingTime":"20.94 min",
     },
     {
       "sl": "#SL-0000008-23",
@@ -298,7 +313,9 @@ export let parkingList = [
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
       "date": "23-October-23 12:21 PM",
-      "vehicleMaximumWeight": "2100 kg"
+      "vehicleMaximumWeight": "2100 kg",
+      "LoadingStatus":"Pending",
+      "LoadingTime":"20.94 min",
     },
     {
       "sl": "#SL-0000009-23",
@@ -334,7 +351,9 @@ export let parkingList = [
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
       "date": "23-October-23 04:10 PM",
-      "vehicleMaximumWeight": "2700 kg"
+      "vehicleMaximumWeight": "2700 kg",
+      "LoadingStatus":"Complete",
+      "LoadingTime":"20.94 min",
     },{
       "sl": "#SL-0000001-23",
       "salesOrderNumber": "#SO-MN-0002",
@@ -351,7 +370,9 @@ export let parkingList = [
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
       "date": "23-October-23 12:30 PM",
-      "vehicleMaximumWeight": "2000 kg"
+      "vehicleMaximumWeight": "2000 kg",
+      "LoadingStatus":"Complete",
+      "LoadingTime":"20.94 min",
     },{
       "sl": "#SL-0000001-23",
       "salesOrderNumber": "#SO-MN-0003",
@@ -368,7 +389,9 @@ export let parkingList = [
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
       "date": "23-October-23 12:45 PM",
-      "vehicleMaximumWeight": "2000 kg"
+      "vehicleMaximumWeight": "2000 kg",
+      "LoadingStatus":"Pending",
+      "LoadingTime":"20.94 min",
     },{
       "sl": "#SL-0000001-23",
       "salesOrderNumber": "#SO-MN-0001",
@@ -385,7 +408,9 @@ export let parkingList = [
       "entryTime": "10:30 A.M",
       "exitTime": "03:45 P.M",
       "date": "23-October-23 12:56 PM",
-      "vehicleMaximumWeight": "2000 kg"
+      "vehicleMaximumWeight": "2000 kg",
+      "LoadingStatus":"Pending",
+      "LoadingTime":"20.94 min",
     },
   ]
 
