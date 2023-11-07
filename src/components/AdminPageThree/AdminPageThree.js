@@ -102,7 +102,7 @@ const AdminPageThree = () => {
                     <div className="mx-auto rounded-lg">
                         <div className='mx-auto  flex flex-col gap-3'>
                             <div className='flex flex-col-reverse gap-5  md:flex-row'>
-                                <div className='flex flex-col md:flex-row gap-4 md:gap-16'>
+                                {/* <div className='flex flex-col md:flex-row gap-4 md:gap-16'>
                                     <div className='flex gap-[10px] items-center w-40 md:w-full bg-par-blue-light text-white font-bold relative rounded-tl-lg rounded-bl-lg'>
                                         <div className='whitespace-nowrap px-4'>
                                             <h2 className="md:text-sm text-xs py-1">No. of Vehicle Served </h2>
@@ -122,7 +122,7 @@ const AdminPageThree = () => {
                                             <p className=''>20s</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className='w-full'>
                                     <div className='flex justify-start md:justify-end'>
                                         <div class="relative py-1 flex gap-2 items-center w-60 border-2 border-gray-200 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
@@ -148,7 +148,9 @@ const AdminPageThree = () => {
                            <table className="text-[12px] shadow-md">
                                 <thead className='rounded-2xl'>
                                     <tr className='bg-par-blue-dark text-white font-bold  border-b border-black leading-7'>
-
+                                    <th className="px-6 py-2 text-center font-medium uppercase tracking-wider">
+                                            SL No
+                                        </th>
                                         <th className="text-center  py-2 font-medium uppercase tracking-wider">
                                             Vehicle No
                                         </th>
@@ -159,14 +161,23 @@ const AdminPageThree = () => {
                                         <th className="px-6 py-2 text-center font-medium  uppercase tracking-wider">
                                             Queue Status
                                         </th>
-                                        <th className="px-6 py-2 text-center font-medium uppercase tracking-wider">
-                                            SL No
+                                       
+                                        <th className="px-6 py-2 text-center font-medium  uppercase tracking-wider">
+                                        loading status
                                         </th>
+                                       
+                                        <th className="px-6 py-2 text-center font-medium  uppercase tracking-wider">
+                                        loading time
+                                        </th>
+                                       
                                     </tr>
                                 </thead>
                                 <tbody className="[&>tr:nth-child(odd)]:bg-gray-50 [&>tr:nth-child(even)]:bg-gray-200 text-gray-950">
                                     {currentImages.map((examinee, index) => (
                                         <tr key={index}>
+                                            <td className=" py-3 whitespace-nowrap">
+                                                <p className='text-center'> {examinee.sl}</p>
+                                            </td>
                                             <td className=" py-3  whitespace-nowrap">
                                                 <p className='text-center'> {examinee.vehicleNumber}</p>
                                             </td>
@@ -177,8 +188,12 @@ const AdminPageThree = () => {
                                                 <p className='text-center'> {examinee.queueStatus}</p>
                                             </td>
                                             <td className=" py-3 whitespace-nowrap">
-                                                <p className='text-center'> {examinee.sl}</p>
+                                                <p className='text-center'> {examinee.LoadingStatus}</p>
                                             </td>
+                                            <td className=" py-3 whitespace-nowrap">
+                                                <p className='text-center'> {examinee.LoadingTime}</p>
+                                            </td>
+                                            
                                         </tr>
                                     ))}
                                 </tbody>

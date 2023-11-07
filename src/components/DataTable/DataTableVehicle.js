@@ -57,8 +57,8 @@ const DataTableVehicle = ({ vehicle = [] }) => {
                         </div>
                         <div className="mx-auto rounded-lg ">
                             {/* <h2 className='printViewTitle invisible h-0'>Queue Details</h2> */}
-                           <div className='w-full overflow-x-scroll sm:overflow-auto mt-12 sm:mt-0'>
-                           <table className="mx-auto   bg-white text-[12px] border rounded-lg">
+                           <div className=' overflow-x-scroll sm:overflow-auto mt-12 sm:mt-0'>
+                           <table className="mx-auto w-full lg:w-[750px]  bg-white text-[12px] border rounded-lg">
                                 <thead>
                                     <tr className='h-12 text-[12px] bg-par-blue-dark text-white'>
                                         <th className="px-6 py-3  text-center  font-medium uppercase tracking-wider border-b">
