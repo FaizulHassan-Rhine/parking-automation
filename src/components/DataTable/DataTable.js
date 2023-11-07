@@ -95,7 +95,7 @@ const DataTable = ({ vehicle = [] }) => {
                                         <th className="px-6 py-3  text-center  font-medium  uppercase tracking-wider border-b">
                                             Quantity
                                         </th>
-                                        <th className="px-6 py-3  text-center  font-medium  uppercase tracking-wider border-b">
+                                        {/* <th className="px-6 py-3  text-center  font-medium  uppercase tracking-wider border-b">
                                             Storage
                                         </th>
                                         <th className="px-6 py-3  text-center  font-medium uppercase tracking-wider border-b">
@@ -103,7 +103,7 @@ const DataTable = ({ vehicle = [] }) => {
                                         </th>
                                         <th className="px-6 py-3  text-center font-medium  uppercase tracking-wider border-b">
                                             Status
-                                        </th>
+                                        </th> */}
                                         {/* <th className="px-6 py-3 bg-gray-200 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-b">
                                     Details
                                 </th>
@@ -140,19 +140,19 @@ const DataTable = ({ vehicle = [] }) => {
                                                 {getUserInfo.role == 'checker' && <p>******</p>}
                                                 {/* Pending */}
                                             </td>
-                                            <td className="pr-3 py-3 whitespace-nowrap">
+                                            {/* <td className="pr-3 py-3 whitespace-nowrap">
                                                 <p className="border rounded-2xl text-center p-1 border-green-500 first-letter:uppercase"> {examinee.stockLocation}</p>
-                                                {/* Pending */}
+                                        
                                             </td>
                                             <td className="pr-3 py-3 whitespace-nowrap">
                                                 <p className="border rounded-2xl text-center p-1 border-green-500 first-letter:uppercase">  {examinee.queueNo}</p>
 
-                                                {/* Pending */}
+                                             
                                             </td>
                                             <td className="pr-3 py-3 whitespace-nowrap">
                                                 <p className="border rounded-2xl text-center p-1 border-green-500 first-letter:uppercase"> {examinee.queueStatus} </p>
-                                                {/* Pending */}
-                                            </td>
+                                          
+                                            </td> */}
                                             {/* <td className="px-6 py-3 whitespace-nowrap">
                                         <Link to={`/dashboard/examinee-exam-details/${examinee.id}`} state={{ totalQuestions: examinee.totalQuestion, rightAnswers:examinee.total_right_ans }} className='px-2 py-1 rounded-lg text-white font-semibold bg-cyan-400'>
                                             View Details
