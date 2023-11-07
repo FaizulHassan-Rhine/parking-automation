@@ -43,7 +43,7 @@ const StockDetails = () => {
     const param = useParams();
 
 
-    const itemsPerPage = 3;
+    const itemsPerPage = 20;
 
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
