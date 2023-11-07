@@ -44,7 +44,7 @@ const AdminPageThree = () => {
     const param = useParams();
 
 
-    const itemsPerPage = 3;
+    const itemsPerPage = 20;
 
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -163,11 +163,11 @@ const AdminPageThree = () => {
                                         </th>
                                        
                                         <th className="px-6 py-2 text-center font-medium  uppercase tracking-wider">
-                                        loading status
+                                            loading status
                                         </th>
                                        
                                         <th className="px-6 py-2 text-center font-medium  uppercase tracking-wider">
-                                        loading time
+                                            loading time
                                         </th>
                                        
                                     </tr>
