@@ -41,9 +41,12 @@ const AdminPageTwoV3 = () => {
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark  group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
                                         <h1 className='font-bold text-6xl text-center'>{countStockLocation("Packer-1")}</h1>
                                     </div>
-                                    <div className='flex flex-col gap-1 justify-center items-center'>
+                                    <div className='flex flex-col gap-3 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Parking</h2>
-                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
+                                        <div className='text-sm text-center text-gray-100 bg-par-blue-dark group-hover:bg-white p-3 rounded-md gap-1 group-hover:text-gray-700 flex flex-col'>
+                                            <div className='grid grid-cols-[181px_2px_auto] items-center gap-3 text-left'><span>Number of Vehicles Assisted</span><span> : </span> <span className='text-lg font-bold text-white group-hover:text-par-blue-dark leading-[0px]'>10</span></div>
+                                            <div className='grid grid-cols-[181px_2px_auto] items-center gap-3 text-left'><span>Loading Time Per Vehicle</span><span> : </span> <span className='text-lg font-bold text-white group-hover:text-par-blue-dark  leading-[0px]'>20s</span></div>
+                                        </div>
                                     </div>
                                 </Link>
                                 <Link to={"/dashboard/so-detail/packer-2"}
@@ -51,9 +54,12 @@ const AdminPageTwoV3 = () => {
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
                                         <h1 className='font-bold text-6xl text-center'>{countStockLocation("Packer-2")}</h1>
                                     </div>
-                                    <div className='flex flex-col gap-1 justify-center items-center'>
+                                    <div className='flex flex-col gap-3 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Warehouse-1</h2>
-                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
+                                        <div className='text-sm text-center text-gray-100 bg-par-blue-dark group-hover:bg-white p-3 rounded-md gap-1 group-hover:text-gray-700 flex flex-col'>
+                                            <div className='grid grid-cols-[181px_2px_auto] items-center gap-3 text-left'><span>Number of Vehicles Assisted</span><span> : </span> <span className='text-lg font-bold text-white group-hover:text-par-blue-dark leading-[0px]'>12</span></div>
+                                            <div className='grid grid-cols-[181px_2px_auto] items-center gap-3 text-left'><span>Loading Time Per Vehicle</span><span> : </span> <span className='text-lg font-bold text-white group-hover:text-par-blue-dark  leading-[0px]'>25s</span></div>
+                                        </div>
                                     </div>
                                 </Link>
 
@@ -62,10 +68,14 @@ const AdminPageTwoV3 = () => {
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
                                         <h1 className='font-bold text-6xl text-center'>{countStockLocation("Packer-3")}</h1>
                                     </div>
-                                    <div className='flex flex-col gap-1 justify-center items-center'>
+                                    <div className='flex flex-col gap-3 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Warehouse-2</h2>
-                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
+                                        <div className='text-sm text-center text-gray-100 bg-par-blue-dark group-hover:bg-white p-3 rounded-md gap-1 group-hover:text-gray-700 flex flex-col'>
+                                            <div className='grid grid-cols-[181px_2px_auto] items-center gap-3 text-left'><span>Number of Vehicles Assisted</span><span> : </span> <span className='text-lg font-bold text-white group-hover:text-par-blue-dark leading-[0px]'>14</span></div>
+                                            <div className='grid grid-cols-[181px_2px_auto] items-center gap-3 text-left'><span>Loading Time Per Vehicle</span><span> : </span> <span className='text-lg font-bold text-white group-hover:text-par-blue-dark  leading-[0px]'>30s</span></div>
+                                        </div>
                                     </div>
+
                                 </Link>
 
                                 <Link to={"/dashboard/so-detail/warehouse-1"}
@@ -73,10 +83,15 @@ const AdminPageTwoV3 = () => {
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
                                         <h1 className='font-bold text-6xl text-center'>{countStockLocation("warehouse-1")}</h1>
                                     </div>
-                                    <div className='flex flex-col gap-1 justify-center items-center'>
+
+                                    <div className='flex flex-col gap-3 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Packer-1</h2>
-                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
+                                        <div className='text-sm text-center text-gray-100 bg-par-blue-dark group-hover:bg-white p-3 rounded-md gap-1 group-hover:text-gray-700 flex flex-col'>
+                                            <div className='grid grid-cols-[181px_2px_auto] items-center gap-3 text-left'><span>Number of Vehicles Assisted</span><span> : </span> <span className='text-lg font-bold text-white group-hover:text-par-blue-dark leading-[0px]'>24</span></div>
+                                            <div className='grid grid-cols-[181px_2px_auto] items-center gap-3 text-left'><span>Loading Time Per Vehicle</span><span> : </span> <span className='text-lg font-bold text-white group-hover:text-par-blue-dark  leading-[0px]'>27s</span></div>
+                                        </div>
                                     </div>
+
                                 </Link>
 
                                 <Link to={"/dashboard/so-detail/warehouse-2"}
@@ -84,10 +99,15 @@ const AdminPageTwoV3 = () => {
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
                                         <h1 className='font-bold text-6xl text-center'>{countStockLocation("warehouse-2")}</h1>
                                     </div>
-                                    <div className='flex flex-col gap-1 justify-center items-center'>
+
+                                    <div className='flex flex-col gap-3 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Packer-2</h2>
-                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
+                                        <div className='text-sm text-center text-gray-100 bg-par-blue-dark group-hover:bg-white p-3 rounded-md gap-1 group-hover:text-gray-700 flex flex-col'>
+                                            <div className='grid grid-cols-[181px_2px_auto] items-center gap-3 text-left'><span>Number of Vehicles Assisted</span><span> : </span> <span className='text-lg font-bold text-white group-hover:text-par-blue-dark leading-[0px]'>9</span></div>
+                                            <div className='grid grid-cols-[181px_2px_auto] items-center gap-3 text-left'><span>Loading Time Per Vehicle</span><span> : </span> <span className='text-lg font-bold text-white group-hover:text-par-blue-dark  leading-[0px]'>30s</span></div>
+                                        </div>
                                     </div>
+
                                 </Link>
 
                                 <Link to={"/dashboard/so-detail/parking"}
@@ -95,14 +115,15 @@ const AdminPageTwoV3 = () => {
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
                                         <h1 className='font-bold text-6xl text-center'>{countStockLocation("parking")}</h1>
                                     </div>
-                                    <div className='flex flex-col gap-1 justify-center items-center'>
+
+                                    <div className='flex flex-col gap-3 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Packer-3</h2>
-                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
+                                        <div className='text-sm text-center text-gray-100 bg-par-blue-dark group-hover:bg-white p-3 rounded-md gap-1 group-hover:text-gray-700 flex flex-col'>
+                                            <div className='grid grid-cols-[181px_2px_auto] items-center gap-3 text-left'><span>Number of Vehicles Assisted</span><span> : </span> <span className='text-lg font-bold text-white group-hover:text-par-blue-dark leading-[0px]'>5</span></div>
+                                            <div className='grid grid-cols-[181px_2px_auto] items-center gap-3 text-left'><span>Loading Time Per Vehicle</span><span> : </span> <span className='text-lg font-bold text-white group-hover:text-par-blue-dark  leading-[0px]'>25s</span></div>
+                                        </div>
                                     </div>
                                 </Link>
-
-
-
 
                             </div>
                         </div>
