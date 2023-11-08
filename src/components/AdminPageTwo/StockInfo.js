@@ -22,7 +22,7 @@ const StockInfo = () => {
 
             {/* <Navbar /> */}
             <div className='bg-[#f5f5f5] pt-5 pb-12'>
-                <div className='container mx-auto'>
+                <div className='container mx-auto p-3 md:p-0'>
                     <div className='flex flex-col gap-0'>
 
                         <div className='flex justify-center mt-4'>
@@ -37,45 +37,23 @@ const StockInfo = () => {
 
                             <div className='grid  sm:grid-cols-2  lg:grid-cols-3  items-center gap-4'>
 
-                                <Link to={"/dashboard/stock-details/packer-1"}
+                                <Link to={"/dashboard/stock-details/parking"}
                                     className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark  group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
-                                        <h1 className='font-bold text-6xl text-center'>{countStockLocation("Packer-1")}</h1>
+                                        <h1 className='font-bold text-6xl text-center'>{countStockLocation("parking")}</h1>
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Parking</h2>
                                         {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
-                                <Link to={"/dashboard/stock-details/packer-2"}
-                                    className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">
-                                    <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
-                                        <h1 className='font-bold text-6xl text-center'>{countStockLocation("Packer-2")}</h1>
-                                    </div>
-                                    <div className='flex flex-col gap-1 justify-center items-center'>
-                                        <h2 className="text-xl font-bold group-hover:text-gray-100">Warehouse 1</h2>
-                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
-                                    </div>
-                                </Link>
-
-                                <Link to={"/dashboard/stock-details/packer-3"}
-                                    className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">
-                                    <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
-                                        <h1 className='font-bold text-6xl text-center'>{countStockLocation("Packer-3")}</h1>
-                                    </div>
-                                    <div className='flex flex-col gap-1 justify-center items-center'>
-                                        <h2 className="text-xl font-bold group-hover:text-gray-100">Warehouse 2</h2>
-                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
-                                    </div>
-                                </Link>
-
                                 <Link to={"/dashboard/stock-details/warehouse-1"}
                                     className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
                                         <h1 className='font-bold text-6xl text-center'>{countStockLocation("warehouse-1")}</h1>
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
-                                        <h2 className="text-xl font-bold group-hover:text-gray-100">Packer-1</h2>
+                                        <h2 className="text-xl font-bold group-hover:text-gray-100">Warehouse 1</h2>
                                         {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
@@ -86,15 +64,37 @@ const StockInfo = () => {
                                         <h1 className='font-bold text-6xl text-center'>{countStockLocation("warehouse-2")}</h1>
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
+                                        <h2 className="text-xl font-bold group-hover:text-gray-100">Warehouse 2</h2>
+                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
+                                    </div>
+                                </Link>
+
+                                <Link to={"/dashboard/stock-details/packer-1"}
+                                    className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">
+                                    <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
+                                        <h1 className='font-bold text-6xl text-center'>{countStockLocation("packer-1")}</h1>
+                                    </div>
+                                    <div className='flex flex-col gap-1 justify-center items-center'>
+                                        <h2 className="text-xl font-bold group-hover:text-gray-100">Packer-1</h2>
+                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
+                                    </div>
+                                </Link>
+
+                                <Link to={"/dashboard/stock-details/packer-2"}
+                                    className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">
+                                    <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
+                                        <h1 className='font-bold text-6xl text-center'>{countStockLocation("packer-2")}</h1>
+                                    </div>
+                                    <div className='flex flex-col gap-1 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Packer-2</h2>
                                         {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
 
-                                <Link to={"/dashboard/stock-details/parking"}
+                                <Link to={"/dashboard/stock-details/packer-3"}
                                     className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
-                                        <h1 className='font-bold text-6xl text-center'>{countStockLocation("parking")}</h1>
+                                        <h1 className='font-bold text-6xl text-center'>{countStockLocation("packer-3")}</h1>
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Packer-3</h2>

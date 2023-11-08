@@ -17,6 +17,7 @@ const NavbarTest = () => {
 
     const openModal = () => {
         setIsOpen(true);
+        setNavbar(!navbar)
     };
 
     const closeModal = () => {
@@ -77,28 +78,33 @@ const NavbarTest = () => {
                                             <ul className="items-center justify-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0">
                                                 <li>
                                                     <NavLink
+                                                    onClick={() => setNavbar(!navbar)}
                                                         className={({ isActive, isPending }) =>
                                                             isActive ? "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
                                                         }
                                                         to="/dashboard/queue-info">Queue Info</NavLink></li>
 
                                                 <li>
-                                                    <NavLink to="/dashboard/gigo"
+                                                    <NavLink
+                                                    onClick={() => setNavbar(!navbar)}
+                                                     to="/dashboard/gigo"
                                                         className={({ isActive, isPending }) =>
                                                             isActive ? "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
                                                         }
                                                     >GIGO Summary</NavLink></li>
 
                                                 <li><NavLink
+                                                onClick={() => setNavbar(!navbar)}
                                                     className={({ isActive, isPending }) =>
                                                         isActive ? "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
                                                     }
                                                     to="/dashboard/stock-info">Stock Info</NavLink></li>
                                                 <li><NavLink
+                                                
                                                     className={({ isActive, isPending }) =>
                                                         isActive ? "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
                                                     }
-                                                    onClick={openModal} >Stock Entry</NavLink></li>
+                                                    onClick={openModal } >Stock Entry</NavLink></li>
                                                 <li className='flex justify-center'>
                                                     <div className={`flex  lg:hidden justify-center dropdown dropdown-bottom navbar navbar-end w-[150px]`}>
                                                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

@@ -43,7 +43,7 @@ const StockDetails = () => {
     const param = useParams();
 
 
-    const itemsPerPage = 3;
+    const itemsPerPage = 20;
 
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -90,9 +90,9 @@ const StockDetails = () => {
         <div className='flex flex-col h-screen bg-[#f5f5f5]'>
 
             <div>
-                <div className="container mx-auto pt-4">
+                <div className="container mx-auto px-3 md:px-0 pt-4">
 
-                    <h2 className="mb-10 text-3xl text-center pt-6 uppercase font-extrabold">{param.stock} Queue Details</h2>
+                    <h2 className="mb-10 text-3xl text-center pt-6 uppercase font-extrabold">{param.stock} Stock Details</h2>
                     <div class='max-w-md mx-auto'>
 
                     </div>
@@ -149,17 +149,17 @@ const StockDetails = () => {
                                             SL No
                                         </th>
 
-                                        <th className="px-6 py-2 text-center  font-medium  uppercase tracking-wider">
+                                        <th className=" py-2 text-center  font-medium  uppercase tracking-wider">
                                             Packer Name
                                         </th>
-                                        <th className="px-6 py-2 text-center font-medium  uppercase tracking-wider">
+                                        <th className=" py-2 text-center font-medium  uppercase tracking-wider">
                                             Product Name
                                         </th>
-                                        <th className="px-6 py-2 text-center font-medium uppercase tracking-wider">
+                                        <th className=" py-2 text-center font-medium uppercase tracking-wider">
                                             Quantity
                                         </th>
 
-                                        <th className="px-6 py-2 text-center font-medium uppercase tracking-wider">
+                                        <th className=" py-2 text-center font-medium uppercase tracking-wider">
                                             Status
                                         </th>
                                     </tr>
