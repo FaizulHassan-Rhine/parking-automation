@@ -56,7 +56,7 @@ const DataTable = ({ vehicle = [] }) => {
     return (
 
                 <>
-                    <div className="container mx-auto ">
+                    <div className="container mx-auto px-3 md:px-0 ">
                         <div className='flex justify-end mb-4'>
                             <div className='flex items-center justify-center cursor-pointer  p-2 gap-2 bg-blue-400 rounded-full'>
                                 <p onClick={() => { window.print() }} className='text-white text-xl'><FaPrint /></p>

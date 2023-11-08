@@ -49,7 +49,8 @@ const DataTableVehicle = ({ vehicle = [] }) => {
 
     return (
                 <>
-                    <div className="container mx-auto ">
+                    {/* <div className="container px-3 md:px-0 mx-auto "> */}
+                    <div>
                         <div className='flex justify-end mb-4'>
                             {/* <div className='flex items-center justify-center cursor-pointer  p-2 gap-2 bg-blue-400 rounded-full'>
                                 <p onClick={() => { window.print() }} className='text-white text-xl'><FaPrint /></p>
@@ -57,7 +58,7 @@ const DataTableVehicle = ({ vehicle = [] }) => {
                         </div>
                         <div className="mx-auto rounded-lg ">
                             {/* <h2 className='printViewTitle invisible h-0'>Queue Details</h2> */}
-                           <div className=' overflow-x-scroll sm:overflow-auto mt-12 sm:mt-0'>
+                           <div className=' overflow-x-scroll sm:overflow-auto  mt-12 sm:mt-0'>
                            <table className="mx-auto w-full lg:w-[750px]  bg-white text-[12px] border rounded-lg">
                                 <thead>
                                     <tr className='h-12 text-[12px] bg-par-blue-dark text-white'>
