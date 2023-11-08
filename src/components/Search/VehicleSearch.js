@@ -103,8 +103,8 @@ const VehicleSearch = () => {
                         </div>
                         <ReportDownload note="Vehicle Registered for the Upcoming SO" vehicle={getParkingList[0]} />
                     </div>
-                    <div className='flex justify-center pt-10 md:-ml-[320px] ml-0 '>
-                        <h1 className='font-bold text-xl text-red-800 uppercase'>Vehicle Registered for the Upcoming SO</h1>
+                    <div className='flex justify-center pt-10 md:-ml-[270px] ml-0 '>
+                        <h1 className='font-bold text-xl text-red-800 uppercase'>Vehicle Registered: SO Placement In-Process</h1>
                     </div>
                     <DataTableVehicle  vehicle={getParkingList} />
                 </div>
@@ -120,8 +120,8 @@ const VehicleSearch = () => {
 
                         <ReportDownload note="Vehicle Registered for the Valid SO" vehicle={getVehicleList[0]} />
                     </div>
-                    <div className='flex justify-center pt-10 md:-ml-[370px] ml-0 '>
-                        <h1 className='font-bold text-xl text-red-800 uppercase'>Vehicle Registered for the Valid SO</h1>
+                    <div className='flex justify-center pt-10 md:-ml-[440px] ml-0 '>
+                        <h1 className='font-bold text-xl text-red-800 uppercase'>Vehicle Registered: Valid SO</h1>
                     </div>
                     <DataTableVehicleList  vehicle={getVehicleList} />
 
@@ -138,7 +138,7 @@ const VehicleSearch = () => {
                             <ReportDownload note="Corporate Registered Vehicle" vehicle={getCarList[0]} />
                         </div>
                         <div className='flex justify-center pt-10 md:-ml-[430px] ml-0 '>
-                            <h1 className='font-bold text-xl text-red-800 uppercase'>Corporate Registered Vehicle</h1>
+                            <h1 className='font-bold text-xl text-red-800 uppercase'>Vehicle Registered: Dummy SO</h1>
                         </div>
                         <DataTableVehicleList  vehicle={getCarList} />
                     </div>
