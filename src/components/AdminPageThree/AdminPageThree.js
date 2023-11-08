@@ -134,8 +134,12 @@ const AdminPageThree = () => {
 
                                 <table className="text-[12px] shadow-md">
                                     <thead className='rounded-2xl'>
-                                        <tr className='bg-par-blue-dark text-white font-bold  border-b border-black '>
-                                            <th className=" py-2 text-center font-medium uppercase tracking-wider">
+
+                                        <tr className='bg-par-blue-dark text-white font-bold  border-b border-black leading-7'>
+                                        <th className="px-6 py-2 text-center font-medium uppercase tracking-wider">
+                                                Date
+                                            </th>
+                                            <th className="px-6 py-2 text-center font-medium uppercase tracking-wider">
                                                 SL No
                                             </th>
                                             <th className="text-center py-2 font-medium uppercase tracking-wider">
@@ -168,6 +172,9 @@ const AdminPageThree = () => {
                                     <tbody className="[&>tr:nth-child(odd)]:bg-gray-50 [&>tr:nth-child(even)]:bg-gray-200 text-gray-950">
                                         {currentImages.map((examinee, index) => (
                                             <tr key={index}>
+                                                <td className=" py-3 whitespace-nowrap">
+                                                    <p className='text-center'> {examinee.date.split(" ")[0]}</p>
+                                                </td>
                                                 <td className=" py-3 whitespace-nowrap">
                                                     <p className='text-center'> {examinee.sl}</p>
                                                 </td>
