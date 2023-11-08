@@ -22,7 +22,13 @@ const DataTable = ({ vehicle = [] }) => {
     const [getExamneeData, setExamneeData] = useState([]);
 
 
-
+    const  handlePrintWindow = () => {
+        const date = new Date();
+        // const currentTime = new Date().toLocaleString();
+        // const currentDate = new Date().toLocaleDateString();
+        document.title = 'DAS_' + date.getTime();
+        window.print();
+      }
 
 
     const sortNumbers = () => {
@@ -53,13 +59,14 @@ const DataTable = ({ vehicle = [] }) => {
             : getExamneeData.filter((examinee) => examinee.result_status === filterStatus);
 
 
+
     return (
 
                 <>
                     <div className="container mx-auto ">
                         <div className='flex justify-end mb-4'>
                             <div className='flex items-center justify-center cursor-pointer  p-2 gap-2 bg-blue-400 rounded-full'>
-                                <p onClick={() => { window.print() }} className='text-white text-xl'><FaPrint /></p>
+                                <p onClick={handlePrintWindow} className='text-white text-xl'><FaPrint /></p>
                             </div>
                         </div>
                         <div className="mx-auto rounded-lg ">
