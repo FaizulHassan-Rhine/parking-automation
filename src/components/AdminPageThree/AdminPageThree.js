@@ -108,10 +108,10 @@ const AdminPageThree = () => {
                     <div className='w-full lg:w-[900px] mx-auto overflow-x-scroll sm:overflow-auto mt-12 sm:mt-0'>
                         <div className="mx-auto rounded-lg">
                             <div className='mx-auto  flex flex-col gap-3'>
-                                <div className='flex flex-col-reverse gap-5  md:flex-row'>
+                                <div className='flex flex-col-reverse gap-5  md:flex-row  justify-end'>
                                    
                                     <div className=''>
-                                        <div className='flex justify-start md:justify-end'>
+                                        <div className='flex justify-end'>
                                             <div class="relative py-1 flex gap-2 items-center w-60 border-2 border-gray-200 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
                                                 <div class="grid place-items-center h-full w-12 text-gray-300">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -132,7 +132,7 @@ const AdminPageThree = () => {
 
 
 
-                                <table className="text-[12px] shadow-md">
+                                <table className="text-[12px] shadow-md w-[900px]">
                                     <thead className='rounded-2xl'>
 
                                         <tr className='bg-par-blue-dark text-white font-bold  border-b border-black leading-7'>
