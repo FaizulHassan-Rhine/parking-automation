@@ -58,7 +58,7 @@ const VehicleSearch = () => {
 
 
     return (
-        <div className='container mx-auto '>
+        <div className='container mx-auto px-3 md:px-0 '>
             <div className='relative'>
                 <div className="flex justify-center  relative p-2 py-6 ">
                     <div className="bg-white items-center justify-between w-[60%] flex rounded-full shadow-lg p-2 mb-5 sticky" >

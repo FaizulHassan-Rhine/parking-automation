@@ -29,7 +29,7 @@ const AdminPageTwoV3 = () => {
 
             {/* <Navbar /> */}
             <div className='bg-[#f5f5f5] pt-5 pb-12'>
-                <div className='container mx-auto'>
+                <div className='container mx-auto px-3 md:px-0'>
                     <div className='flex flex-col gap-0'>
 
                         <div className='flex justify-center mt-4'>

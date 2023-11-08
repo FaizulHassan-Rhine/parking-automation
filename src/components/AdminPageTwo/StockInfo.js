@@ -22,7 +22,7 @@ const StockInfo = () => {
 
             {/* <Navbar /> */}
             <div className='bg-[#f5f5f5] pt-5 pb-12'>
-                <div className='container mx-auto'>
+                <div className='container mx-auto p-3 md:p-0'>
                     <div className='flex flex-col gap-0'>
 
                         <div className='flex justify-center mt-4'>
