@@ -12,21 +12,21 @@ const ReportChecker = ({ vehicle = [] }) => {
                     <div className="font-bold flex flex-col items-center mt-10">
                         {/* <img className="h-8 w-44 mb-2" src={logo} alt="" /> */}
                         <div className="flex items-center gap-10">
-                        {
-                getUserInfo.role === 'checker' &&
+                            {
+                                getUserInfo.role === 'checker' &&
 
-                <div >
-                    <h1 className="text-3xl font-bold uppercase">Vehicle Checking Details</h1>
-                </div>
-            }
-                      {
-                getUserInfo.role === 'storage' &&
+                                <div >
+                                    <h1 className="text-3xl font-bold uppercase">Vehicle Checking Details</h1>
+                                </div>
+                            }
+                            {
+                                getUserInfo.role === 'storage' &&
 
-                <div >
-                    <h1 className="text-3xl font-bold uppercase">Storage Checking Details</h1>
-                </div>
-            }
-                            
+                                <div >
+                                    <h1 className="text-3xl font-bold uppercase">Storage Checking Details</h1>
+                                </div>
+                            }
+
                             <div className="flex justify-center pt-6">
                                 <img className="w-40" src={qrcode} />
                             </div>
@@ -38,12 +38,12 @@ const ReportChecker = ({ vehicle = [] }) => {
                                 <div>
                                     <p className="font-semibold whitespace-nowrap">SL/N:</p>
                                     <p className="font-semibold whitespace-nowrap">Date:</p>
-                                    <p className="font-semibold whitespace-nowrap">Storage:</p>
+                                    <p className="font-semibold  whitespace-nowrap">Vehicle No: </p>
                                     <p className="font-semibold whitespace-nowrap">Vehicle Weight:</p>
                                     <p className="font-semibold whitespace-nowrap">Vehicle Max Weight:</p>
-                               
-                                   
-                                    
+
+
+
 
 
                                 </div>
@@ -51,31 +51,33 @@ const ReportChecker = ({ vehicle = [] }) => {
                                 <div>
                                     <p className='whitespace-nowrap'>{vehicle[0].sl}</p>
                                     <p className=' whitespace-nowrap'>{vehicle[0].date}</p>
-                                    <p className=' whitespace-nowrap'>{vehicle[0].stockLocation}</p>
+                                    <p className='whitespace-nowrap'>{vehicle[0].vehicleNumber}</p>
                                     <p className=' whitespace-nowrap'>1600 kg</p>
                                     <p className=' whitespace-nowrap'>{vehicle[0].vehicleMaximumWeight}</p>
-                                    
+
                                 </div>
 
                             </div>
                             <div className="flex md:justify-between gap-5 ml-5 md:ml-0">
                                 <div>
-                                <p className="font-semibold whitespace-nowrap">Queue No:</p>
-                                    <p className="font-semibold  whitespace-nowrap">Vehicle No: </p>
-                                    <p className="font-semibold whitespace-nowrap">Vehicle Status: </p>
-                                  
+                                    <p className="font-semibold whitespace-nowrap">Queue No:</p>
+                                    <p className="font-semibold whitespace-nowrap">Storage:</p>
+
+                                    <p className="font-semibold whitespace-nowrap">Status: </p>
+
                                     <p className="font-semibold whitespace-nowrap">Service Type: </p>
                                     <p className="font-semibold whitespace-nowrap">Security Check: </p>
                                 </div>
 
                                 <div>
-                                <p className='whitespace-nowrap'>{vehicle[0].queueNo}</p>
-                                    <p className='whitespace-nowrap'>{vehicle[0].vehicleNumber}</p>
+                                    <p className='whitespace-nowrap'>{vehicle[0].queueNo}</p>
+                                    <p className=' whitespace-nowrap'>{vehicle[0].stockLocation}</p>
 
-                                    <p className='whitespace-nowrap'> 
-                                    {getUserInfo.role == 'storage' ? 'Loading Products' : 'In Queue'}
+
+                                    <p className='whitespace-nowrap'>
+                                        {getUserInfo.role == 'storage' ? 'Loading Products' : 'In Queue'}
                                     </p>
-                                    
+
                                     <p className='whitespace-nowrap'>Automation</p>
                                     <p className='whitespace-nowrap'>Done</p>
 
