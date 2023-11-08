@@ -37,16 +37,16 @@ const VehicleSearch = () => {
             console.log("Car found:", foundCar);
             setVehicleList([])
             setCarList([])
-            setParkingList(foundCar);
+            setParkingList(()=>foundCar);
         } else if (vehicleCar.length > 0) {
             setParkingList([]);
             setCarList([])
-            setVehicleList(vehicleCar)
+            setVehicleList(()=>vehicleCar)
             console.log("found vehicle");
         } else if (carListCar.length > 0) {
             setParkingList([]);
             setVehicleList([])
-            setCarList(carListCar)
+            setCarList(()=>carListCar)
             console.log("found car list");
         } else {
             setParkingList([]);
