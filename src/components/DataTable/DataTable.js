@@ -64,10 +64,12 @@ const DataTable = ({ vehicle = [] }) => {
 
                 <>
                     <div className="container mx-auto px-3 md:px-0 ">
+                        <div className=' xl:w-[900px] mx-auto '>
                         <div className='flex justify-end mb-4'>
                             <div className='flex items-center justify-center cursor-pointer  p-2 gap-2 bg-blue-400 rounded-full'>
                                 <p onClick={handlePrintWindow} className='text-white text-xl'><FaPrint /></p>
                             </div>
+                        </div>
                         </div>
                         <div className="mx-auto rounded-lg ">
                             {/* <h2 className='printViewTitle invisible h-0'>Queue Details</h2> */}
