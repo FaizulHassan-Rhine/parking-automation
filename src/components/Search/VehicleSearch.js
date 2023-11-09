@@ -29,9 +29,9 @@ const VehicleSearch = () => {
         e.preventDefault()
         setSearchString(e.target.value);
 
-        const foundCar = parkingList.filter(car => car.vehicleNumber === e.target.value);
-        const vehicleCar = vehicleList.filter(car => car.vehicleNumber === e.target.value);
-        const carListCar = CarList.filter(car => car.vehicleNumber === e.target.value);
+        const foundCar = parkingList.filter(car => car.vehicleNumber.toLocaleLowerCase() === e.target.value.toLocaleLowerCase() || car.sl.toLocaleLowerCase() === e.target.value.toLocaleLowerCase());
+        const vehicleCar = vehicleList.filter(car => car.vehicleNumber.toLocaleLowerCase() === e.target.value.toLocaleLowerCase() || car.sl.toLocaleLowerCase() === e.target.value.toLocaleLowerCase());
+        const carListCar = CarList.filter(car => car.vehicleNumber.toLocaleLowerCase() === e.target.value.toLocaleLowerCase());
 
         if (foundCar.length > 0) {
             console.log("Car found:", foundCar);
