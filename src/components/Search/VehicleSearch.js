@@ -101,10 +101,10 @@ const VehicleSearch = () => {
                             <img className='w-[180px]' src={qrCode} alt='' />
                             <p className='text-xs text-center font-semibold'>Vehicle No: {getParkingList[0].vehicleNumber}</p>
                         </div>
-                        <ReportDownload note="Vehicle Registered for the Upcoming SO" vehicle={getParkingList[0]} />
+                        <ReportDownload note="Vehicle Registered: Client's Valid SO" vehicle={getParkingList[0]} />
                     </div>
-                    <div className='flex justify-center pt-10 md:-ml-[270px] ml-0 '>
-                        <h1 className='font-bold text-xl text-red-800 uppercase'>Vehicle Registered: SO Placement In-Process</h1>
+                    <div className='flex justify-center pt-10 md:-ml-[359px] ml-0 '>
+                        <h1 className='font-bold text-xl text-red-800 uppercase'>Vehicle Registered: Client's Valid SO</h1>
                     </div>
                     <DataTableVehicle  vehicle={getParkingList} />
                 </div>
@@ -118,10 +118,10 @@ const VehicleSearch = () => {
 
                         </div>
 
-                        <ReportDownload note="Vehicle Registered for the Valid SO" vehicle={getVehicleList[0]} />
+                        <ReportDownload note="Vehicle Registered:  SO Placement In-Process" vehicle={getVehicleList[0]} />
                     </div>
-                    <div className='flex justify-center pt-10 md:-ml-[440px] ml-0 '>
-                        <h1 className='font-bold text-xl text-red-800 uppercase'>Vehicle Registered: Valid SO</h1>
+                    <div className='flex justify-center pt-10 md:-ml-[269px] ml-0 '>
+                        <h1 className='font-bold text-xl text-red-800 uppercase'>Vehicle Registered:  SO Placement In-Process</h1>
                     </div>
                     <DataTableVehicleList  vehicle={getVehicleList} />
 
@@ -135,7 +135,7 @@ const VehicleSearch = () => {
                                 <img className='w-[180px]' src={qrCode} alt='' />
                                 <p className='text-xs text-center font-semibold'>Vehicle No: {getCarList[0].vehicleNumber}</p>
                             </div>
-                            <ReportDownload note="Corporate Registered Vehicle" vehicle={getCarList[0]} />
+                            <ReportDownload note="Vehicle Registered: Dummy SO" vehicle={getCarList[0]} />
                         </div>
                         <div className='flex justify-center pt-10 md:-ml-[430px] ml-0 '>
                             <h1 className='font-bold text-xl text-red-800 uppercase'>Vehicle Registered: Dummy SO</h1>
