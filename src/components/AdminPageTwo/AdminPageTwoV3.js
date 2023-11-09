@@ -81,7 +81,7 @@ const AdminPageTwoV3 = () => {
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">{item.location}</h2>
                                         <div className='text-sm text-center text-gray-100 bg-par-blue-dark group-hover:bg-white p-3 rounded-md gap-1 group-hover:text-gray-700 flex flex-col'>
                                             <div className='grid grid-cols-[181px_2px_auto] items-center gap-3 text-left'><span>Number of Vehicles Assisted</span><span> : </span> <span className='text-lg font-bold text-white group-hover:text-par-blue-dark leading-[0px]'>{countStockLocation(`${item.location}`, "Completed")}</span></div>
-                                            <div className='grid grid-cols-[181px_2px_auto] items-center gap-3 text-left'><span>Loading Time Per Vehicle</span><span> : </span> <span className='text-lg font-bold text-white group-hover:text-par-blue-dark  leading-[0px]'>{avarageLoadTime(`${item.location}`)} m</span></div>
+                                            <div className='grid grid-cols-[181px_2px_auto] items-center gap-3 text-left'><span> {item.location.toLowerCase() === "parking" ?"Waiting":"Loading"} Time Per Vehicle</span><span> : </span> <span className='text-lg font-bold text-white group-hover:text-par-blue-dark  leading-[0px]'>{avarageLoadTime(`${item.location}`)} m</span></div>
                                         </div>
                                     </div>
                                 </Link>

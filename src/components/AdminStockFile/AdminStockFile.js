@@ -52,7 +52,7 @@ const AdminStockFile = () => {
             <div>
                 <div className="container mx-auto pt-4">
 
-                    <h2 className="mb-10 text-3xl text-center pt-6 uppercase font-extrabold">Stock file upload detail</h2>
+                    <h2 className="mb-10 text-3xl text-center pt-6 uppercase font-extrabold">Exel file upload-Stock Details</h2>
                     <div className='max-w-md mx-auto'>
 
                     </div>
