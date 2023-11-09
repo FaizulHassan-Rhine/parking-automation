@@ -17,7 +17,7 @@ const AdminForm = () => {
                 <div className='container mx-auto'>
                     <div className='flex flex-col'>
                         <div className='flex justify-center pt-3'>
-                            <h1 className='text-3xl font-bold uppercase'>Admin Form</h1>
+                            <h1 className='text-3xl font-bold uppercase'>Manual Stock Entry</h1>
                         </div>
                     </div>
                     <div className='flex flex-col items-center'>
