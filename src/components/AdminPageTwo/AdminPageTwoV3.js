@@ -45,8 +45,8 @@ const AdminPageTwoV3 = () => {
             }
         })
        
-        // return (countTotalTime / countParking.length).toFixed(2); 
-        return Math.floor(countTotalTime / count);
+        return (countTotalTime / count).toFixed(2); 
+        // return Math.floor(countTotalTime / count);
     }
 
 

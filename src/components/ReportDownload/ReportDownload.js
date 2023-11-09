@@ -12,7 +12,7 @@ const ReportDownload = ({note="", vehicle}) => {
     return (
        <div>
           {/* <button onClick={() => toPDF()}>Download PDF</button> */}
-          <div  className='fixed p-5 left-[1999px] flex flex-col justify-center items-center'>
+          <div  className='fixed p-5 left-[19999px] flex flex-col justify-center items-center'>
             <div ref={targetRef} className='p-10 justify-self-center' >
                <Report note={note} vehicle={vehicle}/>
             </div>

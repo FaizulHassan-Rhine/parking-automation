@@ -73,12 +73,12 @@ const NavbarTest = () => {
                                         className={`flex-1  flex-col items-center text-center justify-self-center pb-3 mt-8 lg:block lg:pb-0 lg:mt-0 ${navbar ? "block" : "hidden"
                                             }`}
                                     >
-                                        {getUserInfo.role === 'admin' &&
+                                        {Object.keys(getUserInfo).length > 0 && getUserInfo.role === 'admin' &&
 
                                             <ul className="items-center justify-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0">
                                                 <li>
                                                     <NavLink
-                                                    onClick={() => setNavbar(!navbar)}
+                                                        onClick={() => setNavbar(!navbar)}
                                                         className={({ isActive, isPending }) =>
                                                             isActive ? "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
                                                         }
@@ -86,25 +86,25 @@ const NavbarTest = () => {
 
                                                 <li>
                                                     <NavLink
-                                                    onClick={() => setNavbar(!navbar)}
-                                                     to="/dashboard/gigo"
+                                                        onClick={() => setNavbar(!navbar)}
+                                                        to="/dashboard/gigo"
                                                         className={({ isActive, isPending }) =>
                                                             isActive ? "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
                                                         }
                                                     >GIGO Summary</NavLink></li>
 
                                                 <li><NavLink
-                                                onClick={() => setNavbar(!navbar)}
+                                                    onClick={() => setNavbar(!navbar)}
                                                     className={({ isActive, isPending }) =>
                                                         isActive ? "hover:border-b-2 border-green-600 py-1  font-semibold  border-b-2 transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
                                                     }
                                                     to="/dashboard/stock-info">Stock Info</NavLink></li>
                                                 <li><NavLink
-                                                
+
                                                     className={({ isActive, isPending }) =>
                                                         isActive ? "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300" : "hover:border-b-2 hover:border-green-600 py-1  font-semibold  border-b-2 border-white transition-all duration-300"
                                                     }
-                                                    onClick={openModal } >Stock Entry</NavLink></li>
+                                                    onClick={openModal} >Stock Entry</NavLink></li>
                                                 <li className='flex justify-center'>
                                                     <div className={`flex  lg:hidden justify-center dropdown dropdown-bottom navbar navbar-end w-[150px]`}>
                                                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -131,7 +131,7 @@ const NavbarTest = () => {
                                 </div>
                                 <div>
                                     <div className={`dropdown dropdown-bottom navbar navbar-end flex gap-3 w-full
-                                     ${getUserInfo.role == 'admin' ? "hidden lg:flex" : ""}`}>
+                                     ${Object.keys(getUserInfo).length > 0 && getUserInfo.role == 'admin' ? "hidden lg:flex" : ""}`}>
                                         <div><p className='text-xs font-bold'>{getUserInfo.name} ({getUserInfo.displayRole})</p></div>
                                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                             <div className="w-10 rounded-full">
@@ -191,44 +191,44 @@ const NavbarTest = () => {
                                 </div>
 
                                 {/* mobile menu triger button */}
-
-                                <div className={`${getUserInfo.role == 'admin' ? "lg:hidden" : "hidden"}`}>
-                                    <button
-                                        className="p-2 mt-[10px] text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-                                        onClick={() => setNavbar(!navbar)}
-                                    >
-                                        {navbar ? (
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="w-6 h-6 text-black"
-                                                viewBox="0 0 20 20"
-                                                fill="currentColor"
-                                            >
-                                                <path
-                                                    fillRule="evenodd"
-                                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                                    clipRule="evenodd"
-                                                />
-                                            </svg>
-                                        ) : (
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="w-6 h-6 text-black"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                                strokeWidth={2}
-                                            >
-                                                <path
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    d="M4 6h16M4 12h16M4 18h16"
-                                                />
-                                            </svg>
-                                        )}
-                                    </button>
-                                </div>
-
+                                {Object.keys(getUserInfo).length > 0 &&
+                                    <div className={`${getUserInfo.role == 'admin' ? "lg:hidden" : "hidden"}`}>
+                                        <button
+                                            className="p-2 mt-[10px] text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                                            onClick={() => setNavbar(!navbar)}
+                                        >
+                                            {navbar ? (
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="w-6 h-6 text-black"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                        clipRule="evenodd"
+                                                    />
+                                                </svg>
+                                            ) : (
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="w-6 h-6 text-black"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    strokeWidth={2}
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        d="M4 6h16M4 12h16M4 18h16"
+                                                    />
+                                                </svg>
+                                            )}
+                                        </button>
+                                    </div>
+                                }
                             </div>
                         </nav>
 

@@ -27,9 +27,9 @@ const DataTableVehicleList = ({ vehicle = [] }) => {
                                         <th className="px-6 py-3  text-center  font-medium uppercase tracking-wider border-b">
                                             SL.No
                                         </th>
-                                        <th className="px-6 py-3  text-center  font-medium uppercase tracking-wider border-b">
+                                        {/* <th className="px-6 py-3  text-center  font-medium uppercase tracking-wider border-b">
                                             SO.No
-                                        </th>
+                                        </th> */}
                                       
                                         <th
                                             className="px-6 py-3  text-center  font-medium  uppercase tracking-wider cursor-pointer border-b"
@@ -55,10 +55,10 @@ const DataTableVehicleList = ({ vehicle = [] }) => {
                                             <td className=" py-3 whitespace-nowrap text-center">
                                                 {index +1}
                                             </td>
-                                            <td className="pl-6 py-3 whitespace-nowrap text-center">
+                                            {/* <td className="pl-6 py-3 whitespace-nowrap text-center">
                                                 {examinee.sl}
                                             </td>
-                                          
+                                           */}
                                             <td className="px-6 py-3 whitespace-nowrap text-center">
                                                 {examinee.Customer}
                                             </td>

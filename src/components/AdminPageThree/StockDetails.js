@@ -62,9 +62,18 @@ const StockDetails = () => {
         // setSearchString(e.target.value);
         console.log(e.target.value);
         if (e.target.value.length > 0) {
+
+
+
+            
+            var term = e.target.value; // search term (regex pattern)
+            var search = new RegExp(term , 'i'); // prepare a regex object
+            // let b = a.filter(item => search.test(item));
+
             const allLockData = parkingList.filter(car => car.stockLocation.toLowerCase() === param.stock.toLowerCase());
 
-            const vicleData = allLockData.filter(car => car.vehicleNumber.toLowerCase() === e.target.value.toLowerCase());
+            // const vicleData = allLockData.filter(car => car.vehicleNumber.toLowerCase() === e.target.value.toLowerCase());
+            const vicleData = allLockData.filter(car => search.test(car.vehicleNumber.toLowerCase()) || search.test(car.stockLocation.toLowerCase()) || search.test(car.Product.toLowerCase())  || search.test(car.Quantity.toString().toLowerCase()) || search.test(car.queueStockStatus.toLowerCase()) );
 
             setStockLocation(vicleData);
             setCurrentPage(1)
@@ -156,7 +165,7 @@ const StockDetails = () => {
                                             Product Name
                                         </th>
                                         <th className=" py-2 text-center font-medium uppercase tracking-wider">
-                                            Quantity
+                                            Current Stock
                                         </th>
 
                                         <th className=" py-2 text-center font-medium uppercase tracking-wider">

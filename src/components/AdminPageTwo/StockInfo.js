@@ -11,6 +11,15 @@ const dateFormat = 'YYYY-MM-DD';
 
 const StockInfo = () => {
 
+    const dataTable = [
+        // {"location": "Parking"},
+        {"location": "Warehouse-1"},
+        {"location": "Warehouse-2"},
+        {"location": "Packer-1"},
+        {"location": "Packer-2"},
+        {"location": "Packer-3"},
+    ]
+    
     const countStockLocation = (location) => {
         const count = parkingList.filter(car => car.stockLocation.toLowerCase() === location.toLowerCase()).length;
         return count > 0 ? count : 0;
@@ -36,7 +45,22 @@ const StockInfo = () => {
                             </div>
 
                             <div className='grid  sm:grid-cols-2  lg:grid-cols-3  items-center gap-4'>
+                                
+                                {
+                                    dataTable.map((item, index) => (
+                                        <Link to={"/dashboard/stock-details/"+item.location.toLowerCase()}
+                                        className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">
+                                        <div className="w-[70px] h-[70px] self-center bg-par-blue-dark  group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
+                                            <h1 className='font-bold text-6xl text-center'>{countStockLocation(`${item.location}`)}</h1>
+                                        </div>
+                                        <div className='flex flex-col gap-1 justify-center items-center'>
+                                            <h2 className="text-xl font-bold group-hover:text-gray-100">{item.location}</h2>
+                                        </div>
+                                    </Link>
+                                    ))
+                                }
 
+{/* 
                                 <Link to={"/dashboard/stock-details/parking"}
                                     className="group bg-white flex flex-col p-10 rounded-lg shadow-md gap-5 bg-gradient-to-br  hover:from-[#0d3a5f] hover:to-[#0881a3] ">
                                     <div className="w-[70px] h-[70px] self-center bg-par-blue-dark  group-hover:bg-white group-hover:text-par-blue-dark rounded-lg text-white">
@@ -44,7 +68,6 @@ const StockInfo = () => {
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Parking</h2>
-                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
                                 <Link to={"/dashboard/stock-details/warehouse-1"}
@@ -54,7 +77,6 @@ const StockInfo = () => {
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Warehouse 1</h2>
-                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
 
@@ -65,7 +87,6 @@ const StockInfo = () => {
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Warehouse 2</h2>
-                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
 
@@ -76,7 +97,6 @@ const StockInfo = () => {
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Packer-1</h2>
-                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
 
@@ -87,7 +107,6 @@ const StockInfo = () => {
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Packer-2</h2>
-                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
 
@@ -98,11 +117,10 @@ const StockInfo = () => {
                                     </div>
                                     <div className='flex flex-col gap-1 justify-center items-center'>
                                         <h2 className="text-xl font-bold group-hover:text-gray-100">Packer-3</h2>
-                                        {/* <p className='text-sm text-center text-gray-500 group-hover:text-gray-300'>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to </p> */}
                                     </div>
                                 </Link>
 
-
+ */}
 
 
                             </div>

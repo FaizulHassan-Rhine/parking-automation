@@ -30,9 +30,16 @@ const Login = () => {
     e.preventDefault();
     if (getFormData.email.value.length > 0) {
        if (getFormData.pass.value.length > 0) {
+        const userInfo = users.filter(user => user.email === getFormData.email.value && user.password === getFormData.pass.value);
+
+        if (userInfo.length > 0) {
           setUserInfo(checkCredentials(getFormData.email.value, getFormData.pass.value))
           console.log(checkCredentials(getFormData.email.value, getFormData.pass.value))
           navigate('/dashboard/dash')
+        }else{
+          // setFormData({ ...getFormData, formValid: false })
+        }
+
           // console.log(getFormData)
       }
     } else {

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import avatar from "../../images/avatarProfile.png"
 import { userContextManager } from '../../App';
 import DataTable from '../DataTable/DataTable';
@@ -19,16 +19,29 @@ const DetailsSearch = () => {
         e.preventDefault()
         // console.log(e.target.value);
         setSearchString(e.target.value);
-        const foundCar = parkingList.filter(car => car.vehicleNumber === e.target.value || car.sl === e.target.value);
+        const foundCar = parkingList.filter(car => car.vehicleNumber.toLocaleLowerCase() === e.target.value.toLocaleLowerCase() || car.sl.toLocaleLowerCase() === e.target.value.toLocaleLowerCase());
 
+        // setParkingList(() => parkingList.filter(car => car.vehicleNumber === e.target.value || car.sl === e.target.value))
         if (foundCar) {
             console.log("Car found:", foundCar);
-            setParkingList(foundCar);
+            setParkingList(()=>foundCar);
         } else {
             setParkingList([]);
             console.log("Car not found");
         }
     }
+
+    // useEffect(()=>{
+    //     const foundCar = parkingList.filter(car => car.vehicleNumber.toLocaleLowerCase() === getSearchString.toLocaleLowerCase() || car.sl.toLocaleLowerCase() === getSearchString.toLocaleLowerCase());
+    //     console.log(getSearchString);
+    //     if (foundCar) {
+    //         console.log("Car found:", foundCar);
+    //         setParkingList(()=>foundCar);
+    //     } else {
+    //         setParkingList([]);
+    //         console.log("Car not found");
+    //     }
+    // },[getSearchString])
 
     return (
         <div>
